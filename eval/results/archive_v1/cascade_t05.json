@@ -1,0 +1,1283 @@
+{
+  "tag": "cascade_t05",
+  "split": "test",
+  "timestamp": "2026-10-31T01:08:42Z",
+  "summary": {
+    "n_evaluated": 20,
+    "router_fallbacks_excluded": 0,
+    "total_questions": 20,
+    "avg_latency_ms": 2408.49,
+    "p95_latency_ms": 8831.44,
+    "avg_tokens": 1214.4,
+    "avg_cost_usd": 0.000112,
+    "idk_rate": 0.45,
+    "routing_accuracy": 0.5,
+    "kb_hit_rate": 1.0,
+    "pct_skipped_external": 85.0,
+    "mean_confidence": 0.5104
+  },
+  "questions": [
+    {
+      "id": 5,
+      "question": "How does PrairieFire achieve high update throughput in billion-scale SSD-based approximate nearest neighbor search without sacrificing search performance?",
+      "expected_source": "kb",
+      "split": "test",
+      "kb_file": "arxiv_2610.23232v1_PrairieFire_Igniting_High-Throughput_Updates_in_Large-Scale_.txt",
+      "answer": "PrairieFire achieves high update throughput while maintaining excellent search performance by utilizing buffered updates and batched local rebuilds, combined with cascaded adjustments, concurrency control, and CPU-GPU-SSD cooperation [2]. These co-designs avoid the frequent SSD accesses typically incurred by foreground insertions and the heavy background reassignments that repeatedly relocate each vector [2].",
+      "routing_mode": "cascade_router",
+      "sources_queried": [
+        "kb"
+      ],
+      "router_decision": "kb_sufficient",
+      "router_fallback": false,
+      "confidence_score": 0.9342,
+      "citation_source_types": [
+        "kb"
+      ],
+      "citation_files": [
+        "arxiv_2610.23232v1_PrairieFire_Igniting_High-Throughput_Updates_in_Large-Scale_.txt"
+      ],
+      "citations": [
+        {
+          "id": 2,
+          "source": "arxiv_2610.23232v1_PrairieFire_Igniting_High-Throughput_Updates_in_Large-Scale_.txt",
+          "source_type": "kb",
+          "url": null,
+          "page": 1,
+          "snippet": "The bottleneck lies in CPU-intensive update paths, where foreground insertions incur frequent SSD accesses and background reassignments repeatedly relocate each vector, making high update throughput difficult to achieve even by exhausting available h...",
+          "text": "The bottleneck lies in CPU-intensive update paths, where foreground insertions incur frequent SSD accesses and background reassignments repeatedly relocate each vector, making high update throughput difficult to achieve even by exhausting available hardware. In this paper, using buffered updates and batched local rebuilds, we develop PrairieFire with cascaded adjustments, concurrency control, and CPU-GPU-SSD cooperation. These co-designs avoid frequent SSD accesses in foreground updates and heavy background reassignments, achieving high update throughput while maintaining excellent search performance.",
+          "score": 0.9771
+        }
+      ],
+      "total_latency_ms": 852.1,
+      "tokens": 1073,
+      "estimated_cost_usd": 9.6e-05,
+      "is_idk": false
+    },
+    {
+      "id": 6,
+      "question": "How does AgentOnto utilize Iterative Ontology Preparation to refine enterprise knowledge representations for LLM agents?",
+      "expected_source": "kb",
+      "split": "test",
+      "kb_file": "arxiv_2610.23317v1_AgentOnto_Ontology-Guided_LLM_Agents_for_Enterprise_Data_Ana.txt",
+      "answer": "Based on the provided sources, AgentOnto utilizes Iterative Ontology Preparation to further improve the ontology through self-generated analysis tasks [1].",
+      "routing_mode": "cascade_router",
+      "sources_queried": [
+        "kb"
+      ],
+      "router_decision": "kb_sufficient",
+      "router_fallback": false,
+      "confidence_score": 0.7771,
+      "citation_source_types": [
+        "kb"
+      ],
+      "citation_files": [
+        "arxiv_2610.23317v1_AgentOnto_Ontology-Guided_LLM_Agents_for_Enterprise_Data_Ana.txt"
+      ],
+      "citations": [
+        {
+          "id": 1,
+          "source": "arxiv_2610.23317v1_AgentOnto_Ontology-Guided_LLM_Agents_for_Enterprise_Data_Ana.txt",
+          "source_type": "kb",
+          "url": null,
+          "page": 1,
+          "snippet": "Enterprise data analysis requires agents to connect analytical requests with knowledge distributed across databases, business documents, and existing example tasks. Without an explicit representation of this knowledge, an agent may produce incorrect...",
+          "text": "Enterprise data analysis requires agents to connect analytical requests with knowledge distributed across databases, business documents, and existing example tasks. Without an explicit representation of this knowledge, an agent may produce incorrect analytical results and cannot reliably incorporate feedback. We present AgentOnto, an ontology-guided LLM agent for enterprise data analytics. AgentOnto organizes heterogeneous enterprise knowledge into an ontology that directly guides analysis and incorporates confirmed feedback. Iterative Ontology Preparation further improves the ontology through self-generated analysis tasks. We evaluate AgentOnto on two public data sources. AgentOnto substantially outperforms representative methods, while module-level evaluations confirm the effectiveness of ontology construction, analysis, and updating. A real-world deployment further demonstrates its practical value in enterprise analytics",
+          "score": 0.9992
+        }
+      ],
+      "total_latency_ms": 941.06,
+      "tokens": 878,
+      "estimated_cost_usd": 7.2e-05,
+      "is_idk": false
+    },
+    {
+      "id": 7,
+      "question": "What three techniques are introduced by the PUMA framework to accelerate large-scale string similarity joins using Jaro-Winkler distance?",
+      "expected_source": "kb",
+      "split": "test",
+      "kb_file": "arxiv_2610.23652v1_Joining_Large_String_Collections_with_Jaro-Winkler_Similarit.txt",
+      "answer": "Based on the provided documents, the novel approach for efficient Jaro-Winkler similarity joins on large string collections is based on three key techniques (with the PUMA framework specifically contributing to the third technique, though the overall approach utilizes all three):\n\n1. **JUMP**: A fast algorithm for computing the Jaro-Winkler similarity between two strings that runs in linear time for bounded alphabets [1].\n2. **Dual-bound intersection bitmaps**: Bitmaps that encode strings (represented as character sets) into fixed-size, data-adapting bitmaps equipped with a cost model, used to prune candidate string pairs by bounding their character overlap [1].\n3. **PUMA framework**: Groups strings by prefix to tighten filter conditions, which reduces the number of required similarity computations [1].",
+      "routing_mode": "cascade_router",
+      "sources_queried": [
+        "kb"
+      ],
+      "router_decision": "kb_sufficient",
+      "router_fallback": false,
+      "confidence_score": 0.8194,
+      "citation_source_types": [
+        "kb"
+      ],
+      "citation_files": [
+        "arxiv_2610.23652v1_Joining_Large_String_Collections_with_Jaro-Winkler_Similarit.txt"
+      ],
+      "citations": [
+        {
+          "id": 1,
+          "source": "arxiv_2610.23652v1_Joining_Large_String_Collections_with_Jaro-Winkler_Similarit.txt",
+          "source_type": "kb",
+          "url": null,
+          "page": 1,
+          "snippet": "We present a novel approach for efficient Jaro-Winkler similarity joins on large string collections. Our solution is based on three key techniques: (1) JUMP is a fast algorithm for computing the Jaro-Winkler similarity between two strings that runs i...",
+          "text": "We present a novel approach for efficient Jaro-Winkler similarity joins on large string collections. Our solution is based on three key techniques: (1) JUMP is a fast algorithm for computing the Jaro-Winkler similarity between two strings that runs in linear time for bounded alphabets. (2) Dual-bound intersection bitmaps encode strings -- represented as character sets -- into fixed-size bitmaps, which are used to prune candidate string pairs by providing effective bounds on their character overlap; unlike prior bitmap techniques, our bitmaps are equipped with a cost model and adapt to the input data. (3) Our PUMA framework groups strings by prefix to tighten filter conditions, thereby reducing the number of similarity computations. Extensive experiments on large string collections demonstrate that our approach consistently outperforms the state of the art, achieving speedups of up to three orders of magnitude.",
+          "score": 0.9995
+        }
+      ],
+      "total_latency_ms": 5672.54,
+      "tokens": 1316,
+      "estimated_cost_usd": 0.000135,
+      "is_idk": false
+    },
+    {
+      "id": 8,
+      "question": "What computational complexity is established for finding a diverse subset of why-provenance explanations in Datalog queries?",
+      "expected_source": "kb",
+      "split": "test",
+      "kb_file": "arxiv_2610.24707v1_Diverse_Why-Provenance_for_Datalog_Queries.txt",
+      "answer": "Based on the available sources, the problem of finding a diverse subset of why-provenance explanations for Datalog queries is highly intractable, specifically being **NP-hard even in data complexity** [1].",
+      "routing_mode": "cascade_router",
+      "sources_queried": [
+        "kb"
+      ],
+      "router_decision": "kb_sufficient",
+      "router_fallback": false,
+      "confidence_score": 0.856,
+      "citation_source_types": [
+        "kb"
+      ],
+      "citation_files": [
+        "arxiv_2610.24707v1_Diverse_Why-Provenance_for_Datalog_Queries.txt"
+      ],
+      "citations": [
+        {
+          "id": 1,
+          "source": "arxiv_2610.24707v1_Diverse_Why-Provenance_for_Datalog_Queries.txt",
+          "source_type": "kb",
+          "url": null,
+          "page": 1,
+          "snippet": ". However, whenever the set of explanations is very large, outputting the entire set might be prohibitively expensive. Moreover, it is questionable the practical usefulness of flooding the user with a very large number of explanations, many of them p...",
+          "text": ". However, whenever the set of explanations is very large, outputting the entire set might be prohibitively expensive. Moreover, it is questionable the practical usefulness of flooding the user with a very large number of explanations, many of them possibly differing only marginally. In this case, one can argue that it would be practically more useful to compute a small, sufficiently diverse subset of the set of why-provenance explanations. The present work initiates the study of the latter problem. In particular, we formalize the problem of interest as an optimization problem, and, after showing that it is highly intractable (it is NP-hard even in data complexity), we investigate whether ILP optimization solvers can be employed towards practical solutions. Our main finding is that this is achievable as long as we keep the requested set of explanations small, or we employ approximation algorithms (with error guarantees).",
+          "score": 0.9886
+        }
+      ],
+      "total_latency_ms": 1468.92,
+      "tokens": 1195,
+      "estimated_cost_usd": 9.9e-05,
+      "is_idk": false
+    },
+    {
+      "id": 9,
+      "question": "How does the Helmholtz Component Flow Matching architecture isolate anomaly signals in time series without requiring full Jacobian-trace estimation?",
+      "expected_source": "kb",
+      "split": "test",
+      "kb_file": "arxiv_2610.25059v1_HCFM_Helmholtz_Component_Flow_Matching_for_Time_Series_Anoma.txt",
+      "answer": "To isolate anomaly signals without requiring expensive Jacobian-trace estimation over the entire vector field, HCFM parameterizes the vector field prediction network with three separate heads: a transport head, a compression head, and a residual head [1]. \n\nSpecifically:\n* **The transport head** is constrained to be divergence-free, ensuring it handles volume-preserving nominal transport [1, 3].\n* **The compression head** is where divergence estimation is restricted, isolating the local density-changing behavior (expansion and contraction) that carries anomaly-sensitive information [1, 3].\n* **The residual head** is a lightweight component that absorbs any remaining mismatch [1, 3].",
+      "routing_mode": "cascade_router",
+      "sources_queried": [
+        "kb"
+      ],
+      "router_decision": "kb_sufficient",
+      "router_fallback": false,
+      "confidence_score": 0.7871,
+      "citation_source_types": [
+        "kb"
+      ],
+      "citation_files": [
+        "arxiv_2610.25059v1_HCFM_Helmholtz_Component_Flow_Matching_for_Time_Series_Anoma.txt"
+      ],
+      "citations": [
+        {
+          "id": 1,
+          "source": "arxiv_2610.25059v1_HCFM_Helmholtz_Component_Flow_Matching_for_Time_Series_Anoma.txt",
+          "source_type": "kb",
+          "url": null,
+          "page": 1,
+          "snippet": "Flow Matching (FM) is an efficient simulation-free approach for training flow-based generative models, making it a promising foundation for scalable time-series anomaly detection (TSAD). However, standard FM learns a monolithic vector field in which...",
+          "text": "Flow Matching (FM) is an efficient simulation-free approach for training flow-based generative models, making it a promising foundation for scalable time-series anomaly detection (TSAD). However, standard FM learns a monolithic vector field in which nominal transport and local density-changing behavior are entangled. This creates a central challenge for TSAD; local expansion and contraction carry crucial anomaly-sensitive information, yet isolating this signal requires expensive Jacobian-trace estimation over the entire field. We propose \\emph{Helmholtz Component Flow Matching} (HCFM), an unsupervised TSAD framework that parameterizes the vector field prediction network with separate transport, compression, and residual heads. The transport head is constrained to be divergence-free, so divergence estimation is restricted to the compression head, while a lightweight residual head absorbs the remaining mismatch",
+          "score": 0.9974
+        }
+      ],
+      "total_latency_ms": 1579.41,
+      "tokens": 1248,
+      "estimated_cost_usd": 0.000125,
+      "is_idk": false
+    },
+    {
+      "id": 10,
+      "question": "How does the RemoteANN vector search engine minimize cloud object storage request fees and network I/O during similarity queries?",
+      "expected_source": "kb",
+      "split": "test",
+      "kb_file": "arxiv_2610.25172v1_RemoteANN_A_Native_Vector_Search_Engine_for_Cloud_Object_Sto.txt",
+      "answer": "To minimize cloud object storage request fees and network I/O during similarity queries, RemoteANN utilizes a tailored data layout and query engine approach, which includes:\n\n* **Coupling IVF and RaBitQ:** It pairs an Inverted File (IVF) index with RaBitQ quantization [1].\n* **Data Reordering:** It uses inter-cluster and intra-cluster data reordering to improve data locality [1].\n* **Query Engine Optimizations:** Its query engine combines cluster pruning, fine-grained Range-GET requests, request merging, and local NVMe SSD caching, which dramatically reduces discrete storage requests and network transfer volume [1].",
+      "routing_mode": "cascade_router",
+      "sources_queried": [
+        "kb"
+      ],
+      "router_decision": "kb_sufficient",
+      "router_fallback": false,
+      "confidence_score": 0.8678,
+      "citation_source_types": [
+        "kb"
+      ],
+      "citation_files": [
+        "arxiv_2610.25172v1_RemoteANN_A_Native_Vector_Search_Engine_for_Cloud_Object_Sto.txt"
+      ],
+      "citations": [
+        {
+          "id": 1,
+          "source": "arxiv_2610.25172v1_RemoteANN_A_Native_Vector_Search_Engine_for_Cloud_Object_Sto.txt",
+          "source_type": "kb",
+          "url": null,
+          "page": 1,
+          "snippet": "To resolve these challenges, we present RemoteANN, a vector search engine explicitly co-designed for cloud object storage across indexing and querying. To mitigate the dominant network I/O bottleneck, RemoteANN couples an Inverted File (IVF) index wi...",
+          "text": "To resolve these challenges, we present RemoteANN, a vector search engine explicitly co-designed for cloud object storage across indexing and querying. To mitigate the dominant network I/O bottleneck, RemoteANN couples an Inverted File (IVF) index with RaBitQ quantization, further optimized by inter-cluster and intra-cluster data reordering for improved data locality. Building on this tailored data layout, RemoteANN's query engine combines cluster pruning, fine-grained Range-GET requests, request merging, and local NVMe SSD caching, dramatically reducing discrete storage requests and network transfer volume without sacrificing accuracy. To address the index construction bottleneck, we further develop QGKMeans, which substantially reduces construction latency without compromising clustering quality",
+          "score": 0.9977
+        }
+      ],
+      "total_latency_ms": 999.61,
+      "tokens": 1104,
+      "estimated_cost_usd": 0.000113,
+      "is_idk": false
+    },
+    {
+      "id": 11,
+      "question": "What diagnostic methodology does the MemDerive benchmark use to expose failures in agent memory systems over evolving histories?",
+      "expected_source": "kb",
+      "split": "test",
+      "kb_file": "arxiv_2610.25373v1_MemDerive_A_Diagnostic_Benchmark_for_Agent_Memory_over_Evolv.txt",
+      "answer": "To expose failures in agent memory systems over evolving histories, the MemDerive benchmark uses the following diagnostic methodology:\n\n* **Symbolic Scenario Specification:** It specifies each scenario symbolically and derives exact gold answers using Datalog [2].\n* **Gold Derivation DAG and Supporting Events:** It records the gold derivation DAG (Directed Acyclic Graph) and the supporting events for every query [2].\n* **Node Probing:** It evaluates answer reliability, diagnoses failures by probing the nodes of the gold derivation DAG, and tracks whether answers stay correct as new events arrive [3].",
+      "routing_mode": "cascade_router",
+      "sources_queried": [
+        "kb"
+      ],
+      "router_decision": "kb_sufficient",
+      "router_fallback": false,
+      "confidence_score": 0.8583,
+      "citation_source_types": [
+        "kb",
+        "kb"
+      ],
+      "citation_files": [
+        "arxiv_2610.25373v1_MemDerive_A_Diagnostic_Benchmark_for_Agent_Memory_over_Evolv.txt",
+        "arxiv_2610.25373v1_MemDerive_A_Diagnostic_Benchmark_for_Agent_Memory_over_Evolv.txt"
+      ],
+      "citations": [
+        {
+          "id": 2,
+          "source": "arxiv_2610.25373v1_MemDerive_A_Diagnostic_Benchmark_for_Agent_Memory_over_Evolv.txt",
+          "source_type": "kb",
+          "url": null,
+          "page": 1,
+          "snippet": "Long-running agents rely on memory of their past interactions for task state, such as what has been completed and which conditions still hold. Such state is usually a derived state. No record states it, and it must be computed by rules from multiple...",
+          "text": "Long-running agents rely on memory of their past interactions for task state, such as what has been completed and which conditions still hold. Such state is usually a derived state. No record states it, and it must be computed by rules from multiple records of an evolving history. Existing memory benchmarks score only the final answer, with no reference for the intermediate states behind it. A wrong answer therefore cannot be traced to the state that was missed, and a state that silently became outdated goes undetected. We present MemDerive, a diagnostic benchmark for agent memory over evolving data. It specifies each scenario symbolically, derives exact gold answers with Datalog, records the gold derivation DAG and the supporting events of every query, and renders the history in natural language with fictional entities and distractors. Its 10 scenarios contain 4,692 events and 1,503 queries whose difficulty varies along access, evolution, and composition",
+          "score": 0.9883
+        },
+        {
+          "id": 3,
+          "source": "arxiv_2610.25373v1_MemDerive_A_Diagnostic_Benchmark_for_Agent_Memory_over_Evolv.txt",
+          "source_type": "kb",
+          "url": null,
+          "page": 1,
+          "snippet": ". Its 10 scenarios contain 4,692 events and 1,503 queries whose difficulty varies along access, evolution, and composition. On this ground truth, MemDerive evaluates answer reliability, diagnoses failures by probing the nodes of the gold derivation D...",
+          "text": ". Its 10 scenarios contain 4,692 events and 1,503 queries whose difficulty varies along access, evolution, and composition. On this ground truth, MemDerive evaluates answer reliability, diagnoses failures by probing the nodes of the gold derivation DAG, and tracks whether answers stay correct as events arrive. Our evaluation of four memory systems reveals failures that final-answer benchmarks hide. On derived state, every memory system falls behind simple BM25 retrieval, although the same answer model reaches 96.01% when given the supporting events. Most failures are ungathered, as a system holds the missing intermediate state but does not retrieve it for the question that needs it. Memory systems also rarely propagate implicit changes, which no new record states. These results suggest three principles for memory design. Gather inputs along the derivation, store rules with their versions, and maintain derived states through recorded dependencies.",
+          "score": 0.9745
+        }
+      ],
+      "total_latency_ms": 1194.7,
+      "tokens": 1305,
+      "estimated_cost_usd": 0.000124,
+      "is_idk": false
+    },
+    {
+      "id": 12,
+      "question": "How does the SARP indexing scheme resolve the tradeoff between prefix-matching latency and crash-recovery time for on-SSD KVCache?",
+      "expected_source": "kb",
+      "split": "test",
+      "kb_file": "arxiv_2610.26849v1_SARP_An_On-SSD_Index_for_KVCache_with_Fast_Prefix_Matching_a.txt",
+      "answer": "SARP resolves the tension between prefix-matching performance and recovery time through the following mechanisms:\n\n* **Eliminating Full Index Rebuilds:** Like other on-SSD indexes, SARP avoids the lengthy rebuild times associated with snapshot-backed in-memory indexes after a crash or restart [1]. It achieves fast recovery by restoring its compact, sparse routing directory directly from a snapshot [2, 3].\n* **Sparse In-Memory Routing & Segment Grouping:** SARP relies on the core insight that extending a matched prefix over a short span typically requires distinguishing only a few token sequences, making sparse in-memory routing state sufficient [1]. It groups consecutive block IDs and metadata into segments to amortize storage accesses across multiple blocks [2].\n* **Optimized Prefix Matching:** A compact in-memory routing directory identifies candidate segments using entries at selected block positions [2]. SARP then limits segment retrievals, uses compact filters to prioritize candidates with longer potential matches, and verifies block IDs against the query before reusing the corresponding KVCache blocks [2, 3].",
+      "routing_mode": "cascade_router",
+      "sources_queried": [
+        "kb"
+      ],
+      "router_decision": "kb_sufficient",
+      "router_fallback": false,
+      "confidence_score": 0.8484,
+      "citation_source_types": [
+        "kb",
+        "kb"
+      ],
+      "citation_files": [
+        "arxiv_2610.26849v1_SARP_An_On-SSD_Index_for_KVCache_with_Fast_Prefix_Matching_a.txt",
+        "arxiv_2610.26849v1_SARP_An_On-SSD_Index_for_KVCache_with_Fast_Prefix_Matching_a.txt"
+      ],
+      "citations": [
+        {
+          "id": 1,
+          "source": "arxiv_2610.26849v1_SARP_An_On-SSD_Index_for_KVCache_with_Fast_Prefix_Matching_a.txt",
+          "source_type": "kb",
+          "url": null,
+          "page": 1,
+          "snippet": "Distributed LLM serving relies on a global index to locate reusable key-value cache (KVCache) blocks through prefix matching. Losing the index after a crash or restart forces affected requests to recompute existing KVCache on GPUs. Persisting the ind...",
+          "text": "Distributed LLM serving relies on a global index to locate reusable key-value cache (KVCache) blocks through prefix matching. Losing the index after a crash or restart forces affected requests to recompute existing KVCache on GPUs. Persisting the index restores access after a failure. Existing persistent indexes face a tension between prefix-matching performance and recovery time. A snapshot-backed in-memory index supports fast prefix matching, but rebuilding the full index delays recovery. An on-SSD index avoids this rebuild, but adds storage accesses to prefix matching. Our core insight is that extending a matched prefix over a short span typically requires distinguishing only a few token sequences, suggesting that sparse in-memory routing state may suffice. Prefix matching also accesses block metadata in sequence order, allowing metadata for consecutive blocks to be retrieved together",
+          "score": 0.9663
+        },
+        {
+          "id": 2,
+          "source": "arxiv_2610.26849v1_SARP_An_On-SSD_Index_for_KVCache_with_Fast_Prefix_Matching_a.txt",
+          "source_type": "kb",
+          "url": null,
+          "page": 1,
+          "snippet": ". Prefix matching also accesses block metadata in sequence order, allowing metadata for consecutive blocks to be retrieved together. We present SARP (Sparse Adaptive Routing and Packing), an on-SSD KVCache index for fast recovery and prefix matching....",
+          "text": ". Prefix matching also accesses block metadata in sequence order, allowing metadata for consecutive blocks to be retrieved together. We present SARP (Sparse Adaptive Routing and Packing), an on-SSD KVCache index for fast recovery and prefix matching. SARP groups consecutive block IDs and metadata into segments to amortize storage accesses across multiple blocks. A compact in-memory routing directory identifies candidate segments using entries at selected block positions. SARP limits segment retrievals and uses compact filters to prioritize candidates with longer potential matches. After retrieval, SARP verifies block IDs against the query and reuses only KVCache blocks covered by the verified prefix. After a restart, SARP restores the sparse routing directory from a snapshot",
+          "score": 0.8603
+        }
+      ],
+      "total_latency_ms": 1720.21,
+      "tokens": 1342,
+      "estimated_cost_usd": 0.00015,
+      "is_idk": false
+    },
+    {
+      "id": 16,
+      "question": "What is the role of multi-head self-attention in the original Transformer architecture?",
+      "expected_source": "wikipedia",
+      "split": "test",
+      "kb_file": "",
+      "answer": "I don't know based on the available sources.",
+      "routing_mode": "cascade_router",
+      "sources_queried": [
+        "kb"
+      ],
+      "router_decision": "kb_sufficient",
+      "router_fallback": false,
+      "confidence_score": 0.3409,
+      "citation_source_types": [
+        "kb",
+        "kb",
+        "kb",
+        "kb",
+        "kb"
+      ],
+      "citation_files": [
+        "arxiv_2610.37645v1_Multi-State_Linear_Attention_with_Generalized_Second-Order_R.txt",
+        "arxiv_2610.28223v1_Local_Inference_of_LLMs_on_Long_Contexts_A_Data_Systems_Pers.txt",
+        "arxiv_2610.37645v1_Multi-State_Linear_Attention_with_Generalized_Second-Order_R.txt",
+        "arxiv_2610.37178v1_INTR++_INterpretable_TRansformer_with_better_Accuracy,_Inter.txt",
+        "arxiv_2610.37068v1_Hierarchical_Low-Rank_Reparameterization_for_Parameter-Effic.txt"
+      ],
+      "citations": [
+        {
+          "id": 1,
+          "source": "arxiv_2610.37645v1_Multi-State_Linear_Attention_with_Generalized_Second-Order_R.txt",
+          "source_type": "kb",
+          "url": null,
+          "page": 1,
+          "snippet": "Self-attention plays a key role in long-sequence modeling, but its quadratic time complexity fundamentally limits the scaling of Large Language Models. Recently, Multi-State Linear Attention (MSLA) mechanisms have been proposed to make sequence model...",
+          "text": "Self-attention plays a key role in long-sequence modeling, but its quadratic time complexity fundamentally limits the scaling of Large Language Models. Recently, Multi-State Linear Attention (MSLA) mechanisms have been proposed to make sequence modeling more efficient by splitting the context into segments and compressing each in its own memory state. MSLA aggregates the information extracted from each memory state using only the mean alignment between a query and each segment's keys, ignoring how the alignment is distributed within the segment. In order to model the relevance of a segment to a query more comprehensively and incorporate the variance of the alignment in the aggregation, we propose MERLIN (MomEnt Routing for multi-state LINear attention), a method that tracks the first and second moments of each segment's keys",
+          "score": 0.9451
+        },
+        {
+          "id": 2,
+          "source": "arxiv_2610.28223v1_Local_Inference_of_LLMs_on_Long_Contexts_A_Data_Systems_Pers.txt",
+          "source_type": "kb",
+          "url": null,
+          "page": 1,
+          "snippet": ". Rather than characterizing a single model on one GPU, we analyze how different models behave across several GPU generations. This lets us uncover not just individual bottlenecks but broader trends in where inefficiencies arise. Our analysis confirm...",
+          "text": ". Rather than characterizing a single model on one GPU, we analyze how different models behave across several GPU generations. This lets us uncover not just individual bottlenecks but broader trends in where inefficiencies arise. Our analysis confirms that, as expected, self-attention dominates the runtime for long-context inference. More unexpectedly, our evaluation reveals that the current structure of self-attention leaves key GPU resources significantly underutilized, and the newest GPU is often the least well served. Many of these findings are fundamentally data management problems, from paging the KV cache to improving cache utilization and synchronization in the GPU, which is why we bring this study to the Data Systems community. To engage this community, we present our findings as a series of experimental observations and formulate recommendations for future work.",
+          "score": 0.0173
+        },
+        {
+          "id": 3,
+          "source": "arxiv_2610.37645v1_Multi-State_Linear_Attention_with_Generalized_Second-Order_R.txt",
+          "source_type": "kb",
+          "url": null,
+          "page": 1,
+          "snippet": "Title: Multi-State Linear Attention with Generalized Second-Order Routing Authors: Hee Seung Hwang, Sanghyuk Chun, Xindi Wu, Olga Russakovsky, Zhiwei Deng Categories: cs.CL Published: 2026-10-27 ArXiv ID: 2610.37645v1 URL: http://arxiv.org/abs/2610.3...",
+          "text": "Title: Multi-State Linear Attention with Generalized Second-Order Routing\nAuthors: Hee Seung Hwang, Sanghyuk Chun, Xindi Wu, Olga Russakovsky, Zhiwei Deng\nCategories: cs.CL\nPublished: 2026-10-27\nArXiv ID: 2610.37645v1\nURL: http://arxiv.org/abs/2610.37645v1",
+          "score": 0.0008
+        },
+        {
+          "id": 4,
+          "source": "arxiv_2610.37178v1_INTR++_INterpretable_TRansformer_with_better_Accuracy,_Inter.txt",
+          "source_type": "kb",
+          "url": null,
+          "page": 1,
+          "snippet": "Title: INTR++: INterpretable TRansformer with better Accuracy, Interpretability, and Adaptability Authors: Dipanjyoti Paul, Arpita Chowdhury, Maneet Chatterjee, Daichi Kitaguchi, Tanya Berger-Wolf, Tetsuya Sakurai, Wei-Lun Chao Categories: cs.CV Publ...",
+          "text": "Title: INTR++: INterpretable TRansformer with better Accuracy, Interpretability, and Adaptability\nAuthors: Dipanjyoti Paul, Arpita Chowdhury, Maneet Chatterjee, Daichi Kitaguchi, Tanya Berger-Wolf, Tetsuya Sakurai, Wei-Lun Chao\nCategories: cs.CV\nPublished: 2026-10-27\nArXiv ID: 2610.37178v1\nURL: http://arxiv.org/abs/2610.37178v1",
+          "score": 0.0002
+        },
+        {
+          "id": 5,
+          "source": "arxiv_2610.37068v1_Hierarchical_Low-Rank_Reparameterization_for_Parameter-Effic.txt",
+          "source_type": "kb",
+          "url": null,
+          "page": 1,
+          "snippet": ". Under comparable trainable-parameter budgets, our method combined with LoRA or DoRA achieves better performance. Furthermore,when the parameter count of the original methods is compressed by approximately an order of magnitude, our method can still...",
+          "text": ". Under comparable trainable-parameter budgets, our method combined with LoRA or DoRA achieves better performance. Furthermore,when the parameter count of the original methods is compressed by approximately an order of magnitude, our method can still maintain competitive task performance and even surpass the corresponding baselines in average accuracy across the eight commonsense reasoning benchmarks.",
+          "score": 0.0
+        }
+      ],
+      "total_latency_ms": 873.83,
+      "tokens": 1015,
+      "estimated_cost_usd": 7.9e-05,
+      "is_idk": true
+    },
+    {
+      "id": 17,
+      "question": "How does Dijkstra's algorithm determine the shortest path from a single source vertex in a non-negative weighted graph?",
+      "expected_source": "wikipedia",
+      "split": "test",
+      "kb_file": "",
+      "answer": "I don't know based on the available sources.",
+      "routing_mode": "cascade_router",
+      "sources_queried": [
+        "kb"
+      ],
+      "router_decision": "kb_sufficient",
+      "router_fallback": false,
+      "confidence_score": 0.0015,
+      "citation_source_types": [
+        "kb",
+        "kb",
+        "kb",
+        "kb",
+        "kb"
+      ],
+      "citation_files": [
+        "arxiv_2610.24856v1_Enumerating_Small_Potential_Maximal_Cliques_with_Fixed-Param.txt",
+        "arxiv_2610.24856v1_Enumerating_Small_Potential_Maximal_Cliques_with_Fixed-Param.txt",
+        "arxiv_2610.37635v1_Classical_Verification_of_Quantum_Computation_Beyond_the_Pol.txt",
+        "arxiv_2610.36458v1_A_Simple_Presentation_of_Robust_Membership_Inference_Attacks.txt",
+        "arxiv_2610.22818v1_FuseRAG_Fusing_Structure_and_Evidence_into_Inference_for_Cos.txt"
+      ],
+      "citations": [
+        {
+          "id": 1,
+          "source": "arxiv_2610.24856v1_Enumerating_Small_Potential_Maximal_Cliques_with_Fixed-Param.txt",
+          "source_type": "kb",
+          "url": null,
+          "page": 1,
+          "snippet": "A potential maximal clique (PMC) of a graph $G$ is a nonempty vertex set that forms a maximal clique in some minimal triangulation of $G$. Listing the PMCs of a graph is a key step in exact algorithms for computing treewidth, minimum fill-in, and rel...",
+          "text": "A potential maximal clique (PMC) of a graph $G$ is a nonempty vertex set that forms a maximal clique in some minimal triangulation of $G$. Listing the PMCs of a graph is a key step in exact algorithms for computing treewidth, minimum fill-in, and related graph parameters. We present a deterministic algorithm that enumerates all PMCs of cardinality at most $k$ in an $n$-vertex graph $G$, without repetition, with delay $2^{O(k^3)}n^4\\log n$. This bound also covers the preprocessing time before the first output, the time from the last output to termination, and the total running time when no such PMC exists. At the core of our enumeration algorithm is a procedure that solves the following constrained search problem within the same time bound: given sets of required and excluded vertices $I,O\\subseteq V(G)$, find a PMC $\u03a9$ of size at most $k$ satisfying $I\\subseteq\u03a9$ and $\u03a9\\cap O=\\emptyset$, or determine that none exists",
+          "score": 0.0042
+        },
+        {
+          "id": 2,
+          "source": "arxiv_2610.24856v1_Enumerating_Small_Potential_Maximal_Cliques_with_Fixed-Param.txt",
+          "source_type": "kb",
+          "url": null,
+          "page": 1,
+          "snippet": "Our approach builds on the \\emph{recursive understanding} technique of Chitnis et al.~\\cite{chitnis2016} and the reduction to unbreakable graphs of Lokshtanov et al.~\\cite{lokshtanov2018}. A graph is $(q,k)$-unbreakable if no removal of at most $k$ v...",
+          "text": "Our approach builds on the \\emph{recursive understanding} technique of Chitnis et al.~\\cite{chitnis2016} and the reduction to unbreakable graphs of Lokshtanov et al.~\\cite{lokshtanov2018}. A graph is $(q,k)$-unbreakable if no removal of at most $k$ vertices leaves two disjoint unions of connected components that each contain more than $q$ vertices. We first solve constrained PMC search on $(q,k)$-unbreakable graphs, and then apply this procedure to replace separated subgraphs with graphs of size $2^{O(k^2)}$ that preserve the existence of a constrained solution for every graph attached along the shared boundary.",
+          "score": 0.0002
+        },
+        {
+          "id": 3,
+          "source": "arxiv_2610.37635v1_Classical_Verification_of_Quantum_Computation_Beyond_the_Pol.txt",
+          "source_type": "kb",
+          "url": null,
+          "page": 1,
+          "snippet": "The language is a variant of recursive Fourier sampling in which code tables encode secrets that address data tables. The tables are evaluated recursively, and the oracle stores only the leaves. The quantum algorithm recovers every secret exactly, an...",
+          "text": "The language is a variant of recursive Fourier sampling in which code tables encode secrets that address data tables. The tables are evaluated recursively, and the oracle stores only the leaves. The quantum algorithm recovers every secret exactly, and the verifier checks the prover's secrets recursively against random code entries. The recursion restricts the input in a correlated way, as the same secret fixes the code bits and chooses the free coordinate, so H\u00e5stad's switching lemma does not apply. We prove a switching theorem for these restrictions, which may be of independent interest. For instances of sufficient height, no constant-depth circuit of size $2^{\\mathrm{poly}(n)}$ changes its output with probability above $2^{-\u03a9(n)}$ when the answer of a random instance is flipped by changing a single leaf.",
+          "score": 0.0
+        },
+        {
+          "id": 4,
+          "source": "arxiv_2610.36458v1_A_Simple_Presentation_of_Robust_Membership_Inference_Attacks.txt",
+          "source_type": "kb",
+          "url": null,
+          "page": 1,
+          "snippet": "Abstract: In a membership inference attack, an attacker is given the data of a particular individual, and tries to determine if that individual was included in a particular dataset, given some kind of statistics derived from the dataset or a model tr...",
+          "text": "Abstract:\nIn a membership inference attack, an attacker is given the data of a particular individual, and tries to determine if that individual was included in a particular dataset, given some kind of statistics derived from the dataset or a model trained on the dataset. Roughly, a membership inference attack is robust if it succeeds even when the statistics are highly noisy, regardless of how that noise is introduced. We give a simple presentation of robust membership inference attacks for mean estimation, covering both multivariate Gaussian distributions and binary product distributions. We also give a summary of the literature on robust membership inference, covering history, extensions, and connections to other research areas.",
+          "score": 0.0
+        },
+        {
+          "id": 5,
+          "source": "arxiv_2610.22818v1_FuseRAG_Fusing_Structure_and_Evidence_into_Inference_for_Cos.txt",
+          "source_type": "kb",
+          "url": null,
+          "page": 1,
+          "snippet": "Title: FuseRAG: Fusing Structure and Evidence into Inference for Cost-Efficient Graph-based RAG Authors: Tingqi Wang, Yingshu Li, Zhipeng Cai Categories: cs.DB Published: 2026-10-16 ArXiv ID: 2610.22818v1 URL: http://arxiv.org/abs/2610.22818v1...",
+          "text": "Title: FuseRAG: Fusing Structure and Evidence into Inference for Cost-Efficient Graph-based RAG\nAuthors: Tingqi Wang, Yingshu Li, Zhipeng Cai\nCategories: cs.DB\nPublished: 2026-10-16\nArXiv ID: 2610.22818v1\nURL: http://arxiv.org/abs/2610.22818v1",
+          "score": 0.0
+        }
+      ],
+      "total_latency_ms": 968.6,
+      "tokens": 1172,
+      "estimated_cost_usd": 9e-05,
+      "is_idk": true
+    },
+    {
+      "id": 18,
+      "question": "How does a Bloom filter achieve space efficiency and why can it yield false positives but never false negatives?",
+      "expected_source": "wikipedia",
+      "split": "test",
+      "kb_file": "",
+      "answer": "Based on the provided sources, a Bloom filter achieves space efficiency by storing only hash values instead of explicitly storing every actual key or item [1, 5]. Constructed using multiple hash functions, it requires significantly less space than other data structures used to represent sets [1, 2]. \n\nA Bloom filter can yield false positives because multiple distinct elements may share the same hash values across the hash functions [2]. Consequently, querying a non-existent element can return a positive result if another element with those same hash values has already been added to the filter [2]. \n\nHowever, Bloom filters never yield false negatives because if an element is genuinely part of the set, its corresponding hash values will have been correctly marked. Therefore, a query will unequivocally determine non-membership (\"definitely not in set\") or potential membership (\"possibly in set\") without ever falsely missing an actual member [1, 3].",
+      "routing_mode": "cascade_router",
+      "sources_queried": [
+        "kb",
+        "wikipedia",
+        "web"
+      ],
+      "router_decision": "escalate_web_wikipedia",
+      "router_fallback": false,
+      "confidence_score": 0.999,
+      "citation_source_types": [
+        "wikipedia"
+      ],
+      "citation_files": [
+        "Bloom filters in bioinformatics"
+      ],
+      "citations": [
+        {
+          "id": 2,
+          "source": "Bloom filters in bioinformatics",
+          "source_type": "wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Bloom_filters_in_bioinformatics",
+          "page": null,
+          "snippet": "Bloom filters are space-efficient probabilistic data structures used to test whether an element is a part of a set. Bloom filters require much less space than other data structures for representing sets, however the downside of Bloom filters is that...",
+          "text": "Bloom filters are space-efficient probabilistic data structures used to test whether an element is a part of a set. Bloom filters require much less space than other data structures for representing sets, however the downside of Bloom filters is that there is a false positive rate when querying the data structure. Since multiple elements may have the same hash values for a number of hash functions, then there is a probability that querying for a non-existent element may return a positive if another element with the same hash values has been added to the Bloom filter. Assuming that the hash function has equal probability of selecting any index of the Bloom filter, the false positive rate of querying a Bloom filter is a function of the number of bits, number of hash functions and number of elements of the Bloom filter. This allows the user to manage the risk of a getting a false positive by compromising on the space benefits of the Bloom filter.",
+          "score": 0.9991
+        }
+      ],
+      "total_latency_ms": 8822.97,
+      "tokens": 1509,
+      "estimated_cost_usd": 0.000154,
+      "is_idk": false
+    },
+    {
+      "id": 19,
+      "question": "How does TCP congestion control use slow start and additive-increase/multiplicative-decrease (AIMD) to prevent network congestion?",
+      "expected_source": "wikipedia",
+      "split": "test",
+      "kb_file": "",
+      "answer": "TCP congestion control uses a combination of slow start and additive-increase/multiplicative-decrease (AIMD) schemes (along with a congestion window, CWND) to achieve congestion avoidance and prevent sending more data than the network can forward [1], [2]. \n\nHere is how they work together:\n\n* **Slow Start:** This phase is used at the very beginning of a connection (from a cold start) or whenever a coarse-grained timeout occurs [4], [5]. It rapidly increases the congestion window exponentially rather than linearly [4], [5]. Initially, the congestion window size (`cwnd`) starts at 1, 2, 4, or 10 MSS [1], or specifically `cwnd = 1` MSS [3]. With each acknowledgment (ACK) received, the value can be increased by 1 MSS, effectively doubling the window size each RTT [1], [4], [5]. \n* **Transition to AIMD:** Slow start continues to increase the window until it reaches a threshold value (`ssthresh`) or a packet loss occurs [3], [4], [5]. Once the flow reaches the slow start threshold, slow start switches to AIMD [3], [5].\n* **Additive Increase/Multiplicative Decrease (AIMD):** When operating closer to the network's available capacity, AIMD probes more slowly by increasing the congestion window linearly (adding 1 MSS per RTT, or according to the number of received acknowledgements) [3], [5]. When congestion or packet loss is detected, the system takes corrective measures\u2014such as cutting the congestion window in half or switching back to the slow start restart phase depending on the specific TCP version (e.g., TCP-Tahoe resetting `cwnd` to 1 upon a timeout or triple dup-ack) [3], [4], [5].",
+      "routing_mode": "cascade_router",
+      "sources_queried": [
+        "kb",
+        "wikipedia",
+        "web"
+      ],
+      "router_decision": "escalate_web_wikipedia",
+      "router_fallback": false,
+      "confidence_score": 0.9995,
+      "citation_source_types": [
+        "web",
+        "wikipedia",
+        "web",
+        "web",
+        "web"
+      ],
+      "citation_files": [
+        "TCP congestion control - Wikipedia",
+        "TCP congestion control",
+        "TCP versions and AIMD",
+        "6.3 TCP Congestion Control \u2014 Computer Networks: A Systems Approach Version 6.2-dev documentation",
+        "AIMD Algorithm - GeeksforGeeks"
+      ],
+      "citations": [
+        {
+          "id": 1,
+          "source": "TCP congestion control - Wikipedia",
+          "source_type": "web",
+          "url": "https://en.wikipedia.org/wiki/TCP_congestion_control",
+          "page": null,
+          "snippet": "Wikipedia The Free Encyclopedia  ## Contents  # TCP congestion control  Transmission Control Protocol (TCP) uses one of several congestion control algorithms that include various aspects of an additive increase/multiplicative decrease (AIMD) scheme,...",
+          "text": "Wikipedia\nThe Free Encyclopedia\n\n## Contents\n\n# TCP congestion control\n\nTransmission Control Protocol (TCP) uses one of several congestion control algorithms that include various aspects of an additive increase/multiplicative decrease (AIMD) scheme, along with other schemes including slow start and a congestion window (CWND), to achieve congestion avoidance. [...] ## Slow start\n\nSlow start, defined by RFC \"RFC (identifier)\") 5681, is part of the congestion control strategy used by TCP in conjunction with other algorithms to avoid sending more data than the network is capable of forwarding, that is, to avoid causing network congestion. [...] Slow start begins initially with a congestion window size (CWND) of 1, 2, 4 or 10 MSS.:\u200a1 The value for the congestion window size can be increased by 1 MSS with each acknowledgment \"Acknowledgement (data networks)\") (ACK) received, effectively doubling the window size each RTT.",
+          "score": 0.9998
+        },
+        {
+          "id": 2,
+          "source": "TCP congestion control",
+          "source_type": "wikipedia",
+          "url": "https://en.wikipedia.org/wiki/TCP_congestion_control",
+          "page": null,
+          "snippet": "Transmission Control Protocol (TCP) uses one of several congestion control algorithms that include various aspects of an additive increase/multiplicative decrease (AIMD) scheme, along with other schemes including slow start and a congestion window (C...",
+          "text": "Transmission Control Protocol (TCP) uses one of several congestion control algorithms that include various aspects of an additive increase/multiplicative decrease (AIMD) scheme, along with other schemes including slow start and a congestion window (CWND), to achieve congestion avoidance.",
+          "score": 0.9997
+        },
+        {
+          "id": 3,
+          "source": "TCP versions and AIMD",
+          "source_type": "web",
+          "url": "https://stackoverflow.com/questions/36405347/tcp-versions-and-aimd",
+          "page": null,
+          "snippet": "# Slow Start  Any TCP congestion control algorithm starts from congestion window size `cwnd = 1` MSS (Maximum Segment Size as congestion window size is scaled by bytes) then it starts an additive increase according to the number of received acknowled...",
+          "text": "# Slow Start\n\nAny TCP congestion control algorithm starts from congestion window size `cwnd = 1` MSS (Maximum Segment Size as congestion window size is scaled by bytes) then it starts an additive increase according to the number of received acknowledgements until it reaches the slow start threshold value ssthresh that's the intial advertised window size. [...] In particular we suggest that we decrease the Congestion Window Size by a factor of 2 on packet loss. However am I right in thinking that there are in fact multiple approaches?\n\nIn TCP-Tahoe we actually don't do AIMD at all. When we time-out or a triple dup-ack occurs, the CWND is set to 1, and slow-start begins again (Note this is not a multiplicative decrease). [...] `cwnd = 8 + 1  ( 1 / 8)` and this is repeated 8 times (because all segments have been acknowledged). So after adding `1 / 8` to cwnd 8 times, the result is 1 MSS added to the last known cwnd which is 8 i.e. new cwnd is 9. Image 4: Figure 1 - Slow Start\n\nSlow Start Algorithm\n\n```\nIf cwnd < ssthresh then\n    Each time an Ack is received:\n    cwnd = cwnd + MSS\nelse / cwnd >= ssthresh /\n    Each time an Ack is received :\n    cwnd = cwnd + MSS. MSS / cwnd\nendif\n```\n\n# Response to Congestion",
+          "score": 0.9992
+        },
+        {
+          "id": 4,
+          "source": "6.3 TCP Congestion Control \u2014 Computer Networks: A Systems Approach Version 6.2-dev documentation",
+          "source_type": "web",
+          "url": "https://book.systemsapproach.org/congestion/tcpcc.html",
+          "page": null,
+          "snippet": "fast recovery avoids the slow start period between 3.8 and 4 seconds in Figure 164 and instead simply cuts the congestion window in half (from 22 KB to 11 KB) and resumes additive increase. In other words, slow start is only used at the beginning of...",
+          "text": "fast recovery avoids the slow start period between 3.8 and 4 seconds in Figure 164 and instead simply cuts the congestion window in half (from 22 KB to 11 KB) and resumes additive increase. In other words, slow start is only used at the beginning of a connection and whenever a coarse-grained timeout occurs. At all other times, the congestion window is following a pure additive increase/multiplicative decrease pattern. [...] There are actually two different situations in which slow start runs. The first is at the very beginning of a connection, at which time the source has no idea how many packets it is going to be able to have in transit at a given time. (Keep in mind that today TCP runs over everything from 1-Mbps links to 40-Gbps links, so there is no way for the source to know the network\u2019s capacity.) In this situation, slow start continues to double `CongestionWindow` each RTT until there is a loss, at which [...] ## 6.3.2 Slow Start\uf0c1\n\nThe additive increase mechanism just described is the right approach to use when the source is operating close to the available capacity of the network, but it takes too long to ramp up a connection when it is starting from scratch. TCP therefore provides a second mechanism, ironically called slow start, which is used to increase the congestion window rapidly from a cold start. Slow start effectively increases the congestion window exponentially, rather than linearly.",
+          "score": 0.9984
+        },
+        {
+          "id": 5,
+          "source": "AIMD Algorithm - GeeksforGeeks",
+          "source_type": "web",
+          "url": "https://www.geeksforgeeks.org/computer-networks/aimd-algorithm",
+          "page": null,
+          "snippet": "Only TCP protocol uses the AIMD in addition to slow start restart for congestion detections and taking corrective measures.  AIMD is very compatible with Slow Start Restart. This combo is used together in almost all TCPs i.e. Tahoe, Reno, NewReno, an...",
+          "text": "Only TCP protocol uses the AIMD in addition to slow start restart for congestion detections and taking corrective measures.\n\nAIMD is very compatible with Slow Start Restart. This combo is used together in almost all TCPs i.e. Tahoe, Reno, NewReno, and Cubic. When the flow starts SSR is used, when SSR reaches the threshold then AIMD begins. When congestion is detected, AIMD switches to SSR again. The AIMD is very effective in terms of network fairness. It doesn't hurt other TCP flows. [...] AIMD probes \u2018slowly\u2019 as compared to the \u2018Slow Start\u2019 phase. Slow start increases the congestion window size exponentially (double per RTT) while AIMD increases cwnd linearly (by 1 per RTT). When TCP was introduced there was no congestion control mechanism. The TCP sender used to send the entire cwnd worth of packets at a time without caring about the packet loss at intermediary devices. The routers could not tolerate that burst of packets and thus lost the packets. Then slow start was designed [...] start was designed to overcome this situation, and thus it was named a slow start. It starts slowly compared to the original TCP sending rate and criteria, which was careless about congestion state.",
+          "score": 0.9983
+        }
+      ],
+      "total_latency_ms": 8992.46,
+      "tokens": 1868,
+      "estimated_cost_usd": 0.000227,
+      "is_idk": false
+    },
+    {
+      "id": 20,
+      "question": "What distinct purpose do convolutional layers and pooling layers serve in a convolutional neural network?",
+      "expected_source": "wikipedia",
+      "split": "test",
+      "kb_file": "",
+      "answer": "I don't know based on the available sources.",
+      "routing_mode": "cascade_router",
+      "sources_queried": [
+        "kb"
+      ],
+      "router_decision": "kb_sufficient",
+      "router_fallback": false,
+      "confidence_score": 0.1197,
+      "citation_source_types": [
+        "kb",
+        "kb",
+        "kb",
+        "kb",
+        "kb"
+      ],
+      "citation_files": [
+        "arxiv_2610.37431v1_Segmentation_Confidence_for_Arbitrary_CNNs.txt",
+        "arxiv_2610.36295v1_Detecting_and_Mitigating_Query-Based_System_Prompt_Leakage_A.txt",
+        "arxiv_2610.37216v1_Zhengrong-Spatial-Aware_1.0_Advancing_3D_Multimodal_Intellig.txt",
+        "arxiv_2610.37213v1_Retrospective_macromolecular_pool_fraction_mapping_from_conv.txt",
+        "arxiv_2610.36418v1_When_the_Application_Layer_Is_Disposable_Putting_Integrity_C.txt"
+      ],
+      "citations": [
+        {
+          "id": 1,
+          "source": "arxiv_2610.37431v1_Segmentation_Confidence_for_Arbitrary_CNNs.txt",
+          "source_type": "kb",
+          "url": null,
+          "page": 1,
+          "snippet": "Abstract: Convolutional neural networks (CNN) are widely used for medical image segmentation. However, they lack an inherent measure of confidence. Existing methods for estimating prediction uncertainty often require a custom network architecture and...",
+          "text": "Abstract:\nConvolutional neural networks (CNN) are widely used for medical image segmentation. However, they lack an inherent measure of confidence. Existing methods for estimating prediction uncertainty often require a custom network architecture and/or dedicated training setups and need to be trained from scratch. In addition, the deduction of a single confidence score per input from the uncertainty maps is not always straightforward. In this study, we explore voxel-based uncertainty estimation methods that can be added to existing segmentation pipelines without training from scratch. We also propose a novel method to estimate a single confidence score from the uncertainty maps. Our evaluations on different ROIs and modalities suggest that our confidence score can predict segmentation performance in unseen data.",
+          "score": 0.3314
+        },
+        {
+          "id": 2,
+          "source": "arxiv_2610.36295v1_Detecting_and_Mitigating_Query-Based_System_Prompt_Leakage_A.txt",
+          "source_type": "kb",
+          "url": null,
+          "page": 1,
+          "snippet": "We present AdvGuard, a model-agnostic framework for detecting and mitigating system prompt leakage. AdvGuard models cross-query relationships using a bounded semantic interaction graph, statistically filters candidate components, and converts them in...",
+          "text": "We present AdvGuard, a model-agnostic framework for detecting and mitigating system prompt leakage. AdvGuard models cross-query relationships using a bounded semantic interaction graph, statistically filters candidate components, and converts them into line graphs for graph convolutional network (GCN) classification. This approach captures multi-hop patterns in query similarity that distinguish coordinated extraction from benign workflows. A lightweight prompt-level detector provides protection before sufficient interaction history accumulates, and the framework supports black-box LLM deployments.",
+          "score": 0.0115
+        },
+        {
+          "id": 3,
+          "source": "arxiv_2610.37216v1_Zhengrong-Spatial-Aware_1.0_Advancing_3D_Multimodal_Intellig.txt",
+          "source_type": "kb",
+          "url": null,
+          "page": 1,
+          "snippet": ". On a separately collected styled split, accuracy improves from 14.9% to 55.1%, indicating transfer beyond the original training set. The Qwen3-VL pipeline is likewise implemented end-to-end for both 8B- and 32B-scale models using mixed-domain QLoRA...",
+          "text": ". On a separately collected styled split, accuracy improves from 14.9% to 55.1%, indicating transfer beyond the original training set. The Qwen3-VL pipeline is likewise implemented end-to-end for both 8B- and 32B-scale models using mixed-domain QLoRA adaptation. The resulting accuracy improves from 20.74% to 45.27% for Qwen3-VL-8B and from 30.79% to 47.60% for Qwen3-VL-32B. Together, these results establish two complementary and reproducible adaptation pipelines for geometry-aware and general-purpose multimodal spatial reasoning. These results establish a reproducible engineering foundation for subsequent work on metric 3D reasoning, spatial grounding, and domain-adapted multimodal systems, while also identifying training-data composition as a central factor in preserving general multimodal capability during specialization.",
+          "score": 0.0
+        },
+        {
+          "id": 4,
+          "source": "arxiv_2610.37213v1_Retrospective_macromolecular_pool_fraction_mapping_from_conv.txt",
+          "source_type": "kb",
+          "url": null,
+          "page": 1,
+          "snippet": "Title: Retrospective macromolecular pool fraction mapping from conventional clinical MRI: a physics-guided self-supervised deep learning framework Authors: Jelmer van Lune, Miha Fuderer, Oscar van der Heide, Matteo Maspero, Martin B. Schilder, Jan Wi...",
+          "text": "Title: Retrospective macromolecular pool fraction mapping from conventional clinical MRI: a physics-guided self-supervised deep learning framework\nAuthors: Jelmer van Lune, Miha Fuderer, Oscar van der Heide, Matteo Maspero, Martin B. Schilder, Jan Willem Dankbaar, Stefano Mandija, Alessandro Sbrizzi\nCategories: physics.med-ph, cs.CV, cs.LG\nPublished: 2026-10-27\nArXiv ID: 2610.37213v1\nURL: http://arxiv.org/abs/2610.37213v1",
+          "score": 0.0
+        },
+        {
+          "id": 5,
+          "source": "arxiv_2610.36418v1_When_the_Application_Layer_Is_Disposable_Putting_Integrity_C.txt",
+          "source_type": "kb",
+          "url": null,
+          "page": 1,
+          "snippet": "Integrity constraints have been central to the relational model since its inception. However, beyond keys, single-row CHECKs, and referential integrity, most constraints are enforced by application layers today. SQL ASSERTIONs, standardized in SQL-92...",
+          "text": "Integrity constraints have been central to the relational model since its inception. However, beyond keys, single-row CHECKs, and referential integrity, most constraints are enforced by application layers today. SQL ASSERTIONs, standardized in SQL-92, remain poorly supported by major RDBMSs. This has become increasingly unacceptable due to two developments. First, LLM-driven applications and agents increasingly issue queries and updates directly against databases, bypassing application layers where invariants reside. Such code may be generated on demand and discarded afterwards, making the database the only durable component that can encode and enforce these invariants. Second, natural constraints in higher-level conceptual models, such as E/R and property graphs, become fragmented across relations under mappings chosen for performance",
+          "score": 0.0
+        }
+      ],
+      "total_latency_ms": 1245.95,
+      "tokens": 1137,
+      "estimated_cost_usd": 8.8e-05,
+      "is_idk": true
+    },
+    {
+      "id": 21,
+      "question": "What properties define a B-tree and keep it balanced during insertions and deletions?",
+      "expected_source": "wikipedia",
+      "split": "test",
+      "kb_file": "",
+      "answer": "Based on the available sources, a B-tree is defined by the following properties and mechanisms that keep it balanced:\n\n* **Definition and Structure:** A B-tree is a self-balancing, $m$-ary (multi-way) search tree that generalizes the binary search tree by allowing nodes to have more than two children (up to $m$, the order of the tree) and multiple keys per node [1, 2, 3]. It maintains sorted data and allows searches, sequential access, insertions, and deletions in logarithmic time [1, 2]. Its high branching factor reduces tree height, minimizes disk I/O operations, and optimizes it for disk storage and paged data access [2, 3]. It also ensures that interior nodes are at least half full [4].\n* **Balancing during Insertions:** To keep the B-tree balanced during insertions, you locate the correct leaf node and insert the key [2]. If the leaf node is full, it is split, and the middle key is moved up to the parent node [2, 4]. Tree depth only increases when the root is split [4].\n* **Balancing during Deletions:** A B-tree is kept balanced after deletion by merging or redistributing keys among siblings to maintain the minimum key requirement for non-root nodes [4]. A merger reduces the number of keys in the parent, which can potentially force the parent to merge or redistribute keys with its siblings [4]. The depth only changes when the root changes [4].",
+      "routing_mode": "cascade_router",
+      "sources_queried": [
+        "kb",
+        "wikipedia",
+        "web"
+      ],
+      "router_decision": "escalate_web_wikipedia",
+      "router_fallback": false,
+      "confidence_score": 0.9977,
+      "citation_source_types": [
+        "web",
+        "web"
+      ],
+      "citation_files": [
+        "B-tree | PhoenixAI Glossary",
+        "B-tree - Wikipedia"
+      ],
+      "citations": [
+        {
+          "id": 2,
+          "source": "B-tree | PhoenixAI Glossary",
+          "source_type": "web",
+          "url": "https://celerdata.com/glossary/b-tree",
+          "page": null,
+          "snippet": "Red-Black trees: Red-Black trees maintain a looser balance compared to AVL trees. They ensure that no path from the root to a leaf is more than twice as long as any other path. This property allows for fewer rotations during updates, making Red-Black...",
+          "text": "Red-Black trees: Red-Black trees maintain a looser balance compared to AVL trees. They ensure that no path from the root to a leaf is more than twice as long as any other path. This property allows for fewer rotations during updates, making Red-Black trees more efficient for frequent insertions and deletions. [...] Efficiency: B-trees support logarithmic time complexity for searches, insertions, and deletions. This efficiency stems from the balanced structure and multiple keys per node.\n Reduced tree height: The high branching factor of B-trees results in fewer levels, enhancing performance.\n Optimized for disk storage: B-trees excel in paged data access, making them ideal for databases and file systems. The structure minimizes disk accesses, speeding up data retrieval. [...] Consider inserting the key 15 into a B-tree of order 3. Start by locating the correct leaf node. Suppose the leaf node contains keys 10 and 20. Insert 15 between 10 and 20. If the leaf node is full, split it and move the middle key to the parent node. This ensures the B-tree remains balanced and maintains its properties.\n\n### Deletion\n\n#### Step-by-step deletion process",
+          "score": 0.9985
+        },
+        {
+          "id": 4,
+          "source": "B-tree - Wikipedia",
+          "source_type": "web",
+          "url": "https://en.wikipedia.org/wiki/B-tree",
+          "page": null,
+          "snippet": "{\\displaystyle O(n)} {\\displaystyle O(\\log n)} {\\displaystyle O(\\log n)} {\\displaystyle O(\\log n)} {\\displaystyle O(\\log n)} {\\displaystyle O(\\log n)} {\\displaystyle O(\\log n)}  In computer science, a B-tree is a self-balancing tree data structure th...",
+          "text": "{\\displaystyle O(n)}\n{\\displaystyle O(\\log n)}\n{\\displaystyle O(\\log n)}\n{\\displaystyle O(\\log n)}\n{\\displaystyle O(\\log n)}\n{\\displaystyle O(\\log n)}\n{\\displaystyle O(\\log n)}\n\nIn computer science, a B-tree is a self-balancing tree data structure that maintains sorted data and allows searches, sequential access, insertions, and deletions in logarithmic time. The B-tree generalizes the binary search tree, allowing nodes \"Node (computer science)\") to have more than two children. [...] {\\displaystyle 2d+1} keys, into two d-key siblings and inserting the mid-value key into the parent. Depth only increases when the root is split, maintaining balance. Similarly, a B-tree is kept balanced after deletion by merging or redistributing keys among siblings to maintain the d-key minimum for non-root nodes. A merger reduces the number of keys in the parent, potentially forcing it to merge or redistribute keys with its siblings, and so on. The only change in depth occurs when the root [...] In addition, a B-tree minimizes waste by making sure the interior nodes are at least half full. A B-tree can handle an arbitrary number of insertions and deletions.\n\n## Best case and worst case heights",
+          "score": 0.9928
+        }
+      ],
+      "total_latency_ms": 8525.76,
+      "tokens": 1663,
+      "estimated_cost_usd": 0.000195,
+      "is_idk": false
+    },
+    {
+      "id": 25,
+      "question": "What major cybersecurity incident or zero-day vulnerability disclosure was reported across enterprise infrastructure this week?",
+      "expected_source": "web",
+      "split": "test",
+      "kb_file": "",
+      "answer": "I don't know based on the available sources.",
+      "routing_mode": "cascade_router",
+      "sources_queried": [
+        "kb"
+      ],
+      "router_decision": "kb_sufficient",
+      "router_fallback": false,
+      "confidence_score": 0.0006,
+      "citation_source_types": [
+        "kb",
+        "kb",
+        "kb",
+        "kb",
+        "kb"
+      ],
+      "citation_files": [
+        "arxiv_2610.36334v1_PHP2Shell_and_the_Future_of_AI-Discovered_Vulnerability_Disc.txt",
+        "arxiv_2610.36334v1_PHP2Shell_and_the_Future_of_AI-Discovered_Vulnerability_Disc.txt",
+        "arxiv_2610.37465v1_What_Carries_Forward_Pretraining_Disclosure_Across_Language_.txt",
+        "arxiv_2610.35451v1_Then_there_is_prompt_injection,_a_malicious_email,_..._The_W.txt",
+        "arxiv_2610.35782v1_Atomic_Security_Concerns_Towards_a_Foundational_Language_for.txt"
+      ],
+      "citations": [
+        {
+          "id": 1,
+          "source": "arxiv_2610.36334v1_PHP2Shell_and_the_Future_of_AI-Discovered_Vulnerability_Disc.txt",
+          "source_type": "kb",
+          "url": null,
+          "page": 1,
+          "snippet": "Title: PHP2Shell and the Future of AI-Discovered Vulnerability Disclosure: Evidence, Verification, and Human Authority Authors: Toqeer Ali Syed, Asadullah Abdullah Khan Categories: cs.CR Published: 2026-10-26 ArXiv ID: 2610.36334v1 URL: http://arxiv....",
+          "text": "Title: PHP2Shell and the Future of AI-Discovered Vulnerability Disclosure: Evidence, Verification, and Human Authority\nAuthors: Toqeer Ali Syed, Asadullah Abdullah Khan\nCategories: cs.CR\nPublished: 2026-10-26\nArXiv ID: 2610.36334v1\nURL: http://arxiv.org/abs/2610.36334v1",
+          "score": 0.0015
+        },
+        {
+          "id": 2,
+          "source": "arxiv_2610.36334v1_PHP2Shell_and_the_Future_of_AI-Discovered_Vulnerability_Disc.txt",
+          "source_type": "kb",
+          "url": null,
+          "page": 1,
+          "snippet": "AI-assisted vulnerability discovery can produce technically plausible findings faster than maintainers can validate, coordinate, and safely disclose them. The resulting challenge is not only to establish whether a vulnerability claim is credible, but...",
+          "text": "AI-assisted vulnerability discovery can produce technically plausible findings faster than maintainers can validate, coordinate, and safely disclose them. The resulting challenge is not only to establish whether a vulnerability claim is credible, but also to ensure that its supporting evidence, human authorization, intended recipients, and applicable policy remain bound to the same case revision. We present FedTrust-CVDv2, a federated coordinated vulnerability disclosure framework that separates evidence validation, interorganizational coordination, human governance, and permissioned auditing. The framework binds independently signed observations to exact evidence revisions and scopes external actions to approved payloads, audiences, expiry, policy, and revocation state while preserving existing CVE Numbering Authority (CNA) roles",
+          "score": 0.0005
+        },
+        {
+          "id": 3,
+          "source": "arxiv_2610.37465v1_What_Carries_Forward_Pretraining_Disclosure_Across_Language_.txt",
+          "source_type": "kb",
+          "url": null,
+          "page": 1,
+          "snippet": "Title: What Carries Forward? Pretraining Disclosure Across Language Model Releases Authors: Md Sakib Ul Islam, S M Mehedi Zaman Categories: cs.CL Published: 2026-10-27 ArXiv ID: 2610.37465v1 URL: http://arxiv.org/abs/2610.37465v1...",
+          "text": "Title: What Carries Forward? Pretraining Disclosure Across Language Model Releases\nAuthors: Md Sakib Ul Islam, S M Mehedi Zaman\nCategories: cs.CL\nPublished: 2026-10-27\nArXiv ID: 2610.37465v1\nURL: http://arxiv.org/abs/2610.37465v1",
+          "score": 0.0001
+        },
+        {
+          "id": 4,
+          "source": "arxiv_2610.35451v1_Then_there_is_prompt_injection,_a_malicious_email,_..._The_W.txt",
+          "source_type": "kb",
+          "url": null,
+          "page": 1,
+          "snippet": ". We further collect 358 security-tagged GitHub issues and retain 180 issues describing concrete security concerns. Using qualitative analysis and evidence-grounded CWE mapping, we identify 521 CWE instances across 59 distinct weakness types, concent...",
+          "text": ". We further collect 358 security-tagged GitHub issues and retain 180 issues describing concrete security concerns. Using qualitative analysis and evidence-grounded CWE mapping, we identify 521 CWE instances across 59 distinct weakness types, concentrated in access-control failures, sensitive-data exposure, injection, and unsafe execution. We also extract 543 practitioner mitigation suggestions and consolidate them into seven recurring strategies. To complement the empirical analysis, we present an evidence-grounded illustrative reconstruction of a representative sensitive-data exposure pathway using dummy secret values. Our findings show that OpenClaw security issues are not isolated implementation bugs; they reflect recurring trust-boundary failures across the agent execution pipeline",
+          "score": 0.0001
+        },
+        {
+          "id": 5,
+          "source": "arxiv_2610.35782v1_Atomic_Security_Concerns_Towards_a_Foundational_Language_for.txt",
+          "source_type": "kb",
+          "url": null,
+          "page": 1,
+          "snippet": ". Inspired by the role of atoms in chemistry, the proposed approach views cybersecurity concepts as compositions of more fundamental concerns rather than as independent abstractions. Hence, Atomic Security Concerns could be viewed as a common abstrac...",
+          "text": ". Inspired by the role of atoms in chemistry, the proposed approach views cybersecurity concepts as compositions of more fundamental concerns rather than as independent abstractions. Hence, Atomic Security Concerns could be viewed as a common abstraction layer for the representation of cybersecurity concepts, independently of their domain, nature, or level of granularity. Building upon this perspective, the paper explores how Atomic Security Concerns may provide the vocabulary of a cybersecurity language and how cybersecurity concepts may be represented as concern sets supporting explicit relationships among concepts. The contribution of this work is intentionally conceptual: it introduces a framework and research hypothesis for investigating the foundations of a common language for cybersecurity knowledge representation, reasoning, and future formalization.",
+          "score": 0.0
+        }
+      ],
+      "total_latency_ms": 671.8,
+      "tokens": 1031,
+      "estimated_cost_usd": 8e-05,
+      "is_idk": true
+    },
+    {
+      "id": 26,
+      "question": "What are the latest experimental breakthroughs in quantum computing qubit coherence times announced this week?",
+      "expected_source": "web",
+      "split": "test",
+      "kb_file": "",
+      "answer": "I don't know based on the available sources.",
+      "routing_mode": "cascade_router",
+      "sources_queried": [
+        "kb"
+      ],
+      "router_decision": "kb_sufficient",
+      "router_fallback": false,
+      "confidence_score": 0.0001,
+      "citation_source_types": [
+        "kb",
+        "kb",
+        "kb",
+        "kb",
+        "kb"
+      ],
+      "citation_files": [
+        "arxiv_2610.35235v2_False-Alarm_Improvements_and_Detection_Trade-Offs_in_Quantum.txt",
+        "arxiv_2610.37635v1_Classical_Verification_of_Quantum_Computation_Beyond_the_Pol.txt",
+        "arxiv_2610.36145v1_They_Will_See_Johnny's_Message_A_Measurement_Study_of_Post-Q.txt",
+        "arxiv_2610.32015v1_Scaling_Graph_Query_Processing_Focused_Exploration_on_Partit.txt",
+        "arxiv_2610.37635v1_Classical_Verification_of_Quantum_Computation_Beyond_the_Pol.txt"
+      ],
+      "citations": [
+        {
+          "id": 1,
+          "source": "arxiv_2610.35235v2_False-Alarm_Improvements_and_Detection_Trade-Offs_in_Quantum.txt",
+          "source_type": "kb",
+          "url": null,
+          "page": 1,
+          "snippet": "Title: False-Alarm Improvements and Detection Trade-Offs in Quantum Machine Learning for Intrusion Detection: A Reproducible Secondary Analysis Authors: Roberto Fern\u00e1ndez-Barrios, Iker Pastor-L\u00f3pez, Asier Gonz\u00e1lez-Santocildes, Pablo Garc\u00eda Bringas Ca...",
+          "text": "Title: False-Alarm Improvements and Detection Trade-Offs in Quantum Machine Learning for Intrusion Detection: A Reproducible Secondary Analysis\nAuthors: Roberto Fern\u00e1ndez-Barrios, Iker Pastor-L\u00f3pez, Asier Gonz\u00e1lez-Santocildes, Pablo Garc\u00eda Bringas\nCategories: cs.CR\nPublished: 2026-10-26\nArXiv ID: 2610.35235v2\nURL: http://arxiv.org/abs/2610.35235v2",
+          "score": 0.0003
+        },
+        {
+          "id": 2,
+          "source": "arxiv_2610.37635v1_Classical_Verification_of_Quantum_Computation_Beyond_the_Pol.txt",
+          "source_type": "kb",
+          "url": null,
+          "page": 1,
+          "snippet": "Abstract: It is not known whether a classical polynomial-time verifier can verify arbitrary polynomial-time quantum computations with an efficient quantum honest prover without computational assumptions. We show that, relative to a classical oracle,...",
+          "text": "Abstract:\nIt is not known whether a classical polynomial-time verifier can verify arbitrary polynomial-time quantum computations with an efficient quantum honest prover without computational assumptions. We show that, relative to a classical oracle, such verification is possible for a language beyond the polynomial hierarchy that is decided exactly in quantum polynomial time. The protocol is public-coin, with perfect completeness and soundness error at most 1/4. To our knowledge, no language with such a proof system was previously proved to lie outside AM relative to an oracle.",
+          "score": 0.0001
+        },
+        {
+          "id": 3,
+          "source": "arxiv_2610.36145v1_They_Will_See_Johnny's_Message_A_Measurement_Study_of_Post-Q.txt",
+          "source_type": "kb",
+          "url": null,
+          "page": 1,
+          "snippet": "Title: They Will See Johnny's Message: A Measurement Study of Post-Quantum Cryptography Across Email Delivery Paths Authors: Jaehwan Park, Sunghyun Park, Kevin Nam, Doowon Kim Categories: cs.CR Published: 2026-10-26 ArXiv ID: 2610.36145v1 URL: http:/...",
+          "text": "Title: They Will See Johnny's Message: A Measurement Study of Post-Quantum Cryptography Across Email Delivery Paths\nAuthors: Jaehwan Park, Sunghyun Park, Kevin Nam, Doowon Kim\nCategories: cs.CR\nPublished: 2026-10-26\nArXiv ID: 2610.36145v1\nURL: http://arxiv.org/abs/2610.36145v1",
+          "score": 0.0001
+        },
+        {
+          "id": 4,
+          "source": "arxiv_2610.32015v1_Scaling_Graph_Query_Processing_Focused_Exploration_on_Partit.txt",
+          "source_type": "kb",
+          "url": null,
+          "page": 1,
+          "snippet": "In this paper, we address the problem of answering graph queries and their efficient processing on arbitrary-sized graphs. We propose the partitioning of graphs and the use of the distributed paradigm to achieve efficiency and scalability. Our approa...",
+          "text": "In this paper, we address the problem of answering graph queries and their efficient processing on arbitrary-sized graphs. We propose the partitioning of graphs and the use of the distributed paradigm to achieve efficiency and scalability. Our approach takes a subgraph as query input including wild cards and comparison operations. Our partitioned approach leverages focused exploration and distributed processing to achieve the desired parallelism and improve the response time. We also present heuristics to reduce the number of partitions loaded for query processing. We present our partitioning algorithm, distributed processing architecture used, and load balancing for computing query answers. We establish the correctness of the approach in the presence of partitions, compare heuristics for load balancing, and extensive experimental results over large synthetic and real-world graph data sets.",
+          "score": 0.0
+        },
+        {
+          "id": 5,
+          "source": "arxiv_2610.37635v1_Classical_Verification_of_Quantum_Computation_Beyond_the_Pol.txt",
+          "source_type": "kb",
+          "url": null,
+          "page": 1,
+          "snippet": "For every unbounded polynomial-time computable function, the oracle can be chosen so that the message count and the oracle query counts of the quantum algorithm, verifier, and honest prover are bounded by this function of the input length. The messag...",
+          "text": "For every unbounded polynomial-time computable function, the oracle can be chosen so that the message count and the oracle query counts of the quantum algorithm, verifier, and honest prover are bounded by this function of the input length. The message count is optimal up to a constant factor, since for a suitable oracle every interactive proof system for the language uses at least a constant fraction of the messages of our protocol on infinitely many lengths, with a constant depending on its verifier.",
+          "score": 0.0
+        }
+      ],
+      "total_latency_ms": 611.45,
+      "tokens": 982,
+      "estimated_cost_usd": 7.6e-05,
+      "is_idk": true
+    },
+    {
+      "id": 27,
+      "question": "What are the latest developments and legal enforcement timelines for AI regulation in the European Union and the United States this week?",
+      "expected_source": "web",
+      "split": "test",
+      "kb_file": "",
+      "answer": "I don't know based on the available sources.",
+      "routing_mode": "cascade_router",
+      "sources_queried": [
+        "kb"
+      ],
+      "router_decision": "kb_sufficient",
+      "router_fallback": false,
+      "confidence_score": 0.0,
+      "citation_source_types": [
+        "kb",
+        "kb",
+        "kb",
+        "kb",
+        "kb"
+      ],
+      "citation_files": [
+        "arxiv_2610.35633v1_Cheap_AI-Assisted_Reverse_Engineering_and_What_It_Will_Do.txt",
+        "arxiv_2610.36334v1_PHP2Shell_and_the_Future_of_AI-Discovered_Vulnerability_Disc.txt",
+        "arxiv_2610.31553v1_Contestable_Agents_for_Data_Governance_Recording_Human_Stewa.txt",
+        "arxiv_2610.35996v1_Pricing_Cross-Bank_Context_in_Federated_Anti-Money_Launderin.txt",
+        "arxiv_2610.25373v1_MemDerive_A_Diagnostic_Benchmark_for_Agent_Memory_over_Evolv.txt"
+      ],
+      "citations": [
+        {
+          "id": 1,
+          "source": "arxiv_2610.35633v1_Cheap_AI-Assisted_Reverse_Engineering_and_What_It_Will_Do.txt",
+          "source_type": "kb",
+          "url": null,
+          "page": 1,
+          "snippet": "Abstract: Generative AI is putting the law of reverse engineering (RE) under severe strain. Existing IP and technology laws assume that RE is expensive and time-consuming, and that it requires specialized expertise. They generally allow it, but they...",
+          "text": "Abstract:\nGenerative AI is putting the law of reverse engineering (RE) under severe strain. Existing IP and technology laws assume that RE is expensive and time-consuming, and that it requires specialized expertise. They generally allow it, but they rely on its difficulty as a filter to separate (permissible) RE from (impermissible) copying and theft. Generative AI is changing this equation by making \\RE much faster, cheaper, and easier. AI systems can identify hardware components, extract firmware, decompile object code, and clone entire apps. The resulting struggle between technology vendors and reverse engineers will challenge a wide range of laws, including trade secret, copyright, anti-circumvention, computer misuse, and contract. In this article, we describe the ways in which AI is changing \\RE, map these new practices onto existing laws, and sketch ways that the legal system could respond and their associated trade-offs.",
+          "score": 0.0001
+        },
+        {
+          "id": 2,
+          "source": "arxiv_2610.36334v1_PHP2Shell_and_the_Future_of_AI-Discovered_Vulnerability_Disc.txt",
+          "source_type": "kb",
+          "url": null,
+          "page": 1,
+          "snippet": "Title: PHP2Shell and the Future of AI-Discovered Vulnerability Disclosure: Evidence, Verification, and Human Authority Authors: Toqeer Ali Syed, Asadullah Abdullah Khan Categories: cs.CR Published: 2026-10-26 ArXiv ID: 2610.36334v1 URL: http://arxiv....",
+          "text": "Title: PHP2Shell and the Future of AI-Discovered Vulnerability Disclosure: Evidence, Verification, and Human Authority\nAuthors: Toqeer Ali Syed, Asadullah Abdullah Khan\nCategories: cs.CR\nPublished: 2026-10-26\nArXiv ID: 2610.36334v1\nURL: http://arxiv.org/abs/2610.36334v1",
+          "score": 0.0001
+        },
+        {
+          "id": 3,
+          "source": "arxiv_2610.31553v1_Contestable_Agents_for_Data_Governance_Recording_Human_Stewa.txt",
+          "source_type": "kb",
+          "url": null,
+          "page": 1,
+          "snippet": "Title: Contestable Agents for Data Governance: Recording Human Stewardship of AI-Generated Metadata Across Structured and Unstructured Systems Authors: Humza Akhtar, Brian Freeman Categories: cs.AI, cs.DB, cs.HC, cs.MA Published: 2026-10-22 ArXiv ID:...",
+          "text": "Title: Contestable Agents for Data Governance: Recording Human Stewardship of AI-Generated Metadata Across Structured and Unstructured Systems\nAuthors: Humza Akhtar, Brian Freeman\nCategories: cs.AI, cs.DB, cs.HC, cs.MA\nPublished: 2026-10-22\nArXiv ID: 2610.31553v1\nURL: http://arxiv.org/abs/2610.31553v1",
+          "score": 0.0001
+        },
+        {
+          "id": 4,
+          "source": "arxiv_2610.35996v1_Pricing_Cross-Bank_Context_in_Federated_Anti-Money_Launderin.txt",
+          "source_type": "kb",
+          "url": null,
+          "page": 1,
+          "snippet": ". On AMLworld HI-Small, across six GNN backbones and up to 32 silos, the observable baseline yields the largest gain and keeps it as fragmentation shrinks the visible slice; counts add a robust correction, while exact remote states help only in speci...",
+          "text": ". On AMLworld HI-Small, across six GNN backbones and up to 32 silos, the observable baseline yields the largest gain and keeps it as fragmentation shrinks the visible slice; counts add a robust correction, while exact remote states help only in specific regimes. In controlled privacy--utility studies, the noise needed to protect shared states erases their detection value before it buys meaningful privacy, whereas counts stay useful even under strong privacy protection. These findings support a practical rule for banks: use what they already record, and formally protect the little that must move.",
+          "score": 0.0
+        },
+        {
+          "id": 5,
+          "source": "arxiv_2610.25373v1_MemDerive_A_Diagnostic_Benchmark_for_Agent_Memory_over_Evolv.txt",
+          "source_type": "kb",
+          "url": null,
+          "page": 1,
+          "snippet": "Long-running agents rely on memory of their past interactions for task state, such as what has been completed and which conditions still hold. Such state is usually a derived state. No record states it, and it must be computed by rules from multiple...",
+          "text": "Long-running agents rely on memory of their past interactions for task state, such as what has been completed and which conditions still hold. Such state is usually a derived state. No record states it, and it must be computed by rules from multiple records of an evolving history. Existing memory benchmarks score only the final answer, with no reference for the intermediate states behind it. A wrong answer therefore cannot be traced to the state that was missed, and a state that silently became outdated goes undetected. We present MemDerive, a diagnostic benchmark for agent memory over evolving data. It specifies each scenario symbolically, derives exact gold answers with Datalog, records the gold derivation DAG and the supporting events of every query, and renders the history in natural language with fictional entities and distractors. Its 10 scenarios contain 4,692 events and 1,503 queries whose difficulty varies along access, evolution, and composition",
+          "score": 0.0
+        }
+      ],
+      "total_latency_ms": 793.41,
+      "tokens": 1125,
+      "estimated_cost_usd": 8.7e-05,
+      "is_idk": true
+    },
+    {
+      "id": 28,
+      "question": "What features were introduced in the latest major programming language releases for Rust and Python this week?",
+      "expected_source": "web",
+      "split": "test",
+      "kb_file": "",
+      "answer": "I don't know based on the available sources.",
+      "routing_mode": "cascade_router",
+      "sources_queried": [
+        "kb"
+      ],
+      "router_decision": "kb_sufficient",
+      "router_fallback": false,
+      "confidence_score": 0.0011,
+      "citation_source_types": [
+        "kb",
+        "kb",
+        "kb",
+        "kb",
+        "kb"
+      ],
+      "citation_files": [
+        "arxiv_2610.35999v1_safeL4_Rethinking_Safe-Language-Based_Single_Address_Space_M.txt",
+        "arxiv_2610.37465v1_What_Carries_Forward_Pretraining_Disclosure_Across_Language_.txt",
+        "arxiv_2610.37234v1_Asynchronous_Verifiable_and_Complete_Secret_Sharing_From_Des.txt",
+        "arxiv_2610.37566v1_ReferStream_Interactive_Subject_Injection_for_Streaming_Vide.txt",
+        "arxiv_2610.37510v1_A_note_on_data-efficient_finetuning_of_vision_foundation_mod.txt"
+      ],
+      "citations": [
+        {
+          "id": 1,
+          "source": "arxiv_2610.35999v1_safeL4_Rethinking_Safe-Language-Based_Single_Address_Space_M.txt",
+          "source_type": "kb",
+          "url": null,
+          "page": 1,
+          "snippet": ". We implement a prototype system in Rust, and our evaluation results show that the primitives provided by safeL4 are, on average, 1.9$\\times$ faster than those of seL4....",
+          "text": ". We implement a prototype system in Rust, and our evaluation results show that the primitives provided by safeL4 are, on average, 1.9$\\times$ faster than those of seL4.",
+          "score": 0.003
+        },
+        {
+          "id": 2,
+          "source": "arxiv_2610.37465v1_What_Carries_Forward_Pretraining_Disclosure_Across_Language_.txt",
+          "source_type": "kb",
+          "url": null,
+          "page": 1,
+          "snippet": "Title: What Carries Forward? Pretraining Disclosure Across Language Model Releases Authors: Md Sakib Ul Islam, S M Mehedi Zaman Categories: cs.CL Published: 2026-10-27 ArXiv ID: 2610.37465v1 URL: http://arxiv.org/abs/2610.37465v1...",
+          "text": "Title: What Carries Forward? Pretraining Disclosure Across Language Model Releases\nAuthors: Md Sakib Ul Islam, S M Mehedi Zaman\nCategories: cs.CL\nPublished: 2026-10-27\nArXiv ID: 2610.37465v1\nURL: http://arxiv.org/abs/2610.37465v1",
+          "score": 0.0
+        },
+        {
+          "id": 3,
+          "source": "arxiv_2610.37234v1_Asynchronous_Verifiable_and_Complete_Secret_Sharing_From_Des.txt",
+          "source_type": "kb",
+          "url": null,
+          "page": 1,
+          "snippet": "Modern secret sharing protocols promise robust secret sharing in fully asynchronous Byzantine systems, but their practical costs remain difficult to compare across papers, assumptions, and workloads. The difficulty is not merely experimental: protoco...",
+          "text": "Modern secret sharing protocols promise robust secret sharing in fully asynchronous Byzantine systems, but their practical costs remain difficult to compare across papers, assumptions, and workloads. The difficulty is not merely experimental: protocols with similar asymptotic guarantees often place very different work on the critical path through their choices of dissemination, verification, batching, and recovery. This paper turns that fragmented research landscape into a corpus-backed designspace analysis and systems evaluation of asynchronous verifiable and complete secret sharing. We derive a design sieve, select seven representative protocols, and implement them in a common Rust framework. In our experiments on the Grid'5000 platform, we evaluate honest-dealer and faulty-dealer stress executions using latency, throughput, message count, bandwidth, and aggregate CPU-time",
+          "score": 0.0
+        },
+        {
+          "id": 4,
+          "source": "arxiv_2610.37566v1_ReferStream_Interactive_Subject_Injection_for_Streaming_Vide.txt",
+          "source_type": "kb",
+          "url": null,
+          "page": 1,
+          "snippet": "Injecting new subjects naturally during streaming video generation requires integrating newly supplied visual references into the existing video while preserving established subjects and the scene. Encoding references independently of the current sce...",
+          "text": "Injecting new subjects naturally during streaming video generation requires integrating newly supplied visual references into the existing video while preserving established subjects and the scene. Encoding references independently of the current scene provides little guidance for this integration, while keeping their features in persistent memory can interfere with established context. We propose ReferStream, a framework that requires no additional training and combines reference construction using the current scene with transient cache injection. Joint Latent places reference latents in target regions of the latest scene latent, allowing reference features to be extracted in context. Cache Restoration uses these features to condition the injection chunk, then restores the overwritten global cache entries while retaining the newly generated history. This procedure incorporates new visual conditions without retraining the generator or revising emitted frames",
+          "score": 0.0
+        },
+        {
+          "id": 5,
+          "source": "arxiv_2610.37510v1_A_note_on_data-efficient_finetuning_of_vision_foundation_mod.txt",
+          "source_type": "kb",
+          "url": null,
+          "page": 1,
+          "snippet": "Adapting foundation models to a new task within or beyond the training domain is the de facto standard for building specialized machine learning models. Recently, Visual Prompting (VP) has emerged as a promising technique for efficient knowledge tran...",
+          "text": "Adapting foundation models to a new task within or beyond the training domain is the de facto standard for building specialized machine learning models. Recently, Visual Prompting (VP) has emerged as a promising technique for efficient knowledge transfer. As new foundation model families~(like Mamba) get introduced and VP pipelines such as AutoVP reach greater maturity, we find a growing need for a systematic evaluation of current approaches. In this work, we assess the performance of the latest models, comparing them to earlier architectures and alternative fine-tuning methods, to better understand the progress, challenges and opportunities in the field of efficient fine-tuning under resource limitations. Towards this goal, this paper provides a concise empirical overview of the interactions among foundation model families (Attention-, Convolution-, and Mamba-based) and transfer paradigms: VP, Linear Probing (LP), Full Fine-tuning (FFT) and Low Rank Adaptation (LoRA)",
+          "score": 0.0
+        }
+      ],
+      "total_latency_ms": 700.63,
+      "tokens": 1029,
+      "estimated_cost_usd": 8e-05,
+      "is_idk": true
+    },
+    {
+      "id": 29,
+      "question": "What were the latest quarterly earnings reports and cloud infrastructure revenue trends reported by big-tech companies this week?",
+      "expected_source": "web",
+      "split": "test",
+      "kb_file": "",
+      "answer": "I don't know based on the available sources.",
+      "routing_mode": "cascade_router",
+      "sources_queried": [
+        "kb"
+      ],
+      "router_decision": "kb_sufficient",
+      "router_fallback": false,
+      "confidence_score": 0.0,
+      "citation_source_types": [
+        "kb",
+        "kb",
+        "kb",
+        "kb",
+        "kb"
+      ],
+      "citation_files": [
+        "arxiv_2610.35296v1_Trim_Fee_Level_Matters_More_Than_Skew_in_Lightning_Routing.txt",
+        "arxiv_2610.30593v1_TT-SAX_A_Two-Track_Time_Series_Symbolization_for_Natural_Lan.txt",
+        "arxiv_2610.36801v1_API-TAIL_Detecting_Model_Substitution_in_LLM_APIs_through_Te.txt",
+        "arxiv_2610.23317v1_AgentOnto_Ontology-Guided_LLM_Agents_for_Enterprise_Data_Ana.txt",
+        "arxiv_2610.36219v1_Bringing_Hardware_Security_Education_to_All_A_Seamless_Curri.txt"
+      ],
+      "citations": [
+        {
+          "id": 1,
+          "source": "arxiv_2610.35296v1_Trim_Fee_Level_Matters_More_Than_Skew_in_Lightning_Routing.txt",
+          "source_type": "kb",
+          "url": null,
+          "page": 1,
+          "snippet": ". So the level should be chosen: Trim's rule traces the revenue--success frontier, posts one level on every channel, and adds a skew only where refills stay frequent and costly. On a 2026 snapshot with synthetic payments, no tuned tool beats that fro...",
+          "text": ". So the level should be chosen: Trim's rule traces the revenue--success frontier, posts one level on every channel, and adds a skew only where refills stay frequent and costly. On a 2026 snapshot with synthetic payments, no tuned tool beats that frontier by over a few percent, and a skew changes gross revenue by a few percent.",
+          "score": 0.0
+        },
+        {
+          "id": 2,
+          "source": "arxiv_2610.30593v1_TT-SAX_A_Two-Track_Time_Series_Symbolization_for_Natural_Lan.txt",
+          "source_type": "kb",
+          "url": null,
+          "page": 1,
+          "snippet": "Natural language querying for time series databases aims to let users find what they need in long histories of data by asking in plain language. Shape queries ask how a series moves. They are the main challenge of this task. Recent work makes them fe...",
+          "text": "Natural language querying for time series databases aims to let users find what they need in long histories of data by asking in plain language. Shape queries ask how a series moves. They are the main challenge of this task. Recent work makes them feasible by using symbolization as a bridge between the query and the long history. However, existing symbolizations were designed for compression, similarity indexing, or classification. What a symbolization should provide for natural language querying has not been systematically studied. We therefore examine the definitions of six classical symbolizations against this task and identify three limitations. (1) Direction is missing from the string, (2) direction is measured at too small a scale, and (3) the letters are arbitrary. Three design principles follow. We follow these principles and make a minimal redesign of SAX called TT-SAX (two-track SAX). The level letters stay. Each segment gains a trend letter",
+          "score": 0.0
+        },
+        {
+          "id": 3,
+          "source": "arxiv_2610.36801v1_API-TAIL_Detecting_Model_Substitution_in_LLM_APIs_through_Te.txt",
+          "source_type": "kb",
+          "url": null,
+          "page": 1,
+          "snippet": ". Building on this, we introduce API-TAIL, a typicality audit that first absorbs batch-level shifts by aligning a single effective temperature to center standardized surprisal scores across the audited batch, and then flags the endpoint if the number...",
+          "text": ". Building on this, we introduce API-TAIL, a typicality audit that first absorbs batch-level shifts by aligning a single effective temperature to center standardized surprisal scores across the audited batch, and then flags the endpoint if the number of remaining tail responses exceeds a threshold calibrated across legitimate configurations. Evaluated on real-world commercial APIs, API-TAIL reliably controls false alarms across diverse honest providers while detecting even low-rate partial substitution with a small query budget, substantially outperforming existing rank- and MMD-based audits that lose detection power under the same composite calibration.",
+          "score": 0.0
+        },
+        {
+          "id": 4,
+          "source": "arxiv_2610.23317v1_AgentOnto_Ontology-Guided_LLM_Agents_for_Enterprise_Data_Ana.txt",
+          "source_type": "kb",
+          "url": null,
+          "page": 1,
+          "snippet": ". A real-world deployment further demonstrates its practical value in enterprise analytics. These results demonstrate that explicitly constructing, using, and updating enterprise knowledge supports reliable and adaptable data analysis....",
+          "text": ". A real-world deployment further demonstrates its practical value in enterprise analytics. These results demonstrate that explicitly constructing, using, and updating enterprise knowledge supports reliable and adaptable data analysis.",
+          "score": 0.0
+        },
+        {
+          "id": 5,
+          "source": "arxiv_2610.36219v1_Bringing_Hardware_Security_Education_to_All_A_Seamless_Curri.txt",
+          "source_type": "kb",
+          "url": null,
+          "page": 1,
+          "snippet": ". At the University of Florida, fewer than 7% of the undergraduate electrical and computer engineering students register for the introductory HS course each year. We present an integrated and economical approach that disseminates fundamental HS conce...",
+          "text": ". At the University of Florida, fewer than 7% of the undergraduate electrical and computer engineering students register for the introductory HS course each year. We present an integrated and economical approach that disseminates fundamental HS concepts within existing core courses through contextual learning. Nine hands-on modules were developed such that each security concept exercises an associated design concept of the core course, as a component of that course and not as a course of their own. Doing the security work is how the student exercises the design topic, so the modules are built to strengthen the host course and not only to add to it. Three were assessed across three offerings of the embedded systems course through one course survey and two conducted by an external evaluator, with 25 respondents. We report what those instruments measured and the limitations of the approach.",
+          "score": 0.0
+        }
+      ],
+      "total_latency_ms": 854.22,
+      "tokens": 1009,
+      "estimated_cost_usd": 7.8e-05,
+      "is_idk": true
+    },
+    {
+      "id": 30,
+      "question": "What major merger, acquisition, or antitrust enforcement in tech was announced this week?",
+      "expected_source": "web",
+      "split": "test",
+      "kb_file": "",
+      "answer": "I don't know based on the available sources.",
+      "routing_mode": "cascade_router",
+      "sources_queried": [
+        "kb"
+      ],
+      "router_decision": "kb_sufficient",
+      "router_fallback": false,
+      "confidence_score": 0.0,
+      "citation_source_types": [
+        "kb",
+        "kb",
+        "kb",
+        "kb",
+        "kb"
+      ],
+      "citation_files": [
+        "arxiv_2610.29669v1_Conflicted_Records_Typed_Adversarial_Contracts_for_Auditable.txt",
+        "arxiv_2610.36682v1_An_Empirical_Study_of_Undisclosed_Charges_in_Hook-Based_Dece.txt",
+        "arxiv_2610.37213v1_Retrospective_macromolecular_pool_fraction_mapping_from_conv.txt",
+        "arxiv_2610.35633v1_Cheap_AI-Assisted_Reverse_Engineering_and_What_It_Will_Do.txt",
+        "arxiv_2610.36808v1_HqcLethe_Streaming_HQC_Encapsulation_for_Tiny_Stateless_Serv.txt"
+      ],
+      "citations": [
+        {
+          "id": 1,
+          "source": "arxiv_2610.29669v1_Conflicted_Records_Typed_Adversarial_Contracts_for_Auditable.txt",
+          "source_type": "kb",
+          "url": null,
+          "page": 1,
+          "snippet": "Title: Conflicted Records: Typed Adversarial Contracts for Auditable LLM Output Quality Enforcement Authors: Kardelen Subasi, Jaros\u0142aw A. Chudziak Categories: cs.DB, cs.AI, cs.CL, cs.MA Published: 2026-10-21 ArXiv ID: 2610.29669v1 URL: http://arxiv.o...",
+          "text": "Title: Conflicted Records: Typed Adversarial Contracts for Auditable LLM Output Quality Enforcement\nAuthors: Kardelen Subasi, Jaros\u0142aw A. Chudziak\nCategories: cs.DB, cs.AI, cs.CL, cs.MA\nPublished: 2026-10-21\nArXiv ID: 2610.29669v1\nURL: http://arxiv.org/abs/2610.29669v1",
+          "score": 0.0
+        },
+        {
+          "id": 2,
+          "source": "arxiv_2610.36682v1_An_Empirical_Study_of_Undisclosed_Charges_in_Hook-Based_Dece.txt",
+          "source_type": "kb",
+          "url": null,
+          "page": 1,
+          "snippet": "Many decentralized exchanges use automated market makers (AMMs) to trade assets against liquidity pools. Modern AMMs allow third-party contracts, called Hooks, to customize this process. However, Hooks can impose additional deductions that fee breakd...",
+          "text": "Many decentralized exchanges use automated market makers (AMMs) to trade assets against liquidity pools. Modern AMMs allow third-party contracts, called Hooks, to customize this process. However, Hooks can impose additional deductions that fee breakdowns based on standard pool parameters do not itemize. We present, to the best of our knowledge, the first large-scale empirical study of the production Hook ecosystem, focusing on these undisclosed settlement charges. Our study covers 7,873 Hook deployments, 50,011 pools, and 296M pool events on Uniswap v4 and PancakeSwap Infinity across Ethereum and BNB Smart Chain (BSC) through August 1, 2026. We develop a bytecode analysis that reconstructs how Hooks change traders' payments and receipts, separating charges from exchanged assets and standard fees. We then reconstruct historical settlements to measure charging frequency and economic burden",
+          "score": 0.0
+        },
+        {
+          "id": 3,
+          "source": "arxiv_2610.37213v1_Retrospective_macromolecular_pool_fraction_mapping_from_conv.txt",
+          "source_type": "kb",
+          "url": null,
+          "page": 1,
+          "snippet": ". It was trained and evaluated on a multisite, multivendor, multiprotocol dataset of 7,705 MRI sessions (3 T). Across 1,237 test sessions, mean MPF was $0.182 \\pm 0.007$ in white matter and $0.144 \\pm 0.009$ in gray matter, with limited variation acr...",
+          "text": ". It was trained and evaluated on a multisite, multivendor, multiprotocol dataset of 7,705 MRI sessions (3 T). Across 1,237 test sessions, mean MPF was $0.182 \\pm 0.007$ in white matter and $0.144 \\pm 0.009$ in gray matter, with limited variation across vendor-by-protocol groups (between-group coefficient of variation: 2.65% and 5.63%, respectively). In 70 sessions with demyelinating-disease labels, MPF was 35.6% lower in segmented lesions than in normal-appearing white matter. MPF maps from two different clinical protocols acquired in a healthy volunteer showed a mean voxel-wise absolute percentage difference of 7.7% and a concordance correlation coefficient of $0.888$, indicating good cross-protocol consistency",
+          "score": 0.0
+        },
+        {
+          "id": 4,
+          "source": "arxiv_2610.35633v1_Cheap_AI-Assisted_Reverse_Engineering_and_What_It_Will_Do.txt",
+          "source_type": "kb",
+          "url": null,
+          "page": 1,
+          "snippet": "Abstract: Generative AI is putting the law of reverse engineering (RE) under severe strain. Existing IP and technology laws assume that RE is expensive and time-consuming, and that it requires specialized expertise. They generally allow it, but they...",
+          "text": "Abstract:\nGenerative AI is putting the law of reverse engineering (RE) under severe strain. Existing IP and technology laws assume that RE is expensive and time-consuming, and that it requires specialized expertise. They generally allow it, but they rely on its difficulty as a filter to separate (permissible) RE from (impermissible) copying and theft. Generative AI is changing this equation by making \\RE much faster, cheaper, and easier. AI systems can identify hardware components, extract firmware, decompile object code, and clone entire apps. The resulting struggle between technology vendors and reverse engineers will challenge a wide range of laws, including trade secret, copyright, anti-circumvention, computer misuse, and contract. In this article, we describe the ways in which AI is changing \\RE, map these new practices onto existing laws, and sketch ways that the legal system could respond and their associated trade-offs.",
+          "score": 0.0
+        },
+        {
+          "id": 5,
+          "source": "arxiv_2610.36808v1_HqcLethe_Streaming_HQC_Encapsulation_for_Tiny_Stateless_Serv.txt",
+          "source_type": "kb",
+          "url": null,
+          "page": 1,
+          "snippet": "Abstract: Stateless post-quantum authenticated key exchanges such as post-quantum WireGuard hedge against unexpected cryptanalytic advances by combining a lattice KEM with code-based Classic McEliece. However, recent attacks have led Germany's BSI to...",
+          "text": "Abstract:\nStateless post-quantum authenticated key exchanges such as post-quantum WireGuard hedge against unexpected cryptanalytic advances by combining a lattice KEM with code-based Classic McEliece. However, recent attacks have led Germany's BSI to advise against McEliece, which leaves these protocols with lattices alone. HQC, the code-based KEM that NIST selected, could restore diversity, but its keys do not fit in a single packet, so a server would have to buffer multi-packet handshakes. This would leave an attack surface for memory exhaustion, which is what WireGuard's stateless handshake was designed to avoid in the first place. McTiny demonstrated that stateless key encapsulation for Classic McEliece is possible by streaming key blocks one-at-a-time. However, HQC's encapsulation does not split as easily into individual packets, as cyclic polynomial multiplication, unlike matrix-vector multiplication, is inherently non-local.",
+          "score": 0.0
+        }
+      ],
+      "total_latency_ms": 680.2,
+      "tokens": 1287,
+      "estimated_cost_usd": 9.9e-05,
+      "is_idk": true
+    }
+  ]
+}

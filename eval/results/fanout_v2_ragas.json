@@ -1,0 +1,11 @@
+{
+  "tag": "fanout_v2",
+  "ragas_version": "0.2.14",
+  "model": "gemini-flash-lite-latest",
+  "scored": 19,
+  "skipped_idk": 1,
+  "failed": 0,
+  "avg_faithfulness": 0.8086,
+  "avg_answer_relevancy": 0.8197,
+  "failed_ids": []
+}

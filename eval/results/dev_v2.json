@@ -1,0 +1,543 @@
+{
+  "tag": "dev_v2",
+  "split": "dev",
+  "timestamp": "2026-10-31T02:19:46Z",
+  "summary": {
+    "n_evaluated": 10,
+    "router_fallbacks_excluded": 0,
+    "total_questions": 10,
+    "avg_latency_ms": 5945.85,
+    "p95_latency_ms": 11548.34,
+    "avg_tokens": 1539.5,
+    "avg_cost_usd": 0.000155,
+    "idk_rate": 0.0,
+    "routing_accuracy": 0.9,
+    "kb_hit_rate": 1.0,
+    "pct_skipped_external": 40.0,
+    "mean_confidence": 0.8536
+  },
+  "questions": [
+    {
+      "id": 1,
+      "question": "How does the Native TPU Accelerator optimize dynamic memory-bound operations for analytical query processing in JAX/XLA?",
+      "expected_source": "kb",
+      "split": "dev",
+      "kb_file": "arxiv_2610.22673v1_The_Case_for_TPU-Accelerated_Analytical_Query_Processing.txt",
+      "answer": "Based on the provided sources, the Native TPU Accelerator (NTA) optimizes dynamic, memory-bound database operations by rewriting them into deterministic JAX programs through exposing the TPU's structural mechanics [1]. Specifically, it utilizes a suite of novel execution strategies that leverage both the TPU's TensorCore and SparseCore to trade sparse, unpredictable memory accesses for dense, hardware-aligned ones [3]. Additionally, its core compiler uses catalog statistics to assign guarded static capacities and applies a hardware-calibrated local cost model to select a TPU-native implementation for each relational operator prior to JIT compilation [3].",
+      "routing_mode": "cascade_router",
+      "sources_queried": [
+        "kb"
+      ],
+      "router_decision": "kb_sufficient",
+      "router_fallback": false,
+      "confidence_score": 0.8579,
+      "citation_source_types": [
+        "kb",
+        "kb"
+      ],
+      "citation_files": [
+        "arxiv_2610.22673v1_The_Case_for_TPU-Accelerated_Analytical_Query_Processing.txt",
+        "arxiv_2610.22673v1_The_Case_for_TPU-Accelerated_Analytical_Query_Processing.txt"
+      ],
+      "citations": [
+        {
+          "id": 1,
+          "source": "arxiv_2610.22673v1_The_Case_for_TPU-Accelerated_Analytical_Query_Processing.txt",
+          "source_type": "kb",
+          "url": null,
+          "page": 1,
+          "snippet": "Large-scale analytical query processing requires computing substrates capable of immense distributed scale-out. Tensor Processing Units (TPUs) perfectly embody this extreme-scale architecture, offering massive computational density and highly scalabl...",
+          "text": "Large-scale analytical query processing requires computing substrates capable of immense distributed scale-out. Tensor Processing Units (TPUs) perfectly embody this extreme-scale architecture, offering massive computational density and highly scalable optical pod-level interconnects. Despite these advantages, TPUs have so far remained largely unexplored for analytical database workloads. In this paper, we present the first comprehensive case for TPU-accelerated analytical query processing by running all the TPC-H queries entirely on the TPUs. We introduce Native TPU Accelerator (NTA) for analytical query processing, which provides hardware-conscious algorithm design and optimizations in JAX/XLA. By exposing the TPU's structural mechanics, we demonstrate how dynamic, memory-bound database operations can be rewritten into deterministic JAX programs",
+          "score": 0.9977
+        },
+        {
+          "id": 3,
+          "source": "arxiv_2610.22673v1_The_Case_for_TPU-Accelerated_Analytical_Query_Processing.txt",
+          "source_type": "kb",
+          "url": null,
+          "page": 1,
+          "snippet": ". By exposing the TPU's structural mechanics, we demonstrate how dynamic, memory-bound database operations can be rewritten into deterministic JAX programs. We engineer a suite of novel execution strategies that leverage both the TPU's TensorCore and...",
+          "text": ". By exposing the TPU's structural mechanics, we demonstrate how dynamic, memory-bound database operations can be rewritten into deterministic JAX programs. We engineer a suite of novel execution strategies that leverage both the TPU's TensorCore and SparseCore to trade sparse, unpredictable memory accesses for dense, hardware-aligned ones. At the core of NTA, a compiler uses catalog statistics to assign guarded static capacities and a hardware-calibrated local cost model to select a TPU-native implementation for each relational operator before JIT compilation.",
+          "score": 0.9388
+        }
+      ],
+      "total_latency_ms": 1003.47,
+      "tokens": 1164,
+      "estimated_cost_usd": 0.000115,
+      "is_idk": false
+    },
+    {
+      "id": 2,
+      "question": "How does the FuseRAG framework overcome graph-structure degradation and inefficient KV-cache reuse in graph-based retrieval-augmented generation?",
+      "expected_source": "kb",
+      "split": "dev",
+      "kb_file": "arxiv_2610.22818v1_FuseRAG_Fusing_Structure_and_Evidence_into_Inference_for_Cos.txt",
+      "answer": "To overcome graph-structure degradation and inefficient KV-cache reuse, the FuseRAG framework employs the following approach:\n\n* **Shifting Evidence to Latent Representations:** FuseRAG shifts most of the retrieved evidence from explicit textual contexts into latent representations by separating reusable evidence content from query-aware structural interactions in the latent space [1, 2]. \n* **Retaining Semantic Anchors:** It retains only a few explicit facts to serve as semantic anchors [1, 2].\n* **Decoder Injection:** The resulting latent representations are injected directly into the decoder self-attention, reshaping attention over the evidence to influence hidden states and next-token probabilities [2]. \n\nThis design preserves the graph structure through latent interactions and enables evidence reuse beyond exact token-prefix matching [2].",
+      "routing_mode": "cascade_router",
+      "sources_queried": [
+        "kb"
+      ],
+      "router_decision": "kb_sufficient",
+      "router_fallback": false,
+      "confidence_score": 0.7655,
+      "citation_source_types": [
+        "kb"
+      ],
+      "citation_files": [
+        "arxiv_2610.22818v1_FuseRAG_Fusing_Structure_and_Evidence_into_Inference_for_Cos.txt"
+      ],
+      "citations": [
+        {
+          "id": 2,
+          "source": "arxiv_2610.22818v1_FuseRAG_Fusing_Structure_and_Evidence_into_Inference_for_Cos.txt",
+          "source_type": "kb",
+          "url": null,
+          "page": 1,
+          "snippet": ". Our main idea is to separate reusable evidence content from query-aware structural interactions in latent space, while retaining only a few explicit facts as semantic anchors. The resulting latent representations are injected into decoder self-atte...",
+          "text": ". Our main idea is to separate reusable evidence content from query-aware structural interactions in latent space, while retaining only a few explicit facts as semantic anchors. The resulting latent representations are injected into decoder self-attention, where they reshape attention over evidence and thereby influence hidden states and next-token probabilities. This design preserves graph structure through latent interactions, enables evidence reuse beyond exact token-prefix matching. Experiments on three multi-hop question-answering datasets with Llama-3-8B and Qwen3.5-9B show that FuseRAG improves answer quality while achieving up to 2.7x and 2.2x TTFT speedups over the fastest graph-based baseline, respectively.",
+          "score": 0.5412
+        }
+      ],
+      "total_latency_ms": 3309.7,
+      "tokens": 1315,
+      "estimated_cost_usd": 0.000135,
+      "is_idk": false
+    },
+    {
+      "id": 3,
+      "question": "What five components comprise the persona-driven NL2SQL pipeline designed to eliminate query hallucinations in regulated domains?",
+      "expected_source": "kb",
+      "split": "dev",
+      "kb_file": "arxiv_2610.22968v1_NL2SQL_with_Iterative_Self-Refinement.txt",
+      "answer": "The multi-agent, persona-driven NL2SQL framework combines the following five components:\n\n1. Domain relevance detection [1]\n2. Schema-grounded knowledge construction [1]\n3. KPI-aware SQL synthesis [1]\n4. Syntax-level self-repair using sqlite execution feedback [1]\n5. Semantic consistency checking via SQL-to-NL reverse engineering [1]",
+      "routing_mode": "cascade_router",
+      "sources_queried": [
+        "kb"
+      ],
+      "router_decision": "kb_sufficient",
+      "router_fallback": false,
+      "confidence_score": 0.7473,
+      "citation_source_types": [
+        "kb"
+      ],
+      "citation_files": [
+        "arxiv_2610.22968v1_NL2SQL_with_Iterative_Self-Refinement.txt"
+      ],
+      "citations": [
+        {
+          "id": 1,
+          "source": "arxiv_2610.22968v1_NL2SQL_with_Iterative_Self-Refinement.txt",
+          "source_type": "kb",
+          "url": null,
+          "page": 1,
+          "snippet": "Bridging the gap between human intent and machine logic remains a critical challenge in data access for non-technical users, yet Large Language Models (LLMs) remain unreliable: they hallucinate schema elements, generate syntactically invalid queries,...",
+          "text": "Bridging the gap between human intent and machine logic remains a critical challenge in data access for non-technical users, yet Large Language Models (LLMs) remain unreliable: they hallucinate schema elements, generate syntactically invalid queries, or fail to capture user intent. These limitations are especially critical in domains such as insurance, where KPIs, regulatory constraints, and legacy relational systems demand high precision. We introduce a multi-agent, persona-driven NL2SQL framework that combines (1) domain relevance detection, (2) schema-grounded knowledge construction, (3) KPI-aware SQL synthesis, (4) syntax-level self-repair using sqlite execution feedback, and (5) semantic consistency checking via SQL-to-NL reverse engineering. Our system significantly reduces query hallucination and improves semantic fidelity compared to direct LLM prompting",
+          "score": 0.9604
+        }
+      ],
+      "total_latency_ms": 2853.58,
+      "tokens": 1097,
+      "estimated_cost_usd": 0.000101,
+      "is_idk": false
+    },
+    {
+      "id": 4,
+      "question": "Why do traditional tabular data quality concepts fail when assessing errors in schemaless property graph databases?",
+      "expected_source": "kb",
+      "split": "dev",
+      "kb_file": "arxiv_2610.23083v1_An_Error_Taxonomy_for_Property_Graph_Data.txt",
+      "answer": "Traditional tabular error concepts fail when assessing errors in property graphs because they are unable to capture the structural properties and context that are inherent in graph data [1]. Furthermore, property graphs are often managed without a prescriptive schema\u2014allowing data insertion without explicit validation\u2014while still exhibiting an implicit schema of recurring structural patterns where irregularities depend heavily on the surrounding graph context [1].",
+      "routing_mode": "cascade_router",
+      "sources_queried": [
+        "kb"
+      ],
+      "router_decision": "kb_sufficient",
+      "router_fallback": false,
+      "confidence_score": 0.7846,
+      "citation_source_types": [
+        "kb"
+      ],
+      "citation_files": [
+        "arxiv_2610.23083v1_An_Error_Taxonomy_for_Property_Graph_Data.txt"
+      ],
+      "citations": [
+        {
+          "id": 1,
+          "source": "arxiv_2610.23083v1_An_Error_Taxonomy_for_Property_Graph_Data.txt",
+          "source_type": "kb",
+          "url": null,
+          "page": 1,
+          "snippet": "Graph data are increasingly used in applications where relationships and topology matter. Yet, compared to tabular data, the notions of data quality and error types for graphs are less established. Tabular error concepts often fail to capture structu...",
+          "text": "Graph data are increasingly used in applications where relationships and topology matter. Yet, compared to tabular data, the notions of data quality and error types for graphs are less established. Tabular error concepts often fail to capture structural properties and context inherent in graph data, hindering systematic quality assessment in graph-based systems. We focus on property graphs (PGs) in graph databases. PGs are often managed without a prescriptive schema, enabling data insertion without explicit validation, while still exhibiting an implicit schema of recurring structural patterns. Irregularities in these patterns may indicate errors, but their interpretation depends on the surrounding graph context. To address these challenges, we provide a systematic view of errors in graph data by proposing a comprehensive graph-specific taxonomy of error types",
+          "score": 0.9988
+        }
+      ],
+      "total_latency_ms": 2050.51,
+      "tokens": 1106,
+      "estimated_cost_usd": 9.9e-05,
+      "is_idk": false
+    },
+    {
+      "id": 13,
+      "question": "What trade-offs does the CAP theorem establish for distributed data stores?",
+      "expected_source": "wikipedia",
+      "split": "dev",
+      "kb_file": "",
+      "answer": "Based on the provided sources, the CAP theorem states that any distributed data store can provide at most two of the following three guarantees: Consistency, Availability, and Partition Tolerance [4]. \n\nSpecifically, it acts as an impossibility theorem that no distributed data store can be both consistent and available in executions containing partitions [1]. This involves a trade-off where:\n* If a system ensures consistency, operation latencies grow with message delays, meaning operations cannot terminate eventually if the network is partitioned, so the system cannot ensure availability [1].\n* In essence, the CAP theorem establishes that a distributed data store can provide at most two of these three guarantees [4].",
+      "routing_mode": "cascade_router",
+      "sources_queried": [
+        "kb",
+        "wikipedia"
+      ],
+      "router_decision": "escalated_after_low_confidence",
+      "router_fallback": false,
+      "confidence_score": 0.9794,
+      "citation_source_types": [
+        "wikipedia",
+        "wikipedia"
+      ],
+      "citation_files": [
+        "PACELC design principle",
+        "CAP theorem"
+      ],
+      "citations": [
+        {
+          "id": 1,
+          "source": "PACELC design principle",
+          "source_type": "wikipedia",
+          "url": "https://en.wikipedia.org/wiki/PACELC_design_principle",
+          "page": null,
+          "snippet": "The CAP theorem can be phrased as \"PAC\", the impossibility theorem that no distributed data store can be both consistent and available in executions that contains partitions. This can be proved by examining latency: if a system ensures consistency, t...",
+          "text": "The CAP theorem can be phrased as \"PAC\", the impossibility theorem that no distributed data store can be both consistent and available in executions that contains partitions. This can be proved by examining latency: if a system ensures consistency, then operation latencies grow with message delays, and hence operations cannot terminate eventually if the network is partitioned, i.e. the system cannot ensure availability.",
+          "score": 0.9871
+        },
+        {
+          "id": 4,
+          "source": "CAP theorem",
+          "source_type": "wikipedia",
+          "url": "https://en.wikipedia.org/wiki/CAP_theorem",
+          "page": null,
+          "snippet": "In database theory, the CAP theorem, also named Brewer's theorem after computer scientist Eric Brewer, states that any distributed data store can provide at most two of the following three guarantees:  Consistency  Every read receives the most recent...",
+          "text": "In database theory, the CAP theorem, also named Brewer's theorem after computer scientist Eric Brewer, states that any distributed data store can provide at most two of the following three guarantees:\n\nConsistency\n\nEvery read receives the most recent write or an error. Consistency means that all clients see the same data at the same time, no matter which node they connect to. For this to happen, whenever data is written to one node, it must be instantly forwarded or replicated to all the other nodes in the system before the write is deemed \u2018successful\u2019. Consistency as defined in the CAP theorem is quite different from the consistency guaranteed in ACID database transactions.\n\nAvailability",
+          "score": 0.9563
+        }
+      ],
+      "total_latency_ms": 8751.91,
+      "tokens": 995,
+      "estimated_cost_usd": 0.000105,
+      "is_idk": false
+    },
+    {
+      "id": 14,
+      "question": "How does a hash table resolve collisions using open addressing versus separate chaining?",
+      "expected_source": "wikipedia",
+      "split": "dev",
+      "kb_file": "",
+      "answer": "Based on the provided sources, hash tables resolve collisions using two classic families:\n\n* **Separate Chaining:** This method stores multiple colliding entries or elements behind one bucket, typically using a linked list or other collection at that index [1], [3], [4], [5]. When multiple keys map to the same hash value, the new element is simply added to the list at that specific index [5].\n* **Open Addressing:** This method stores entries directly inside the main table rather than in separate structures [1]. When a collision occurs, it follows a deterministic probe sequence (searching through alternative locations) until it finds either the target record or an unused array slot indicating the key is not present [1], [2], [4]. Well-known open addressing probe sequences include linear probing, quadratic probing, and double hashing [2].",
+      "routing_mode": "cascade_router",
+      "sources_queried": [
+        "kb",
+        "wikipedia",
+        "web"
+      ],
+      "router_decision": "escalated_after_low_confidence",
+      "router_fallback": false,
+      "confidence_score": 0.9992,
+      "citation_source_types": [
+        "web",
+        "wikipedia",
+        "web",
+        "wikipedia",
+        "web"
+      ],
+      "citation_files": [
+        "How Hash Table Collision Resolution Works | Chaining, Probing & Tombstones",
+        "Open addressing",
+        "Hash Table Collision Resolution: Chaining vs Open Addressing | DevToolbox",
+        "Hash table",
+        "Hashing \u2013 Separate Chaining | Baeldung on Computer Science"
+      ],
+      "citations": [
+        {
+          "id": 1,
+          "source": "How Hash Table Collision Resolution Works | Chaining, Probing & Tombstones",
+          "source_type": "web",
+          "url": "https://edukatesg.com/2026/10/02/how-hash-table-collision-resolution-works-separate-chaining-open-addressing-probing",
+          "page": null,
+          "snippet": "The two classic families are separate chaining and open addressing. Chaining stores multiple colliding entries behind one bucket. Open addressing stores entries inside the main table and follows a probe sequence until it finds the key or an available...",
+          "text": "The two classic families are separate chaining and open addressing. Chaining stores multiple colliding entries behind one bucket. Open addressing stores entries inside the main table and follows a probe sequence until it finds the key or an available position. [...] The hash gets several keys to the same neighbourhood. Chaining gives the neighbourhood a directory. Open addressing says: if this address is occupied, follow this route to the next candidate.\n\nThe route must be reproducible later or the key cannot be found.\n\nCollision resolution is local navigation under ambiguous coordinates.\n\n## Cross-Disciplinary Perspective: Collision Strategy Is a Systems Choice [...] # How Hash Table Collision Resolution Works | Separate Chaining, Open Addressing, Probing and Tombstones\n\neduKate Asia\n\n\u270e Edit this page\n\nHash table collision resolution works because a table never assumes that one hash route belongs to only one key. When two or more keys map to the same bucket or initial slot, the table follows a deterministic rule that keeps all entries reachable and lets later lookups distinguish them by equality.",
+          "score": 0.9993
+        },
+        {
+          "id": 2,
+          "source": "Open addressing",
+          "source_type": "wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Open_addressing",
+          "page": null,
+          "snippet": "Open addressing, or closed hashing, is a method of collision resolution in hash tables.  With this method a hash collision is resolved by probing, or searching through alternative locations in the array (the probe sequence) until either the target re...",
+          "text": "Open addressing, or closed hashing, is a method of collision resolution in hash tables.  With this method a hash collision is resolved by probing, or searching through alternative locations in the array (the probe sequence) until either the target record is found, or an unused array slot is found, which indicates that there is no such key in the table. Well-known probe sequences include:\n\nLinear probing\n\nin which the interval between probes is fixed\u2009\u2014\u2009often set to 1.\n\nQuadratic probing\n\nin which the interval between probes increases linearly (hence, the indices are described by a quadratic function).\n\nDouble hashing\n\nin which the interval between probes is fixed for each record but is computed by another hash function.",
+          "score": 0.9992
+        },
+        {
+          "id": 3,
+          "source": "Hash Table Collision Resolution: Chaining vs Open Addressing | DevToolbox",
+          "source_type": "web",
+          "url": "https://www.dev-toolbox.tech/tools/data-structure-visualizer/examples/hash-table-collision-resolution",
+          "page": null,
+          "snippet": "A hash collision occurs when two different keys produce the same hash value (map to the same bucket). Since the number of possible keys is typically much larger than the number of buckets, collisions are inevitable. How they are handled determines th...",
+          "text": "A hash collision occurs when two different keys produce the same hash value (map to the same bucket). Since the number of possible keys is typically much larger than the number of buckets, collisions are inevitable. How they are handled determines the hash table's performance.\n\n### Separate Chaining\n\nEach bucket stores a linked list (or other collection) of all entries that hash to that bucket: [...] DevToolbox\n\n# Hash Table Collision Resolution: Chaining vs Open Addressing\n\nUnderstand how hash tables handle collisions with separate chaining and open addressing. Compare linear probing, quadratic probing, and double hashing strategies with examples.\n\nHash Table\n\n## Detailed Explanation\n\n## Hash Table Collision Resolution [...] ## Use Case\n\nEvery hash table implementation must choose a collision resolution strategy. Language standard libraries vary: Java's HashMap uses chaining (with tree upgrade for long chains), Python's dict uses open addressing with pseudo-random probing, and Go's map uses a variant of chaining with buckets. Understanding these strategies is crucial for system design and choosing the right data structure.\n\n## Try It\u2014 Data Structure Visualizer\n\nOpen full tool \u2192\n\n## Related Topics",
+          "score": 0.9992
+        },
+        {
+          "id": 4,
+          "source": "Hash table",
+          "source_type": "wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Hash_table",
+          "page": null,
+          "snippet": "Most hash table designs employ an imperfect hash function. Hash collisions, where the hash function generates the same index for more than one key, therefore typically must be accommodated in some way. Common strategies to handle hash collisions incl...",
+          "text": "Most hash table designs employ an imperfect hash function. Hash collisions, where the hash function generates the same index for more than one key, therefore typically must be accommodated in some way. Common strategies to handle hash collisions include separate chaining, which stores multiple elements in the same slot using linked lists, and open addressing, which searches for the next available slot according to a probing sequence.\n\nIn a well-dimensioned hash table, the average time complexity for each lookup is independent of the number of elements stored in the table. Many hash table designs also allow arbitrary insertions and deletions of key\u2013value pairs, at amortized constant average cost per operation.",
+          "score": 0.9988
+        },
+        {
+          "id": 5,
+          "source": "Hashing \u2013 Separate Chaining | Baeldung on Computer Science",
+          "source_type": "web",
+          "url": "https://www.baeldung.com/cs/hashing-separate-chaining",
+          "page": null,
+          "snippet": "Separate chaining is a collision resolution technique to store elements in a hash table, which is represented as an array of linked lists. Each index in the table is a chain of elements mapping to the same hash value. When inserting keys into a hash...",
+          "text": "Separate chaining is a collision resolution technique to store elements in a hash table, which is represented as an array of linked lists. Each index in the table is a chain of elements mapping to the same hash value. When inserting keys into a hash table, we generate an index and mitigate collisions by adding a new element to the list at that particular index. Nonetheless, preventing duplicate keys in our table will slightly change the insert algorithm since we must ensure the key is not in [...] Separate Chaining\n\nAccording to our function, \\boldsymbol{h(a)}, 9 will be inserted at index 5, whereas the last item, 2 will be inserted at index 3:\n\nSeparate Chaining\n\nOnce we try to insert 2, we encounter a collision with key 310. However, because we\u2019re using separate chaining as our collision resolution algorithm, our hash table results in the following state after inserting all elements in A:\n\nSeparate Chaining [...] ## 1. Introduction\n\nIn this tutorial, we\u2019ll learn about separate chaining \u2013 an algorithm leveraging linked lists to resolve collisions in a hash table.\n\nDuring insert and search operations, elements may generate the same hash value, hence, sharing the same index in the table. Therefore, we need a logical process that, despite these collisions, we can still find or insert the elements.",
+          "score": 0.9985
+        }
+      ],
+      "total_latency_ms": 11993.35,
+      "tokens": 1541,
+      "estimated_cost_usd": 0.000154,
+      "is_idk": false
+    },
+    {
+      "id": 15,
+      "question": "How does gradient descent update parameters to minimize the loss function during neural network training?",
+      "expected_source": "wikipedia",
+      "split": "dev",
+      "kb_file": "",
+      "answer": "Gradient descent updates parameters (such as weights and biases) to minimize the loss function through the following process:\n\n* **Calculating the Gradient:** The algorithm calculates the gradient of the loss function with respect to the parameters at the current point, which represents a vector of partial derivatives pointing in the direction of the steepest increase (or steepest ascent) [1, 2].\n* **Moving in the Opposite Direction:** To reduce the loss, parameters are updated in the direction opposite to the gradient (the negative gradient or direction of steepest descent) [2]. \n* **Applying the Update Rule:** The parameters are adjusted iteratively using the learning rate ($\\eta$ or $\\alpha$) to scale the size of the steps taken [1, 5]. For example, the weights ($\\mathbf{w}$) and bias ($b$) are updated using formulas such as:\n  $$\\mathbf{w} = \\mathbf{w} - \\eta \\frac{\\partial \\text{loss}}{\\partial \\mathbf{w}}$$\n  $$b = b - \\eta \\frac{\\partial \\text{loss}}{\\partial b}$$\n* **Iterative Improvement:** This step-by-step process is repeated iteratively (often working together with backpropagation) until the model converges, the loss becomes very small, and optimal parameters are found [1, 3, 4, 5].",
+      "routing_mode": "cascade_router",
+      "sources_queried": [
+        "kb",
+        "wikipedia",
+        "web"
+      ],
+      "router_decision": "escalated_after_low_confidence",
+      "router_fallback": false,
+      "confidence_score": 0.997,
+      "citation_source_types": [
+        "web"
+      ],
+      "citation_files": [
+        "Neural networks: How to optimize with gradient descent - CUDO Compute"
+      ],
+      "citations": [
+        {
+          "id": 2,
+          "source": "Neural networks: How to optimize with gradient descent - CUDO Compute",
+          "source_type": "web",
+          "url": "https://www.cudocompute.com/topics/neural-networks/neural-networks-how-to-optimize-with-gradient-descent",
+          "page": null,
+          "snippet": "Gradient Descent aims to minimize the loss function. To achieve this, it updates the parameters in the direction opposite to the gradient. This is why we often refer to the \u201cnegative gradient.\u201d By moving in the opposite direction of the steepest asce...",
+          "text": "Gradient Descent aims to minimize the loss function. To achieve this, it updates the parameters in the direction opposite to the gradient. This is why we often refer to the \u201cnegative gradient.\u201d By moving in the opposite direction of the steepest ascent, we effectively move towards the direction of the steepest descent, thus reducing the loss.\n\nSource: Wikipedia\n\nNow, let\u2019s explore the key elements of gradient descent, starting with the learning rate.\n\n## The Learning Rate [...] In neural networks, the gradient is a vector that points in the direction of the greatest rate of increase of the loss function. Each element of this vector represents the partial derivative of the loss function with respect to a particular parameter. Essentially, it tells us how much the loss would change if we were to make a small change to that specific parameter. [...] Source: Hyperskill\n\nThe primary goal of gradient descent is to find the parameters (weights and biases) that minimize this loss function, thereby improving the network\u2019s performance. Gradient Descent adjusts the parameters in the direction of the negative gradient of the cost function concerning the parameters.\n\nLet\u2019s delve deeper into the mechanics of Gradient Descent.\n\n## Understanding the Gradient",
+          "score": 0.9992
+        }
+      ],
+      "total_latency_ms": 11004.45,
+      "tokens": 1866,
+      "estimated_cost_usd": 0.000202,
+      "is_idk": false
+    },
+    {
+      "id": 22,
+      "question": "What are the latest benchmark results and architecture features of newly released multimodal frontier AI models this week?",
+      "expected_source": "web",
+      "split": "dev",
+      "kb_file": "",
+      "answer": "Based on the provided sources, the architecture features and benchmark results of newly released multimodal frontier models include:\n\n* **Unified Multimodal Architectures:** Gemini 3 Pro features a truly unified multimodal architecture that processes text, images, audio, video, and code through a single transformer stack, moving away from previous approaches that relied on separate encoders for different modalities [1].\n* **MMMU-Pro Benchmark Performance:** By April 2026, leading frontier multimodal models\u2014specifically GPT-5.5, Gemini 3 Deep Think, Claude Opus 4.7, and Qwen 3.5 Omni\u2014clear 80% (scoring between 81% and 83%) on MMMU-Pro, bringing the performance spread down to under 3 points and largely saturating the headline image-QA benchmark [2].\n* **Shifting Multimodal Frontiers:** With benchmarks like MMMU-Pro, ChartQA (~88%), and DocVQA (~96%) nearing saturation, the meaningful frontier and active evaluation areas have moved toward video, long-document OCR, audio understanding, MMT-Bench (~78%), MMMU (~86%), and the edge cases of chart and code-with-vision reasoning [2, 3].",
+      "routing_mode": "cascade_router",
+      "sources_queried": [
+        "kb",
+        "web"
+      ],
+      "router_decision": "escalated_after_low_confidence",
+      "router_fallback": false,
+      "confidence_score": 0.778,
+      "citation_source_types": [
+        "web",
+        "web"
+      ],
+      "citation_files": [
+        "Frontier AI Models Technical Deep Dive: GPT5.1, Grok4.1, Opus4.5 and Gemini 3 Pro",
+        "Multimodal AI Benchmarks 2026: Vision, Audio, Code"
+      ],
+      "citations": [
+        {
+          "id": 1,
+          "source": "Frontier AI Models Technical Deep Dive: GPT5.1, Grok4.1, Opus4.5 and Gemini 3 Pro",
+          "source_type": "web",
+          "url": "https://kenhuangus.substack.com/p/frontier-ai-models-technical-deep",
+          "page": null,
+          "snippet": "The 2025 AI landscape is dominated by four frontier models that represent distinct approaches to scaling transformer architectures: OpenAI\u2019s GPT-5.1 with its smart routing system, Google\u2019s Gemini 3 Pro featuring unified multimodal processing, Anthrop...",
+          "text": "The 2025 AI landscape is dominated by four frontier models that represent distinct approaches to scaling transformer architectures: OpenAI\u2019s GPT-5.1 with its smart routing system, Google\u2019s Gemini 3 Pro featuring unified multimodal processing, Anthropic\u2019s Claude Opus 4.5 with agentic efficiency controls, and xAI\u2019s Grok 4.1 emphasizing truth-seeking capabilities. Each model introduces novel architectural innovations while maintaining the fundamental transformer backbone. [...] AIME 2025: 94.6% (94.6% with GPT-5.1 Pro)\n SWE-bench Verified: 74.9%\n GPQA (Science): 88.4%\n HealthBench Hard: 46.2%\n Hallucination Reduction: 45-80% improvement over GPT-4\n\n## Gemini 3 Pro: Unified Multimodal Transformer Stack\n\n### Architectural Foundation [...] Gemini 3 Pro introduces a truly unified multimodal architecture that processes text, images, audio, video, and code through a single transformer stack. This represents a departure from previous approaches that used separate encoders for different modalities.\n\n### Key Technical Innovations",
+          "score": 0.9375
+        },
+        {
+          "id": 2,
+          "source": "Multimodal AI Benchmarks 2026: Vision, Audio, Code",
+          "source_type": "web",
+          "url": "https://www.digitalapplied.com/blog/multimodal-ai-benchmarks-2026-vision-audio-code",
+          "page": null,
+          "snippet": "\u25bclong-doc OCR king  Multimodal evaluation has moved past the pure image-QA era. By April 2026 the four leading frontier multimodal models \u2014 GPT-5.5, Gemini 3 Deep Think, Claude Opus 4.7, and Qwen 3.5 Omni \u2014 all clear 80% on MMMU-Pro. That benchmark,...",
+          "text": "\u25bclong-doc OCR king\n\nMultimodal evaluation has moved past the pure image-QA era. By April 2026 the four leading frontier multimodal models \u2014 GPT-5.5, Gemini 3 Deep Think, Claude Opus 4.7, and Qwen 3.5 Omni \u2014 all clear 80% on MMMU-Pro. That benchmark, which split the field by 10+ points in 2024, now spreads them by under 3 points. The differentiating axis has moved. [...] In 2023-2024, multimodal evaluation was effectively MMMU and MMMU-Pro \u2014 image understanding plus QA. The field spread cleanly on those benchmarks because most models were genuinely worse at them. By 2026, MMMU-Pro is saturated; the meaningful frontier has moved to video, long-document OCR, audio understanding, and the edge cases of chart and code-with-vision reasoning. [...] 1. 01\n\n   MMMU-Pro is saturated \u2014 the headline image-QA benchmark no longer differentiates frontier models.GPT-5.5, Gemini 3, Claude Opus 4.7, and Qwen 3.5 Omni all score 81-83% on MMMU-Pro in Apr 2026. The 2024 field was 65-78%; the 2026 spread is 2.4 points. Don't pick a multimodal model on MMMU-Pro alone \u2014 it tells you everyone is good, not who wins.\n2. 02",
+          "score": 0.8686
+        }
+      ],
+      "total_latency_ms": 7167.26,
+      "tokens": 1997,
+      "estimated_cost_usd": 0.000208,
+      "is_idk": false
+    },
+    {
+      "id": 23,
+      "question": "What are the latest GPU architecture announcements and memory specifications from Nvidia and AMD this week?",
+      "expected_source": "web",
+      "split": "dev",
+      "kb_file": "",
+      "answer": "Based on the available sources, here are the details regarding recent architecture announcements and memory specifications:\n\n* **AMD:** AMD unveiled its next-generation **RDNA 4** graphics architecture along with the Radeon RX 9000 Series (including the RX 9070 XT and RX 9070 graphics cards) [1]. These new cards feature 16GB of GDDR6 memory, a 256-bit memory interface, and 64 MB of Infinity Cache [1]. Additionally, roadmap and hardware tracking details note future architectures such as UDNA/RDNA 5 (expected late 2026 to early 2027 using TSMC 3nm and GDDR7 memory up to 32 Gbps) and UDNA 2 / RDNA 6 (planned for 2028+) [3].\n* **Nvidia:** Upcoming hardware leaks and roadmap trackers mention future designs like the Nvidia GeForce RTX TITAN Blackwell, which is expected to feature a 512-bit GDDR7 memory interface, 32 Gbps memory speeds, 88 MB of L2 cache, and a GB202-200-A1 GPU layout [2].",
+      "routing_mode": "cascade_router",
+      "sources_queried": [
+        "kb",
+        "web"
+      ],
+      "router_decision": "escalated_after_low_confidence",
+      "router_fallback": false,
+      "confidence_score": 0.7302,
+      "citation_source_types": [
+        "web",
+        "web",
+        "web"
+      ],
+      "citation_files": [
+        "AMD Unveils Next-Generation AMD RDNA 4 Architecture - AMD Newsroom",
+        "Upcoming Hardware Launches 2026 (Updated Jul 2026) | TechPowerUp",
+        "Desktop GPU roadmap: Nvidia Rubin, AMD UDNA & Intel Xe3 Celestial | Tom's Hardware"
+      ],
+      "citations": [
+        {
+          "id": 1,
+          "source": "AMD Unveils Next-Generation AMD RDNA 4 Architecture - AMD Newsroom",
+          "source_type": "web",
+          "url": "https://newsroom.amd.com/news/amd-unveils-next-generation-amd-rdna-4-architectu",
+          "page": null,
+          "snippet": "SANTA CLARA, Calif., Feb. 28, 2025 (GLOBE NEWSWIRE) -- AMD (NASDAQ: AMD) today unveiled the highly-anticipated AMD RDNA\u2122 4 graphics architecture with the launch of the AMD Radeon\u2122 RX 9070 XT and RX 9070 graphics cards as a part of the Radeon\u2122 RX 9000...",
+          "text": "SANTA CLARA, Calif., Feb. 28, 2025 (GLOBE NEWSWIRE) -- AMD (NASDAQ: AMD) today unveiled the highly-anticipated AMD RDNA\u2122 4 graphics architecture with the launch of the AMD Radeon\u2122 RX 9070 XT and RX 9070 graphics cards as a part of the Radeon\u2122 RX 9000 Series. The new graphics cards feature 16GB of memory and extensive improvements designed for high-quality gaming graphics, including re-vamped raytracing accelerators and powerful AI accelerators for ultra-fast, cutting-edge performance, and [...] ## AMD Radeon RX 9000 Series Product Specifications\n\n|  |  |  |  |  |  |  |  |  |\n ---  ---  ---  --- \n| Model | Compute Units | GDDR6 | Game Clock (GHz) | Boost Clock6 (GHz) | Memory Interface | Infinity Cache | TBP | Price (USD SEP) |\n| AMD Radeon RX 9070 XT | 64 | 16 GB | 2.4 | Up to 3.0 | 256-bit | 64 MB | 304W | $599 |\n| AMD Radeon RX 9070 | 56 | 16 GB | 2.1 | Up to 2.5 | 256-bit | 64 MB | 220W | $549 |\n\n## Pricing and Availability [...] The Radeon RX 9000 Series unlocks new levels of performance while delivering a suite of new and enhanced features that improve the gaming experience. The Radeon RX 9070 Series offers 16GB of GDDR6 memory, allowing gamers to render the most exciting games of today and tomorrow at max settings. Compared to the previous generation RX 7900 GRE, the latest AMD Radeon RX 9070 is able to deliver over 20% more performance on average when gaming at 1440,2 with the AMD Radeon RX 9070 XT extending that",
+          "score": 0.8465
+        },
+        {
+          "id": 2,
+          "source": "Upcoming Hardware Launches 2026 (Updated Jul 2026) | TechPowerUp",
+          "source_type": "web",
+          "url": "https://www.techpowerup.com/review/future-hardware-releases",
+          "page": null,
+          "snippet": "### NVIDIA GeForce RTX TITAN Blackwell   Release Date: Unknown #  Another leak suggests late 2026 #  GB202-200-A1 GPU #  Could use the full GB202 GPU #  24,576 CUDA cores, 768 Tensor cores, 192 RT cores, 768 TMUs, and 192 ROPs, besides 88 MB of L2 ca...",
+          "text": "### NVIDIA GeForce RTX TITAN Blackwell\n\n Release Date: Unknown #\n Another leak suggests late 2026 #\n GB202-200-A1 GPU #\n Could use the full GB202 GPU #\n 24,576 CUDA cores, 768 Tensor cores, 192 RT cores, 768 TMUs, and 192 ROPs, besides 88 MB of L2 cache #\n 512-bit GDDR7 memory interface #\n 32 Gbps memory speeds #\n Two 12V-2x6 power connectors #\n\n### AMD Radeon RX 9040\n\n Release Date: Unknown #\n\n### AMD Radeon RX 9050 [...] Vera Rubin, Updated AMD RDNA 5, Updated AMD UDNA, Added Chinese Lisuan LX 7G106 GPU, Added Imagination PowerVR on Windows, Updated Intel Celestial Architecture, Added NVIDIA DLSS 5, Added Next-Gen DirectX Ray Tracing (DXR 2), Added NVIDIA RTX 5070 Mobile 12 GB, Updated HBM4 Memory, Updated HBM4E Memory, Updated Sony PlayStation 6, Updated Microsoft Xbox \"Project Helix\", Updated Valve Steam Machine, Added Valve Steam Deck 2, Added Nintendo Switch 2 Updates, Updated Intel 14A, Added Elon Musk [...] / Arc B770, Updated NVIDIA Rubin, Updated AMD RDNA 5, Updated AMD UDNA, Added LPDDR6 Memory, Updated HBM4 Memory, Updated HBM4e Memory, Updated TSMC 2 nanometer, Added TSMC 1.6 nanometer, Updated TSMC 1.4 nanometer, Updated Intel 14A, Added Samsung Z-NAND, Updated Hynix 321-layer 3D NAND Flash, Updated Samsung 280-layer 3D NAND QLC Flash, Updated YMTC 294-layer 3D NAND Flash, Added PCI Express 8.0, Removed launched HBM3e, Removed Intel Arc B580 with 24 GB, which was launched as Arc Pro B50 &",
+          "score": 0.7527
+        },
+        {
+          "id": 3,
+          "source": "Desktop GPU roadmap: Nvidia Rubin, AMD UDNA & Intel Xe3 Celestial | Tom's Hardware",
+          "source_type": "web",
+          "url": "https://www.tomshardware.com/pc-components/gpus/desktop-gpu-roadmap-nvidia-rubin-amd-udna-and-intel-xe3-celestial",
+          "page": null,
+          "snippet": "Regarding an anticipated launch timeline, Rubin Ultra may launch in the second half of 2027, while Feynman GPUs are still very far off, so don't expect anything sporting the architecture until H2 2028 / H1 2029, at the very earliest. Be sure to take...",
+          "text": "Regarding an anticipated launch timeline, Rubin Ultra may launch in the second half of 2027, while Feynman GPUs are still very far off, so don't expect anything sporting the architecture until H2 2028 / H1 2029, at the very earliest. Be sure to take these dates with a dose of salt, as nothing is confirmed until Nvidia itself says so.\n\n## AMD\n\nArchitecture\n\nExpected Launch\n\nProcess Technology\n\nMemory Type\n\nPower\n\nUDNA/RDNA 5\n\nLate 2026 - Early 2027\n\nTSMC 3nm / N3E\n\nGDDR7 (up to 32 Gbps)\n\nTBC [...] TBC\n\nUDNA 2 / RDNA 6\n\n2028+\n\nTBC\n\nGDDR7X or next-gen VRAM\n\nTBC\n\nAMD unveiled its RDNA 4 architecture in January 2025, followed by the RX 9000 series of cards in early March. AMD\u2019s primary goal this generation was to target the mainstream with GPUs, in quantity, that were both affordable and performed well. [...] The UDNA architecture may also see AMD shift back from monolithic to a chiplet-based design, optimizing manufacturing yields and enabling finer die cutdowns. AMD already employs a technique allowing it to produce more SKUs from a single silicon design through a technique named asymmetric harvesting. Potentially using this, can expect a range from 96 CUs all the way down to 32 CUs for UDNA, with GDDR7 memory being the VRAM technology of choice.",
+          "score": 0.689
+        }
+      ],
+      "total_latency_ms": 5747.84,
+      "tokens": 2372,
+      "estimated_cost_usd": 0.000236,
+      "is_idk": false
+    },
+    {
+      "id": 24,
+      "question": "What are the latest open-source large language model releases and permissive licenses announced this week?",
+      "expected_source": "web",
+      "split": "dev",
+      "kb_file": "",
+      "answer": "Based on the available sources, the open-weight and open-source model releases announced are:\n\n* **DeepSeek-V4.1-Flash-1017** (released by DeepSeek on October 17) [1].\n* **Nemotron Labs Dory 1.0 (4B)** (released by NVIDIA on October 16) [1].\n* **Nemotron 3.5 Bolt (74B A9B 24GB)** (released by NVIDIA on October 15) [1].\n* **Nemotron 3.5 Super VL (120B A12B)** (released by NVIDIA on October 15) [1].\n* **Command A+** (a mixture-of-experts model released by Cohere as open source) [2].\n\nRegarding permissive licenses, open-source language models frequently support commercial use through standard permissive licenses such as **Apache 2.0** or **MIT** [3]. Additionally, specific models like Snowflake Arctic are released under an Apache 2.0 license [5].",
+      "routing_mode": "cascade_router",
+      "sources_queried": [
+        "kb",
+        "web"
+      ],
+      "router_decision": "escalated_after_low_confidence",
+      "router_fallback": false,
+      "confidence_score": 0.8967,
+      "citation_source_types": [
+        "web",
+        "web",
+        "web",
+        "web"
+      ],
+      "citation_files": [
+        "AI Updates Today (October 2026) \u2013 Latest AI Model Releases",
+        "Cohere releases its most powerful AI model as open source | BetaKit",
+        "Best Open Source LLMs in 2026 (Updated for Q3)",
+        "Snowflake unveils open large language model Arctic"
+      ],
+      "citations": [
+        {
+          "id": 1,
+          "source": "AI Updates Today (October 2026) \u2013 Latest AI Model Releases",
+          "source_type": "web",
+          "url": "https://llm-stats.com/llm-updates",
+          "page": null,
+          "snippet": "Weekly brief  ### The model releases, benchmark shifts, and analysis worth your week \u2014 in one email.  Open weights  ## Open Source AI Updates  Recent open-weight model releases with permissive licenses  Open LLM Leaderboard  ### DeepSeek-V4.1-Flash-1...",
+          "text": "Weekly brief\n\n### The model releases, benchmark shifts, and analysis worth your week \u2014 in one email.\n\nOpen weights\n\n## Open Source AI Updates\n\nRecent open-weight model releases with permissive licenses\n\nOpen LLM Leaderboard\n\n### DeepSeek-V4.1-Flash-1017\n\nDeepSeek\u00b7Oct 17### Nemotron Labs Dory 1.0 (4B)\n\nNVIDIA\u00b7Oct 16### Nemotron 3.5 Bolt (74B A9B 24GB)\n\nNVIDIA\u00b7Oct 15### Nemotron 3.5 Super VL (120B A12B)\n\nNVIDIA\u00b7Oct 15\n\nLandscape\n\n### Open Source LLM Landscape [...] Open source LLM news has become increasingly important as open-weight models transform the AI landscape. Stay updated withopen source LLM updates today covering models like Llama 3, Mistral, Qwen, and DeepSeek\u2014now rivaling proprietary alternatives on many benchmarks while providing flexibility to fine-tune, self-host, and customize for specific domains. [...] Our open-source LLM coverage includes licensing terms (Apache 2.0, MIT, or custom licenses), parameter count affecting LLM inference costs, quantization support for efficient deployment, and the community ecosystem of fine-tuned variants and LLM tools.\n\nOpen LLM Leaderboard\u00b7Open Source AI Models\n\nPrimer\n\n## Understanding LLM Versioning",
+          "score": 0.9932
+        },
+        {
+          "id": 2,
+          "source": "Cohere releases its most powerful AI model as open source | BetaKit",
+          "source_type": "web",
+          "url": "https://betakit.com/cohere-releases-its-most-powerful-ai-model-as-open-source",
+          "page": null,
+          "snippet": "The news: On Wednesday, the enterprise-focused AI startup released its latest large language model: Command A+. The mixture-of-experts model, which splits up processing between sub-models or \u201cexperts,\u201d is twice as fast as Cohere\u2019s previous models and...",
+          "text": "The news: On Wednesday, the enterprise-focused AI startup released its latest large language model: Command A+. The mixture-of-experts model, which splits up processing between sub-models or \u201cexperts,\u201d is twice as fast as Cohere\u2019s previous models and has lower latency and higher accuracy, the company says. It\u2019s also available as open source, meaning that developers can directly access the weights used to build and operate the model. Cohere has also made implementation guides available. Nvidia",
+          "score": 0.9802
+        },
+        {
+          "id": 3,
+          "source": "Best Open Source LLMs in 2026 (Updated for Q3)",
+          "source_type": "web",
+          "url": "https://qbitneural.com/open-source-llms",
+          "page": null,
+          "snippet": "Many open source language models support commercial use through permissive licenses such as Apache 2.0 or MIT, but always review the specific model license, attribution requirements, and acceptable-use terms before deploying in production.  To choose...",
+          "text": "Many open source language models support commercial use through permissive licenses such as Apache 2.0 or MIT, but always review the specific model license, attribution requirements, and acceptable-use terms before deploying in production.\n To choose the right open source LLM, evaluate benchmark performance (MMLU-Pro, HLE, GPQA, SWE-bench, LiveCodeBench, LiveBench), licensing, hardware requirements, deployment ecosystem, and your specific production use case. [...] | Commercial use with a standard permissive license | Apache 2.0 or MIT releases | Still review notices, patents, trademarks, acceptable-use guidance, and the exact model version. | [...] Qwen 3.8 Max is Alibaba\u2019s largest and most capable Qwen model to date. It uses a Mixture-of-Experts architecture with 2.4 trillion total parameters while activating 95 billion parameters during inference. The production model was officially released on August 3, 2026, and is available as qwen3.8-max through QwenCloud and Alibaba Cloud Model Studio. It supports deep reasoning and native vision-language understanding, making it suitable for coding, research, document analysis, productivity",
+          "score": 0.9759
+        },
+        {
+          "id": 5,
+          "source": "Snowflake unveils open large language model Arctic",
+          "source_type": "web",
+          "url": "https://ng.investing.com/news/company-news/snowflake-unveils-open-large-language-model-arctic-93CH-1316490",
+          "page": null,
+          "snippet": "SNOW-7.32%  BOZEMAN, Mont. -  Snowflake Inc . (NYSE: NYSE:SNOW), a cloud-based data warehousing company, has introduced Snowflake Arctic, a large language model (LLM) that claims to offer top-tier intelligence and efficiency for enterprise applicatio...",
+          "text": "SNOW-7.32%\n\nBOZEMAN, Mont. -  Snowflake Inc . (NYSE: NYSE:SNOW), a cloud-based data warehousing company, has introduced Snowflake Arctic, a large language model (LLM) that claims to offer top-tier intelligence and efficiency for enterprise applications. The model is distinguished by its Mixture-of-Experts (MoE) architecture and is being released under an Apache 2.0 license to promote transparency and broad usage. [...] The announcement of Arctic represents Snowflake's commitment to advancing open source AI technology. Arctic is designed to handle complex enterprise workloads and has surpassed several industry benchmarks, including SQL code generation and instruction following. Snowflake emphasizes the model's efficiency, noting that it requires significantly fewer parameters to operate compared to other leading models like DBRX and Llama 3 70B.",
+          "score": 0.3005
+        }
+      ],
+      "total_latency_ms": 5576.43,
+      "tokens": 1942,
+      "estimated_cost_usd": 0.000197,
+      "is_idk": false
+    }
+  ]
+}

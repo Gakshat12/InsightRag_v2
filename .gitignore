@@ -1,0 +1,11 @@
+.env
+.venv/
+venv_eval/
+__pycache__/
+indexes/
+data/kb/
+eval/cache/
+eval/ragas_cache/
+data/indices/
+
+data/indices/

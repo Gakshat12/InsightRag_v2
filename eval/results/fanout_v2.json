@@ -1,0 +1,1269 @@
+{
+  "tag": "fanout_v2",
+  "split": "test",
+  "timestamp": "2026-10-31T02:34:07Z",
+  "summary": {
+    "n_evaluated": 20,
+    "router_fallbacks_excluded": 0,
+    "total_questions": 20,
+    "avg_latency_ms": 10201.91,
+    "p95_latency_ms": 18724.14,
+    "avg_tokens": 1687.8,
+    "avg_cost_usd": 0.000169,
+    "idk_rate": 0.05,
+    "routing_accuracy": 0.8,
+    "kb_hit_rate": 0.75,
+    "pct_skipped_external": 0.0,
+    "mean_confidence": 0.8781
+  },
+  "questions": [
+    {
+      "id": 5,
+      "question": "How does PrairieFire achieve high update throughput in billion-scale SSD-based approximate nearest neighbor search without sacrificing search performance?",
+      "expected_source": "kb",
+      "split": "test",
+      "kb_file": "arxiv_2610.23232v1_PrairieFire_Igniting_High-Throughput_Updates_in_Large-Scale_.txt",
+      "answer": "PrairieFire achieves high update throughput while maintaining excellent search performance by utilizing buffered updates and batched local rebuilds, combined with cascaded adjustments, concurrency control, and CPU-GPU-SSD cooperation [2]. These co-designs avoid frequent SSD accesses during foreground updates and eliminate heavy background vector reassignments [2].",
+      "routing_mode": "fan_out",
+      "sources_queried": [
+        "kb",
+        "wikipedia",
+        "web"
+      ],
+      "router_decision": "fan_out_all",
+      "router_fallback": false,
+      "confidence_score": 0.9819,
+      "citation_source_types": [
+        "kb"
+      ],
+      "citation_files": [
+        "arxiv_2610.23232v1_PrairieFire_Igniting_High-Throughput_Updates_in_Large-Scale_.txt"
+      ],
+      "citations": [
+        {
+          "id": 2,
+          "source": "arxiv_2610.23232v1_PrairieFire_Igniting_High-Throughput_Updates_in_Large-Scale_.txt",
+          "source_type": "kb",
+          "url": null,
+          "page": 1,
+          "snippet": "The bottleneck lies in CPU-intensive update paths, where foreground insertions incur frequent SSD accesses and background reassignments repeatedly relocate each vector, making high update throughput difficult to achieve even by exhausting available h...",
+          "text": "The bottleneck lies in CPU-intensive update paths, where foreground insertions incur frequent SSD accesses and background reassignments repeatedly relocate each vector, making high update throughput difficult to achieve even by exhausting available hardware. In this paper, using buffered updates and batched local rebuilds, we develop PrairieFire with cascaded adjustments, concurrency control, and CPU-GPU-SSD cooperation. These co-designs avoid frequent SSD accesses in foreground updates and heavy background reassignments, achieving high update throughput while maintaining excellent search performance.",
+          "score": 0.9771
+        }
+      ],
+      "total_latency_ms": 5739.52,
+      "tokens": 1204,
+      "estimated_cost_usd": 0.000104,
+      "is_idk": false
+    },
+    {
+      "id": 6,
+      "question": "How does AgentOnto utilize Iterative Ontology Preparation to refine enterprise knowledge representations for LLM agents?",
+      "expected_source": "kb",
+      "split": "test",
+      "kb_file": "arxiv_2610.23317v1_AgentOnto_Ontology-Guided_LLM_Agents_for_Enterprise_Data_Ana.txt",
+      "answer": "AgentOnto utilizes Iterative Ontology Preparation to examine and refine the initial ontology (which may contain missing or incorrect knowledge) through self-generated analysis tasks before handling actual analysis requests [1], [5]. Specifically, starting from an initial ontology, AgentOnto performs preparation rounds where it generates a set of analysis tasks in each round to test, examine, and improve the ontology [1], [5]. This self-improving process helps adapt the enterprise knowledge representation over time, ensuring the system remains relevant and effective [4].",
+      "routing_mode": "fan_out",
+      "sources_queried": [
+        "kb",
+        "wikipedia",
+        "web"
+      ],
+      "router_decision": "fan_out_all",
+      "router_fallback": false,
+      "confidence_score": 0.9992,
+      "citation_source_types": [
+        "web",
+        "web",
+        "web"
+      ],
+      "citation_files": [
+        "Paperz",
+        "AgentOnto: Smart LLM Agents for Data Analytics Integration | Welcome.AI",
+        "AgentOnto: Ontology-Guided LLM Agents for Enterprise Data Analytics"
+      ],
+      "citations": [
+        {
+          "id": 1,
+          "source": "Paperz",
+          "source_type": "web",
+          "url": "https://paperz.arrangedbits.com/papers/213dd31a-e2ae-4b67-9e64-ba5d976d3abf",
+          "page": null,
+          "snippet": "LLM agents as a systematic approach to enterprise data analytics, using an explicit and maintainable representation of enterprise knowledge to support reliable analysis. \u2022 We propose AgentOnto, which organizes heterogeneous enterprise knowledge into...",
+          "text": "LLM agents as a systematic approach to enterprise data analytics, using an explicit and maintainable representation of enterprise knowledge to support reliable analysis. \u2022 We propose AgentOnto, which organizes heterogeneous enterprise knowledge into an ontology that directly guides analysis and incorporates feedback. Iterative Ontology Preparation further improves the ontology through self-generated tasks. \u2022 We conduct extensive experiments on public datasets, showing that AgentOnto improves [...] al., 2013; Qiang et al., 2024; Noy and Klein, 2004; Flouris et al., 2008). These capabilities are formulated as separate processes. AgentOnto integrates Ontology Construction, Ontology-Guided Analysis, and Ontology Updating through an enterprise analytics ontology. Iterative Ontology Preparation examines the ontology through self-generated analysis tasks before actual requests. 7. Conclusion We presented AgentOnto, an ontology-guided LLM agent that organizes heterogeneous enterprise knowledge [...] ontology. This initial ontology may still contain missing or incorrect knowledge that affects subsequent analysis. Iterative Ontology Preparation examines and refines the ontology through self-generated analysis tasks before actual analysis tasks. Starting from O0O\\_0, AgentOnto performs R preparation rounds and generates B analysis tasks in each round. Here, R denotes the total number of rounds and B denotes the number of tasks generated per round. In round r, AgentOnto generates the task set",
+          "score": 0.9994
+        },
+        {
+          "id": 4,
+          "source": "AgentOnto: Smart LLM Agents for Data Analytics Integration | Welcome.AI",
+          "source_type": "web",
+          "url": "https://welcome.ai/content/agentonto-smart-llm-agents-for-data-analytics-integration",
+          "page": null,
+          "snippet": "A crucial element of the findings is the process termed \"Iterative Ontology Preparation,\" which allows AgentOnto to enhance its ontology by generating new analytical tasks based on previous outputs. This self-improving feature is designed to adapt to...",
+          "text": "A crucial element of the findings is the process termed \"Iterative Ontology Preparation,\" which allows AgentOnto to enhance its ontology by generating new analytical tasks based on previous outputs. This self-improving feature is designed to adapt to changing enterprise knowledge, ensuring that the system remains relevant and effective over time. [...] guides analysis and incorporates confirmed feedback. Iterative Ontology Preparation further improves the ontology through self-generated analysis tasks. We evaluate AgentOnto on two public data sources. AgentOnto substantially outperforms representative methods, while module-level evaluations confirm the effectiveness of ontology construction, analysis, and updating. A real-world deployment further demonstrates its practical value in enterprise analytics. These results demonstrate that [...] Enterprise data analysis requires agents to connect analytical requests with knowledge distributed across databases, business documents, and existing example tasks. Without an explicit representation of this knowledge, an agent may produce incorrect analytical results and cannot reliably incorporate feedback. We present AgentOnto, an ontology-guided LLM agent for enterprise data analytics. AgentOnto organizes heterogeneous enterprise knowledge into an ontology that directly guides analysis and",
+          "score": 0.9983
+        },
+        {
+          "id": 5,
+          "source": "AgentOnto: Ontology-Guided LLM Agents for Enterprise Data Analytics",
+          "source_type": "web",
+          "url": "https://arxiv.org/html/2610.23317v1",
+          "page": null,
+          "snippet": "Ontology Construction integrates the available enterprise resources into an initial ontology. This initial ontology may still contain missing or incorrect knowledge that affects subsequent analysis. Iterative Ontology Preparation examines and refines...",
+          "text": "Ontology Construction integrates the available enterprise resources into an initial ontology. This initial ontology may still contain missing or incorrect knowledge that affects subsequent analysis. Iterative Ontology Preparation examines and refines the ontology through self-generated analysis tasks before actual analysis tasks. [...] AgentOnto organizes heterogeneous enterprise knowledge into an ontology that directly guides analysis and incorporates confirmed feedback. Iterative Ontology Preparation further improves the ontology through self-generated analysis tasks.\nWe evaluate AgentOnto on two public data sources. AgentOnto substantially outperforms representative methods, while module-level evaluations confirm the effectiveness of ontology construction, analysis, and updating. [...] Building on these methods, Iterative Ontology Preparation uses self-generated analysis tasks to examine and refine the constructed ontology before actual requests are handled.",
+          "score": 0.9977
+        }
+      ],
+      "total_latency_ms": 9608.3,
+      "tokens": 1617,
+      "estimated_cost_usd": 0.000145,
+      "is_idk": false
+    },
+    {
+      "id": 7,
+      "question": "What three techniques are introduced by the PUMA framework to accelerate large-scale string similarity joins using Jaro-Winkler distance?",
+      "expected_source": "kb",
+      "split": "test",
+      "kb_file": "arxiv_2610.23652v1_Joining_Large_String_Collections_with_Jaro-Winkler_Similarit.txt",
+      "answer": "Based on the provided sources, the novel approach for efficient Jaro-Winkler similarity joins on large string collections relies on the following three key techniques [1]:\n\n1. **JUMP**: A fast algorithm that computes the Jaro-Winkler similarity between two strings in linear time for bounded alphabets [1].\n2. **Dual-bound intersection bitmaps**: Bitmaps that encode strings (represented as character sets) into fixed-size bitmaps equipped with a cost model and data-adaptive features, used to prune candidate string pairs by bounding character overlap [1].\n3. **PUMA framework**: A framework that groups strings by prefix to tighten filter conditions, thereby reducing the number of similarity computations [1].",
+      "routing_mode": "fan_out",
+      "sources_queried": [
+        "kb",
+        "wikipedia",
+        "web"
+      ],
+      "router_decision": "fan_out_all",
+      "router_fallback": false,
+      "confidence_score": 0.8803,
+      "citation_source_types": [
+        "kb"
+      ],
+      "citation_files": [
+        "arxiv_2610.23652v1_Joining_Large_String_Collections_with_Jaro-Winkler_Similarit.txt"
+      ],
+      "citations": [
+        {
+          "id": 1,
+          "source": "arxiv_2610.23652v1_Joining_Large_String_Collections_with_Jaro-Winkler_Similarit.txt",
+          "source_type": "kb",
+          "url": null,
+          "page": 1,
+          "snippet": "We present a novel approach for efficient Jaro-Winkler similarity joins on large string collections. Our solution is based on three key techniques: (1) JUMP is a fast algorithm for computing the Jaro-Winkler similarity between two strings that runs i...",
+          "text": "We present a novel approach for efficient Jaro-Winkler similarity joins on large string collections. Our solution is based on three key techniques: (1) JUMP is a fast algorithm for computing the Jaro-Winkler similarity between two strings that runs in linear time for bounded alphabets. (2) Dual-bound intersection bitmaps encode strings -- represented as character sets -- into fixed-size bitmaps, which are used to prune candidate string pairs by providing effective bounds on their character overlap; unlike prior bitmap techniques, our bitmaps are equipped with a cost model and adapt to the input data. (3) Our PUMA framework groups strings by prefix to tighten filter conditions, thereby reducing the number of similarity computations. Extensive experiments on large string collections demonstrate that our approach consistently outperforms the state of the art, achieving speedups of up to three orders of magnitude.",
+          "score": 0.9995
+        }
+      ],
+      "total_latency_ms": 6113.87,
+      "tokens": 1619,
+      "estimated_cost_usd": 0.000154,
+      "is_idk": false
+    },
+    {
+      "id": 8,
+      "question": "What computational complexity is established for finding a diverse subset of why-provenance explanations in Datalog queries?",
+      "expected_source": "kb",
+      "split": "test",
+      "kb_file": "arxiv_2610.24707v1_Diverse_Why-Provenance_for_Datalog_Queries.txt",
+      "answer": "Finding a diverse subset of why-provenance explanations for Datalog queries is highly intractable, specifically being NP-hard even in data complexity [5].",
+      "routing_mode": "fan_out",
+      "sources_queried": [
+        "kb",
+        "wikipedia",
+        "web"
+      ],
+      "router_decision": "fan_out_all",
+      "router_fallback": false,
+      "confidence_score": 0.9953,
+      "citation_source_types": [
+        "kb"
+      ],
+      "citation_files": [
+        "arxiv_2610.24707v1_Diverse_Why-Provenance_for_Datalog_Queries.txt"
+      ],
+      "citations": [
+        {
+          "id": 5,
+          "source": "arxiv_2610.24707v1_Diverse_Why-Provenance_for_Datalog_Queries.txt",
+          "source_type": "kb",
+          "url": null,
+          "page": 1,
+          "snippet": ". However, whenever the set of explanations is very large, outputting the entire set might be prohibitively expensive. Moreover, it is questionable the practical usefulness of flooding the user with a very large number of explanations, many of them p...",
+          "text": ". However, whenever the set of explanations is very large, outputting the entire set might be prohibitively expensive. Moreover, it is questionable the practical usefulness of flooding the user with a very large number of explanations, many of them possibly differing only marginally. In this case, one can argue that it would be practically more useful to compute a small, sufficiently diverse subset of the set of why-provenance explanations. The present work initiates the study of the latter problem. In particular, we formalize the problem of interest as an optimization problem, and, after showing that it is highly intractable (it is NP-hard even in data complexity), we investigate whether ILP optimization solvers can be employed towards practical solutions. Our main finding is that this is achievable as long as we keep the requested set of explanations small, or we employ approximation algorithms (with error guarantees).",
+          "score": 0.9886
+        }
+      ],
+      "total_latency_ms": 9662.33,
+      "tokens": 1805,
+      "estimated_cost_usd": 0.000142,
+      "is_idk": false
+    },
+    {
+      "id": 9,
+      "question": "How does the Helmholtz Component Flow Matching architecture isolate anomaly signals in time series without requiring full Jacobian-trace estimation?",
+      "expected_source": "kb",
+      "split": "test",
+      "kb_file": "arxiv_2610.25059v1_HCFM_Helmholtz_Component_Flow_Matching_for_Time_Series_Anoma.txt",
+      "answer": "Helmholtz Component Flow Matching (HCFM) isolates anomaly signals without full-field Jacobian-trace estimation by parameterizing the vector field prediction network into three separate heads [1, 3]:\n\n1. **Transport head**: Constrained to be divergence-free to handle nominal movement [1, 3].\n2. **Compression head**: Restricted to handle localized density-changing behavior (local expansion and contraction), meaning divergence estimation is required only for this specific head rather than the entire predicted field [1, 3, 4]. \n3. **Residual head**: A lightweight component that absorbs any remaining mismatch [1, 3, 4].\n\nDuring inference, HCFM computes base-energy and compression-divergence scores along the trajectory using Hutchinson trace estimation solely for the compression head, thus avoiding expensive full-field Jacobian-trace scoring [4].",
+      "routing_mode": "fan_out",
+      "sources_queried": [
+        "kb",
+        "wikipedia",
+        "web"
+      ],
+      "router_decision": "fan_out_all",
+      "router_fallback": false,
+      "confidence_score": 0.8492,
+      "citation_source_types": [
+        "web"
+      ],
+      "citation_files": [
+        "HCFM: Helmholtz Component Flow Matching for Time Series Anomaly Detection"
+      ],
+      "citations": [
+        {
+          "id": 4,
+          "source": "HCFM: Helmholtz Component Flow Matching for Time Series Anomaly Detection",
+          "source_type": "web",
+          "url": "https://arxiv.org/html/2610.25059v1",
+          "page": null,
+          "snippet": "During inference, test windows are reverse-integrated through the learned field to obtain base-space endpoints and trajectory states. HCFM computes base-energy and compression-divergence scores along this trajectory. Compression divergence is estimat...",
+          "text": "During inference, test windows are reverse-integrated through the learned field\nto obtain base-space endpoints and trajectory states. HCFM computes base-energy\nand compression-divergence scores along this trajectory. Compression divergence\nis estimated only for the compression head using Hutchinson trace estimation,\navoiding full-field Jacobian-trace scoring.\n\n### IV-E Window-Size Sensitivity [...] divergence-aware scoring while replacing full-field Jacobian tracing with component-specific derivative estimation. [...] through divergence, so divergence estimation is required only for this head rather than for the full predicted field. A lightweight residual head absorbs residual mismatch without dominating the transport and compression heads.",
+          "score": 0.1466
+        }
+      ],
+      "total_latency_ms": 7778.34,
+      "tokens": 1552,
+      "estimated_cost_usd": 0.000156,
+      "is_idk": false
+    },
+    {
+      "id": 10,
+      "question": "How does the RemoteANN vector search engine minimize cloud object storage request fees and network I/O during similarity queries?",
+      "expected_source": "kb",
+      "split": "test",
+      "kb_file": "arxiv_2610.25172v1_RemoteANN_A_Native_Vector_Search_Engine_for_Cloud_Object_Sto.txt",
+      "answer": "RemoteANN minimizes cloud object storage request fees and network I/O during similarity queries by combining the following techniques in its query engine:\n\n* **Cluster pruning** to reduce unnecessary searches [1], [2].\n* **Fine-grained Range-GET requests** to fetch data efficiently [1], [2].\n* **Request merging** to combine requests [1], [2].\n* **Local NVMe SSD caching** [1], [2]. \n\nAdditionally, these are supported by an underlying query-oriented data layout that couples an Inverted File (IVF) index with RaBitQ quantization, optimized through inter-cluster and intra-cluster data reordering to improve data locality [1], [2].",
+      "routing_mode": "fan_out",
+      "sources_queried": [
+        "kb",
+        "wikipedia",
+        "web"
+      ],
+      "router_decision": "fan_out_all",
+      "router_fallback": false,
+      "confidence_score": 0.9618,
+      "citation_source_types": [
+        "kb",
+        "web"
+      ],
+      "citation_files": [
+        "arxiv_2610.25172v1_RemoteANN_A_Native_Vector_Search_Engine_for_Cloud_Object_Sto.txt",
+        "RemoteANN: A Native Vector Search Engine for Cloud Object Storage"
+      ],
+      "citations": [
+        {
+          "id": 1,
+          "source": "arxiv_2610.25172v1_RemoteANN_A_Native_Vector_Search_Engine_for_Cloud_Object_Sto.txt",
+          "source_type": "kb",
+          "url": null,
+          "page": 1,
+          "snippet": "To resolve these challenges, we present RemoteANN, a vector search engine explicitly co-designed for cloud object storage across indexing and querying. To mitigate the dominant network I/O bottleneck, RemoteANN couples an Inverted File (IVF) index wi...",
+          "text": "To resolve these challenges, we present RemoteANN, a vector search engine explicitly co-designed for cloud object storage across indexing and querying. To mitigate the dominant network I/O bottleneck, RemoteANN couples an Inverted File (IVF) index with RaBitQ quantization, further optimized by inter-cluster and intra-cluster data reordering for improved data locality. Building on this tailored data layout, RemoteANN's query engine combines cluster pruning, fine-grained Range-GET requests, request merging, and local NVMe SSD caching, dramatically reducing discrete storage requests and network transfer volume without sacrificing accuracy. To address the index construction bottleneck, we further develop QGKMeans, which substantially reduces construction latency without compromising clustering quality",
+          "score": 0.9977
+        },
+        {
+          "id": 2,
+          "source": "RemoteANN: A Native Vector Search Engine for Cloud Object Storage",
+          "source_type": "web",
+          "url": "https://arxiv.org/html/2610.25172v1",
+          "page": null,
+          "snippet": "To resolve these challenges, we present RemoteANN, a vector search engine explicitly co-designed for cloud object storage across indexing and querying. To mitigate the dominant network I/O bottleneck, RemoteANN couples an Inverted File (IVF) index wi...",
+          "text": "To resolve these challenges, we present RemoteANN, a vector search engine explicitly co-designed for cloud object storage across indexing and querying.\nTo mitigate the dominant network I/O bottleneck, RemoteANN couples an Inverted File (IVF) index with RaBitQ quantization, further optimized by inter-cluster and intra-cluster data reordering for improved data locality. [...] To close this gap, we present RemoteANN, a vector search engine explicitly designed for cloud object storage.\nThrough an algorithm-system co-design spanning indexing, querying, and the storage hierarchy,\nRemoteANN systematically mitigates the network I/O bottlenecks that limit vector search on cloud object storage.\nSpecifically, RemoteANN makes the following contributions in both indexing and querying:\n\nQuery-Oriented Indexing and Data Layout. [...] Building on this tailored data layout, RemoteANN\u2019s query engine combines cluster pruning, fine-grained Range-GET requests, request merging, and local NVMe SSD caching, dramatically reducing discrete storage requests and network transfer volume without sacrificing accuracy.\nTo address the index construction bottleneck, we further develop QGKMeans, which substantially reduces construction latency without compromising clustering quality.",
+          "score": 0.9967
+        }
+      ],
+      "total_latency_ms": 5812.73,
+      "tokens": 1470,
+      "estimated_cost_usd": 0.000143,
+      "is_idk": false
+    },
+    {
+      "id": 11,
+      "question": "What diagnostic methodology does the MemDerive benchmark use to expose failures in agent memory systems over evolving histories?",
+      "expected_source": "kb",
+      "split": "test",
+      "kb_file": "arxiv_2610.25373v1_MemDerive_A_Diagnostic_Benchmark_for_Agent_Memory_over_Evolv.txt",
+      "answer": "To expose failures in agent memory systems over evolving histories, MemDerive uses the following diagnostic methodology:\n\n* **Symbolic Specification and Gold Derivation:** It specifies each scenario symbolically, derives exact gold answers utilizing Datalog, records the gold derivation DAG (directed acyclic graph), and identifies the supporting events for every query while rendering the history in natural language with fictional entities and distractors [1, 4].\n* **Reliability Evaluation and DAG Probing:** It evaluates answer reliability and diagnoses failures by probing the individual nodes of the gold derivation DAG [1, 5].\n* **Tracking Over Time:** It tracks whether the answers remain correct as new events arrive [1, 5].",
+      "routing_mode": "fan_out",
+      "sources_queried": [
+        "kb",
+        "wikipedia",
+        "web"
+      ],
+      "router_decision": "fan_out_all",
+      "router_fallback": false,
+      "confidence_score": 0.4971,
+      "citation_source_types": [
+        "web",
+        "kb",
+        "web",
+        "kb",
+        "kb"
+      ],
+      "citation_files": [
+        "MemDerive: A Diagnostic Benchmark for Agent Memory over Evolving Data - arXiv:2610.25373 \u00b7 \u4e07\u6709\u8986\u53e0\u80fd\u5e72",
+        "arxiv_2610.25373v1_MemDerive_A_Diagnostic_Benchmark_for_Agent_Memory_over_Evolv.txt",
+        "arXiv Query: search_query=ti:\"memory\" AND ti:\"benchmark\"&id_list=&start=0&max_results=12",
+        "arxiv_2610.25373v1_MemDerive_A_Diagnostic_Benchmark_for_Agent_Memory_over_Evolv.txt",
+        "arxiv_2610.25373v1_MemDerive_A_Diagnostic_Benchmark_for_Agent_Memory_over_Evolv.txt"
+      ],
+      "citations": [
+        {
+          "id": 1,
+          "source": "MemDerive: A Diagnostic Benchmark for Agent Memory over Evolving Data - arXiv:2610.25373 \u00b7 \u4e07\u6709\u8986\u53e0\u80fd\u5e72",
+          "source_type": "web",
+          "url": "https://nenkae.com/abs/2610.25373",
+          "page": null,
+          "snippet": "On this ground truth, MemDerive evaluates answer reliability, diagnoses failures by probing the nodes of the gold derivation DAG, and tracks whether answers stay correct as events arrive. Our evaluation of four memory systems reveals failures that fi...",
+          "text": "On this ground truth, MemDerive evaluates answer reliability, diagnoses failures by probing the nodes of the gold derivation DAG, and tracks whether answers stay correct as events arrive. Our evaluation of four memory systems reveals failures that final-answer benchmarks hide. On derived state, every memory system falls behind simple BM25 retrieval, although the same answer model reaches 96.01% when given the supporting events. Most failures are ungathered, as a system holds the missing [...] silently became outdated goes undetected. We present MemDerive, a diagnostic benchmark for agent memory over evolving data. It specifies each scenario symbolically, derives exact gold answers with Datalog, records the gold derivation DAG and the supporting events of every query, and renders the history in natural language with fictional entities and distractors. Its 10 scenarios contain 4,692 events and 1,503 queries whose difficulty varies along access, evolution, and composition. On this [...] Long-running agents rely on memory of their past interactions for task state, such as what has been completed and which conditions still hold. Such state is usually a derived state. No record states it, and it must be computed by rules from multiple records of an evolving history. Existing memory benchmarks score only the final answer, with no reference for the intermediate states behind it. A wrong answer therefore cannot be traced to the state that was missed, and a state that silently became",
+          "score": 0.9969
+        },
+        {
+          "id": 2,
+          "source": "arxiv_2610.25373v1_MemDerive_A_Diagnostic_Benchmark_for_Agent_Memory_over_Evolv.txt",
+          "source_type": "kb",
+          "url": null,
+          "page": 1,
+          "snippet": "Title: MemDerive: A Diagnostic Benchmark for Agent Memory over Evolving Data Authors: Sen Gao, Yongan Li, Han Chen, Bingsheng He, Ming Wu, Jason Zeng, Michael Heinrich, Shixuan Sun Categories: cs.DB, cs.AI, cs.CL, cs.IR Published: 2026-10-18 ArXiv ID...",
+          "text": "Title: MemDerive: A Diagnostic Benchmark for Agent Memory over Evolving Data\nAuthors: Sen Gao, Yongan Li, Han Chen, Bingsheng He, Ming Wu, Jason Zeng, Michael Heinrich, Shixuan Sun\nCategories: cs.DB, cs.AI, cs.CL, cs.IR\nPublished: 2026-10-18\nArXiv ID: 2610.25373v1\nURL: http://arxiv.org/abs/2610.25373v1",
+          "score": 0.9954
+        },
+        {
+          "id": 3,
+          "source": "arXiv Query: search_query=ti:\"memory\" AND ti:\"benchmark\"&id_list=&start=0&max_results=12",
+          "source_type": "web",
+          "url": "http://export.arxiv.org/api/query?search_query=ti%3A%22memory%22+AND+ti%3A%22benchmark%22&start=0&max_results=12&sortBy=submittedDate&sortOrder=descending",
+          "page": null,
+          "snippet": "conditions still hold. Such state is usually a derived state. No record states it, and it must be computed by rules from multiple records of an evolving history. Existing memory benchmarks score only the final answer, with no reference for the interm...",
+          "text": "conditions still hold. Such state is usually a derived state. No record states it, and it must be computed by rules from multiple records of an evolving history. Existing memory benchmarks score only the final answer, with no reference for the intermediate states behind it. A wrong answer therefore cannot be traced to the state that was missed, and a state that silently became outdated goes undetected. We present MemDerive, a diagnostic benchmark for agent memory over evolving data. It [...] preserve process information and reassess memory applicability against current task context. 2026-10-20T02:39:26Z  Guorui Chen   Tao Liu   Zhenzhen Huang   Yidan Zhang   Liyu Jiang   Shuoyuan Wang   Hanchen Sun   Xu He   Dong Li   Yihan Hu   Jianye Hao   Lei Feng     MemDerive: A Diagnostic Benchmark for Agent Memory over Evolving Data 2026-10-18T16:24:33Z Long-running agents rely on memory of their past interactions for task state, such as what has been completed and which conditions still",
+          "score": 0.9915
+        },
+        {
+          "id": 4,
+          "source": "arxiv_2610.25373v1_MemDerive_A_Diagnostic_Benchmark_for_Agent_Memory_over_Evolv.txt",
+          "source_type": "kb",
+          "url": null,
+          "page": 1,
+          "snippet": "Long-running agents rely on memory of their past interactions for task state, such as what has been completed and which conditions still hold. Such state is usually a derived state. No record states it, and it must be computed by rules from multiple...",
+          "text": "Long-running agents rely on memory of their past interactions for task state, such as what has been completed and which conditions still hold. Such state is usually a derived state. No record states it, and it must be computed by rules from multiple records of an evolving history. Existing memory benchmarks score only the final answer, with no reference for the intermediate states behind it. A wrong answer therefore cannot be traced to the state that was missed, and a state that silently became outdated goes undetected. We present MemDerive, a diagnostic benchmark for agent memory over evolving data. It specifies each scenario symbolically, derives exact gold answers with Datalog, records the gold derivation DAG and the supporting events of every query, and renders the history in natural language with fictional entities and distractors. Its 10 scenarios contain 4,692 events and 1,503 queries whose difficulty varies along access, evolution, and composition",
+          "score": 0.9883
+        },
+        {
+          "id": 5,
+          "source": "arxiv_2610.25373v1_MemDerive_A_Diagnostic_Benchmark_for_Agent_Memory_over_Evolv.txt",
+          "source_type": "kb",
+          "url": null,
+          "page": 1,
+          "snippet": ". Its 10 scenarios contain 4,692 events and 1,503 queries whose difficulty varies along access, evolution, and composition. On this ground truth, MemDerive evaluates answer reliability, diagnoses failures by probing the nodes of the gold derivation D...",
+          "text": ". Its 10 scenarios contain 4,692 events and 1,503 queries whose difficulty varies along access, evolution, and composition. On this ground truth, MemDerive evaluates answer reliability, diagnoses failures by probing the nodes of the gold derivation DAG, and tracks whether answers stay correct as events arrive. Our evaluation of four memory systems reveals failures that final-answer benchmarks hide. On derived state, every memory system falls behind simple BM25 retrieval, although the same answer model reaches 96.01% when given the supporting events. Most failures are ungathered, as a system holds the missing intermediate state but does not retrieve it for the question that needs it. Memory systems also rarely propagate implicit changes, which no new record states. These results suggest three principles for memory design. Gather inputs along the derivation, store rules with their versions, and maintain derived states through recorded dependencies.",
+          "score": 0.9745
+        }
+      ],
+      "total_latency_ms": 7113.82,
+      "tokens": 1651,
+      "estimated_cost_usd": 0.000156,
+      "is_idk": false
+    },
+    {
+      "id": 12,
+      "question": "How does the SARP indexing scheme resolve the tradeoff between prefix-matching latency and crash-recovery time for on-SSD KVCache?",
+      "expected_source": "kb",
+      "split": "test",
+      "kb_file": "arxiv_2610.26849v1_SARP_An_On-SSD_Index_for_KVCache_with_Fast_Prefix_Matching_a.txt",
+      "answer": "SARP (Sparse Adaptive Routing and Packing) resolves the tradeoff between prefix-matching latency and crash-recovery time through the following mechanisms:\n\n* **On-SSD Segment Storage and Compact In-Memory Routing:** SARP keeps block IDs and their metadata in on-SSD segments while retaining only selected routing points (a compact in-memory routing directory) and candidate references in memory [1, 3, 4]. This avoids the lengthy rebuild times of full snapshot-backed in-memory indexes after a restart [2, 4], restoring the sparse routing directory from a snapshot [3, 5].\n* **Segment Packing:** SARP groups consecutive block IDs and metadata together into segments. Because prefix matching accesses block metadata in sequence order, this packaging allows metadata for consecutive blocks to be retrieved together, amortizing storage access costs across multiple blocks [2, 3].\n* **Adaptive Filtering and Verification:** SARP limits segment retrievals and uses compact filters to prioritize candidates with longer potential matches [3]. After retrieval, it exactly verifies block IDs against the query and reuses only the KVCache blocks covered by the verified prefix [1, 3].",
+      "routing_mode": "fan_out",
+      "sources_queried": [
+        "kb",
+        "wikipedia",
+        "web"
+      ],
+      "router_decision": "fan_out_all",
+      "router_fallback": false,
+      "confidence_score": 0.9533,
+      "citation_source_types": [
+        "kb"
+      ],
+      "citation_files": [
+        "arxiv_2610.26849v1_SARP_An_On-SSD_Index_for_KVCache_with_Fast_Prefix_Matching_a.txt"
+      ],
+      "citations": [
+        {
+          "id": 3,
+          "source": "arxiv_2610.26849v1_SARP_An_On-SSD_Index_for_KVCache_with_Fast_Prefix_Matching_a.txt",
+          "source_type": "kb",
+          "url": null,
+          "page": 1,
+          "snippet": ". Prefix matching also accesses block metadata in sequence order, allowing metadata for consecutive blocks to be retrieved together. We present SARP (Sparse Adaptive Routing and Packing), an on-SSD KVCache index for fast recovery and prefix matching....",
+          "text": ". Prefix matching also accesses block metadata in sequence order, allowing metadata for consecutive blocks to be retrieved together. We present SARP (Sparse Adaptive Routing and Packing), an on-SSD KVCache index for fast recovery and prefix matching. SARP groups consecutive block IDs and metadata into segments to amortize storage accesses across multiple blocks. A compact in-memory routing directory identifies candidate segments using entries at selected block positions. SARP limits segment retrievals and uses compact filters to prioritize candidates with longer potential matches. After retrieval, SARP verifies block IDs against the query and reuses only KVCache blocks covered by the verified prefix. After a restart, SARP restores the sparse routing directory from a snapshot",
+          "score": 0.8603
+        }
+      ],
+      "total_latency_ms": 7781.0,
+      "tokens": 1779,
+      "estimated_cost_usd": 0.000186,
+      "is_idk": false
+    },
+    {
+      "id": 16,
+      "question": "What is the role of multi-head self-attention in the original Transformer architecture?",
+      "expected_source": "wikipedia",
+      "split": "test",
+      "kb_file": "",
+      "answer": "Based on the provided sources, the role and mechanism of multi-head self-attention in the original Transformer architecture include:\n\n* **Simultaneous Multi-Perspective Understanding:** It allows the model to understand an input sequence from multiple perspectives simultaneously by running several self-attention modules (or heads) in parallel [1, 2].\n* **Capturing Diverse Relationships:** Instead of computing a single attention map, it overcomes the limitations of single-head attention by enabling the model to focus on different aspects and capture a diverse set of relationships and patterns among tokens [1, 3, 5]. \n* **Independent Projections:** Each head performs the scaled dot-product attention calculation using its own independently learned linear transformation matrices for Query (Q), Key (K), and Value (V) [1, 4, 5].\n* **Richer Representation:** The outputs from all the parallel heads are combined into a single, richer representation [2, 4].\n* **Specific Parameters in the Original Paper:** In the original 2017 paper *Attention Is All You Need*, the architecture used an embedding dimension of 512 and 8 attention heads, reducing the dimensionality per head ($d_k = d_v = 512 / 8 = 64$) with projection matrices of shape $\\mathbb{R}^{512 \\times 64}$ [3].",
+      "routing_mode": "fan_out",
+      "sources_queried": [
+        "kb",
+        "wikipedia",
+        "web"
+      ],
+      "router_decision": "fan_out_all",
+      "router_fallback": false,
+      "confidence_score": 0.9992,
+      "citation_source_types": [
+        "web"
+      ],
+      "citation_files": [
+        "Multi-Head Attention in Transformers Explained: Architecture, Mathematics, and Implementation"
+      ],
+      "citations": [
+        {
+          "id": 3,
+          "source": "Multi-Head Attention in Transformers Explained: Architecture, Mathematics, and Implementation",
+          "source_type": "web",
+          "url": "https://medium.com/@smohammedzubair0/multi-head-attention-in-transformers-explained-architecture-mathematics-and-implementation-33a64e4d4891",
+          "page": null,
+          "snippet": "## Flexibility  Dense layers automatically handle varying batch sizes and sequence lengths, making the implementation cleaner and easier to maintain.  ## Summary  Multi-Head Attention extends self-attention by allowing multiple attention mechanisms t...",
+          "text": "## Flexibility\n\nDense layers automatically handle varying batch sizes and sequence lengths, making the implementation cleaner and easier to maintain.\n\n## Summary\n\nMulti-Head Attention extends self-attention by allowing multiple attention mechanisms to operate in parallel. Each head learns a different representation of the input sequence, enabling the Transformer to capture diverse relationships between tokens.\n\nThe process consists of: [...] ## Multi-Head Attention in the Original Transformer Paper\n\nIn the original Transformer paper, _Attention Is All You Need_ (2017), the authors used:\n\n   Embedding dimension: 512\n   Number of heads: 8\n\nInstead of producing 512-dimensional Query, Key, and Value vectors for each head, they reduced the dimensionality per head:  \nd_{model} = 512  \nh = 8  \nd_k = d_v = \\frac{512}{8} = 64\n\nTherefore, each head used projection matrices of shape:  \nW_Q, W_K, W_V \\in \\mathbb{R}^{512 \\times 64} [...] If we use 2 attention heads, we create two independent sets of projection matrices:\n\n   Head 1: (W_Q\u00b9, W_K\u00b9, W_V\u00b9)\n   Head 2: (W_Q\u00b2, W_K\u00b2, W_V\u00b2)\n\nImage 4\n\nEach head generates its own Query, Key, and Value vectors and performs self-attention independently.\n\nAs a result, we obtain two different contextual representations:\n\n   Head 1 output\n   Head 2 output\n\nImage 5\n\nEach head may focus on different aspects of the input. For example:",
+          "score": 0.9985
+        }
+      ],
+      "total_latency_ms": 14432.28,
+      "tokens": 2037,
+      "estimated_cost_usd": 0.000218,
+      "is_idk": false
+    },
+    {
+      "id": 17,
+      "question": "How does Dijkstra's algorithm determine the shortest path from a single source vertex in a non-negative weighted graph?",
+      "expected_source": "wikipedia",
+      "split": "test",
+      "kb_file": "",
+      "answer": "Dijkstra's algorithm determines the shortest path from a single source vertex to every other vertex in a non-negative weighted graph using a greedy, priority-queue-based approach with the following steps:\n\n* **Greedy Selection:** It repeatedly selects the currently unreached or unvisited vertex that has the smallest tentative distance from the source [1, 2, 3]. \n* **Finalizing Distance:** It fixes that chosen distance as final [1]. (Once a vertex is picked with the smallest distance, its shortest distance is assumed to be finalized and will never change, which holds true because edge weights are non-negative) [2].\n* **Edge Relaxation:** It relaxes the vertex's outgoing edges to update its neighboring vertices' tentative distances [1, 2]. For each edge, it checks if adding the edge weight to the current vertex's distance improves the neighbor's distance [3].\n\nThis process continues until all vertices have been processed or the shortest distance to the destination has been determined [2].",
+      "routing_mode": "fan_out",
+      "sources_queried": [
+        "kb",
+        "wikipedia",
+        "web"
+      ],
+      "router_decision": "fan_out_all",
+      "router_fallback": false,
+      "confidence_score": 0.9999,
+      "citation_source_types": [
+        "web",
+        "web",
+        "web"
+      ],
+      "citation_files": [
+        "What is the Dijkstra's Algorithm? How can it be used to find the shortest paths between all pairs of vertices in a weighted graph with negative edge weights? - Quora",
+        "Dijkstra's Algorithm based Common Questions - GeeksforGeeks",
+        "Dijkstra\u2019s Algorithm \u2013 Shortest Path | Neel Mishra"
+      ],
+      "citations": [
+        {
+          "id": 1,
+          "source": "What is the Dijkstra's Algorithm? How can it be used to find the shortest paths between all pairs of vertices in a weighted graph with negative edge weights? - Quora",
+          "source_type": "web",
+          "url": "https://www.quora.com/What-is-the-Dijkstras-Algorithm-How-can-it-be-used-to-find-the-shortest-paths-between-all-pairs-of-vertices-in-a-weighted-graph-with-negative-edge-weights",
+          "page": null,
+          "snippet": "Dijkstra\u2019s algorithm finds the shortest path from a single source vertex to every other vertex in a weighted graph whose edge weights are nonnegative. It is a greedy label-setting method that repeatedly selects the currently unreached vertex with the...",
+          "text": "Dijkstra\u2019s algorithm finds the shortest path from a single source vertex to every other vertex in a weighted graph whose edge weights are nonnegative. It is a greedy label-setting method that repeatedly selects the currently unreached vertex with the smallest tentative distance from the source, fixes that distance as final, and relaxes its outgoing edges to update neighbors\u2019 tentative distances.\n\nKey components [...] Dijkstra\u2019s algorithm finds the shortest path from a single source vertex to every other vertex in a weighted graph whose edge weights are nonnegative. It is a greedy label-setting method that repeatedly selects the currently unreached vertex with the smallest tentative distance from the source, fixes that distance as final, and relaxes its outgoing edges to update neighbors\u2019 tentative distances.\n\nKey components [...] \u00b7 \n\n3y\n\nDijkstra\u2019s algorithm solves the classic single-source shortest path problem, when the edge weights are non-negative. That is, it computes the shortest paths from a source/start vertex to every other vertex in the graph (in this situation, it takes the form of a shortest-path tree).\n\nYou can\u2019t use it to find shortest paths between all pairs of vertices (the all-pairs scenario) with negative edge weig",
+          "score": 0.9999
+        },
+        {
+          "id": 2,
+          "source": "Dijkstra's Algorithm based Common Questions - GeeksforGeeks",
+          "source_type": "web",
+          "url": "https://www.geeksforgeeks.org/dsa/introduction-to-dijkstras-shortest-path-algorithm",
+          "page": null,
+          "snippet": "Dijkstra\u2019s Algorithmis one of the most popular algorithms in graph theory, used to find the shortest path from a single source to all other vertices in a graph with non-negative edge weights.   Starting from the source node, it repeatedly selects the...",
+          "text": "Dijkstra\u2019s Algorithmis one of the most popular algorithms in graph theory, used to find the shortest path from a single source to all other vertices in a graph with non-negative edge weights.  \nStarting from the source node, it repeatedly selects the vertex with the smallest tentative distance, then updates the distances of its neighboring vertices. This process continues until all vertices have been processed or the shortest distance to the destination has been determined. [...] > Dijkstra\u2019s algorithm assumes that once a vertex u is picked from the priority queue (meaning it currently has the smallest distance), its shortest distance is finalized - it will never change in the future. This assumption is true only if all edge weights are non-negative.",
+          "score": 0.9999
+        },
+        {
+          "id": 3,
+          "source": "Dijkstra\u2019s Algorithm \u2013 Shortest Path | Neel Mishra",
+          "source_type": "web",
+          "url": "https://neelmishra.github.io/blog/dsa/graphs/dijkstra",
+          "page": null,
+          "snippet": "1. Dijkstra\u2019s algorithm finds shortest paths from a single source in graphs with non-negative edge weights using a greedy, priority-queue-based approach. 2. The core operation is relaxation: for each edge u\u2192v(w), check if `dist[u]+w` improves `dist[v...",
+          "text": "1. Dijkstra\u2019s algorithm finds shortest paths from a single source in graphs with non-negative edge weights using a greedy, priority-queue-based approach.\n2. The core operation is relaxation: for each edge u\u2192v(w), check if `dist[u]+w` improves `dist[v]`.\n3. Lazy deletion (skip stale PQ entries) is simpler and faster in practice than decrease-key.\n4. Negative weights break Dijkstra because the greedy invariant (\u201cextracted = finalized\u201d) no longer holds. Use Bellman-Ford instead. [...] Given a weighted graph with non-negative edge weights, how do you find the shortest path from a single source to every other vertex? Dijkstra\u2019s algorithm answers this with an elegant greedy strategy: always process the closest unvisited vertex. In this post we cover the full algorithm with a priority-queue implementation, a detailed visual walkthrough, an interactive animation, why negative weights break it, clean C++ code, and competitive-programming patterns you should know. [...] ## Why Dijkstra\u2019s Algorithm?\n\nWhen edges carry non-negative weights, BFS no longer gives shortest paths. We need an algorithm that accounts for edge costs. Dijkstra\u2019s algorithm solves the single-source shortest path problem by greedily extracting the nearest unvisited vertex and relaxing its neighbors.\n\nPublished by Edsger Dijkstra in 1959, it remains one of the most important graph algorithms. Applications include:",
+          "score": 0.9998
+        }
+      ],
+      "total_latency_ms": 8912.77,
+      "tokens": 1965,
+      "estimated_cost_usd": 0.000195,
+      "is_idk": false
+    },
+    {
+      "id": 18,
+      "question": "How does a Bloom filter achieve space efficiency and why can it yield false positives but never false negatives?",
+      "expected_source": "wikipedia",
+      "split": "test",
+      "kb_file": "",
+      "answer": "Based on the provided sources:\n\n**How a Bloom filter achieves space efficiency:**\n* It does not store the data items themselves (unlike data structures such as hash tables, self-balancing binary search trees, tries, or simple arrays/linked lists) [3].\n* It inherits compactness from arrays and utilizes a probabilistic nature [5].\n* When parameters $k$ (the number of hash functions) and $m$ (the array size) are chosen well (where $k > 1$), about half of the bits are set, which minimizes redundancy and maximizes information content [1]. \n\n**Why it can yield false positives but never false negatives:**\n* A Bloom filter is a probabilistic data structure used to test set membership [2]. \n* False positives occur because elements are mapped to bits via hash functions, and as more items are added, the probability of false positives increases until queries may yield positive results even if an element was not actually added [2, 4]. \n* False negatives do not occur because if an element is truly in the set, all the bits it hashes to will definitely have been set during its insertion, meaning a query will never incorrectly state that the element is \"definitely not in set\" [2].",
+      "routing_mode": "fan_out",
+      "sources_queried": [
+        "kb",
+        "wikipedia",
+        "web"
+      ],
+      "router_decision": "fan_out_all",
+      "router_fallback": false,
+      "confidence_score": 0.9983,
+      "citation_source_types": [
+        "wikipedia",
+        "wikipedia",
+        "wikipedia",
+        "wikipedia"
+      ],
+      "citation_files": [
+        "Bloom filter",
+        "Bloom filter",
+        "Bloom filter",
+        "Bloom filter"
+      ],
+      "citations": [
+        {
+          "id": 1,
+          "source": "Bloom filter",
+          "source_type": "wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Bloom_filter",
+          "page": null,
+          "snippet": "To understand its space efficiency, it is instructive to compare the general Bloom filter with its special case when k = 1.  If k = 1, then in order to keep the false positive rate sufficiently low, a small fraction of bits should be set, which means...",
+          "text": "To understand its space efficiency, it is instructive to compare the general Bloom filter with its special case when k = 1.  If k = 1, then in order to keep the false positive rate sufficiently low, a small fraction of bits should be set, which means the array must be very large and contain long runs of zeros.  The information content of the array relative to its size is low.  The generalized Bloom filter (k greater than 1) allows many more bits to be set while still maintaining a low false positive rate; if the parameters (k and m) are chosen well, about half of the bits will be set, and these will be apparently random, minimizing redundancy and maximizing information content.",
+          "score": 0.9991
+        },
+        {
+          "id": 2,
+          "source": "Bloom filter",
+          "source_type": "wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Bloom_filter",
+          "page": null,
+          "snippet": "In computing, a Bloom filter is a space-efficient probabilistic data structure, conceived by Burton Howard Bloom in 1970, that is used to test whether an element is a member of a set. False positive matches are possible, but false negatives are not \u2013...",
+          "text": "In computing, a Bloom filter is a space-efficient probabilistic data structure, conceived by Burton Howard Bloom in 1970, that is used to test whether an element is a member of a set. False positive matches are possible, but false negatives are not \u2013 in other words, a query returns either \"possibly in set\" or \"definitely not in set\". Elements can be added to the set, but not removed (though this can be addressed with the counting Bloom filter variant); the more items added, the larger the probability of false positives.",
+          "score": 0.9986
+        },
+        {
+          "id": 3,
+          "source": "Bloom filter",
+          "source_type": "wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Bloom_filter",
+          "page": null,
+          "snippet": "While risking false positives, Bloom filters have a substantial space advantage over other data structures for representing sets, such as self-balancing binary search trees, tries, hash tables, or simple arrays or linked lists of the entries. Most of...",
+          "text": "While risking false positives, Bloom filters have a substantial space advantage over other data structures for representing sets, such as self-balancing binary search trees, tries, hash tables, or simple arrays or linked lists of the entries. Most of these require storing at least the data items themselves, which can require anywhere from a small number of bits, for small integers, to an arbitrary number of bits, such as for strings (tries are an exception since they can share storage between elements with equal prefixes).  However, Bloom filters do not store the data items at all, and a separate solution must be provided for the actual storage. Linked structures incur an additional linear space overhead for pointers.",
+          "score": 0.9964
+        },
+        {
+          "id": 5,
+          "source": "Bloom filter",
+          "source_type": "wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Bloom_filter",
+          "page": null,
+          "snippet": "A Bloom filter with a 1% error and an optimal value of k, in contrast, requires only about 9.6 bits per element, regardless of the size of the elements. This advantage comes partly from its compactness, inherited from arrays, and partly from its prob...",
+          "text": "A Bloom filter with a 1% error and an optimal value of k, in contrast, requires only about 9.6 bits per element, regardless of the size of the elements. This advantage comes partly from its compactness, inherited from arrays, and partly from its probabilistic nature. The 1% false-positive rate can be reduced by a factor of ten by adding only about 4.8 bits per element.\n\nHowever, if the number of potential values is small and many of them can be in the set, the Bloom filter is easily surpassed by the deterministic bit array, which requires only one bit for each potential element. Hash tables gain a space and time advantage if they begin ignoring collisions and store only whether each bucket contains an entry; in this case, they have effectively become Bloom filters with k = 1.",
+          "score": 0.9948
+        }
+      ],
+      "total_latency_ms": 8707.95,
+      "tokens": 1219,
+      "estimated_cost_usd": 0.000149,
+      "is_idk": false
+    },
+    {
+      "id": 19,
+      "question": "How does TCP congestion control use slow start and additive-increase/multiplicative-decrease (AIMD) to prevent network congestion?",
+      "expected_source": "wikipedia",
+      "split": "test",
+      "kb_file": "",
+      "answer": "To prevent network congestion, TCP uses a multi-faceted congestion-control strategy combining slow start and the additive-increase/multiplicative-decrease (AIMD) algorithm [2], [3]. \n\n* **Slow Start:** When a flow starts, the slow start phase is used to probe how fast the path can carry traffic by exponentially increasing the congestion window size (doubling it per round-trip time) [4], [5]. \n* **Transition to AIMD:** Once slow start reaches a specific threshold, the protocol transitions to the AIMD congestion avoidance state [3], [4], [5]. \n* **Additive Increase (AI):** When no congestion is detected, the congestion window grows linearly (typically by one maximum segment size or 1 per round-trip time) [1], [4].\n* **Multiplicative Decrease (MD):** When congestion is detected\u2014often signaled by packet loss indicated by a timeout, acknowledgement message, or three duplicate ACKs\u2014the congestion window undergoes an exponential reduction (such as being cut in half) [1], [4], [5]. \n\nThe combination of slow start and AIMD allows TCP to effectively probe network capacity, avoid congestive collapse, and ensure network fairness among multiple flows sharing a link [3], [4].",
+      "routing_mode": "fan_out",
+      "sources_queried": [
+        "kb",
+        "wikipedia",
+        "web"
+      ],
+      "router_decision": "fan_out_all",
+      "router_fallback": false,
+      "confidence_score": 0.9995,
+      "citation_source_types": [
+        "web",
+        "wikipedia",
+        "wikipedia",
+        "web",
+        "web"
+      ],
+      "citation_files": [
+        "Additive increase/multiplicative decrease - Wikipedia",
+        "TCP congestion control",
+        "TCP congestion control",
+        "AIMD Algorithm - GeeksforGeeks",
+        "TCP Congestion Control \u2014 AIMD, Slow Start, Fast Retransmit \u2014 Computer Networks \u00b7 Engineering Playbook"
+      ],
+      "citations": [
+        {
+          "id": 1,
+          "source": "Additive increase/multiplicative decrease - Wikipedia",
+          "source_type": "web",
+          "url": "https://en.wikipedia.org/wiki/Additive_increase/multiplicative_decrease",
+          "page": null,
+          "snippet": "The additive-increase/multiplicative-decrease (AIMD) algorithm is a feedback control algorithm best known for its use in TCP congestion control. AIMD combines linear growth of the congestion window when there is no congestion with an exponential redu...",
+          "text": "The additive-increase/multiplicative-decrease (AIMD) algorithm is a feedback control algorithm best known for its use in TCP congestion control. AIMD combines linear growth of the congestion window when there is no congestion with an exponential reduction when congestion is detected. Multiple flows using AIMD congestion control will eventually converge to an equal usage of a shared link. The related schemes of multiplicative-increase/multiplicative-decrease (MIMD) and [...] In TCP, after slow start, the additive increase parameter {\\displaystyle a} is typically one MSS (maximum segment size) per round-trip time, and the multiplicative decrease factor {\\displaystyle b} is typically 1/2.\n\n## Protocols\n\n[edit]\n\nAIMD congestion avoidance is or was used in:\n\n Transmission Control Protocol (TCP)\n Scalable TCP (STCP)\n OSI Transport Class 4\n DCCP (in some modes)\n DECnet\n\n## In nature\n\n[edit] [...] AIMD requires a binary congestion signal. Most frequently, packet loss serves as the signal; the multiplicative decrease is triggered when a timeout or an acknowledgement message indicates a packet lost. It is also possible for in-network switches/routers to mark congestion (without discarding packets) as in Explicit Congestion Notification (ECN).\n\n### Mathematical formula\n\n[edit]",
+          "score": 0.9999
+        },
+        {
+          "id": 2,
+          "source": "TCP congestion control",
+          "source_type": "wikipedia",
+          "url": "https://en.wikipedia.org/wiki/TCP_congestion_control",
+          "page": null,
+          "snippet": "Transmission Control Protocol (TCP) uses one of several congestion control algorithms that include various aspects of an additive increase/multiplicative decrease (AIMD) scheme, along with other schemes including slow start and a congestion window (C...",
+          "text": "Transmission Control Protocol (TCP) uses one of several congestion control algorithms that include various aspects of an additive increase/multiplicative decrease (AIMD) scheme, along with other schemes including slow start and a congestion window (CWND), to achieve congestion avoidance.\n\nThe TCP congestion-avoidance algorithm is the primary basis for congestion control in the Internet. Per the end-to-end principle, congestion control is largely a function of internet hosts, not the network itself. There are several variations and versions of the algorithm implemented in protocol stacks of operating systems of computers that connect to the Internet.",
+          "score": 0.9998
+        },
+        {
+          "id": 3,
+          "source": "TCP congestion control",
+          "source_type": "wikipedia",
+          "url": "https://en.wikipedia.org/wiki/TCP_congestion_control",
+          "page": null,
+          "snippet": "To avoid congestive collapse, TCP uses a multi-faceted congestion-control strategy. For each connection, TCP maintains a CWND, limiting the total number of unacknowledged packets that may be in transit end-to-end. This is somewhat analogous to TCP's...",
+          "text": "To avoid congestive collapse, TCP uses a multi-faceted congestion-control strategy. For each connection, TCP maintains a CWND, limiting the total number of unacknowledged packets that may be in transit end-to-end. This is somewhat analogous to TCP's sliding window used for flow control.\n\nThe additive increase/multiplicative decrease (AIMD) algorithm is a closed-loop control algorithm. AIMD combines linear growth of the congestion window with an exponential reduction when congestion occurs. Multiple flows using AIMD congestion control will eventually converge to use equal amounts of a contended link.\n\nThis is the algorithm that is described in RFC 5681 for the congestion avoidance state.",
+          "score": 0.9995
+        },
+        {
+          "id": 4,
+          "source": "AIMD Algorithm - GeeksforGeeks",
+          "source_type": "web",
+          "url": "https://www.geeksforgeeks.org/computer-networks/aimd-algorithm",
+          "page": null,
+          "snippet": "Only TCP protocol uses the AIMD in addition to slow start restart for congestion detections and taking corrective measures.  AIMD is very compatible with Slow Start Restart. This combo is used together in almost all TCPs i.e. Tahoe, Reno, NewReno, an...",
+          "text": "Only TCP protocol uses the AIMD in addition to slow start restart for congestion detections and taking corrective measures.\n\nAIMD is very compatible with Slow Start Restart. This combo is used together in almost all TCPs i.e. Tahoe, Reno, NewReno, and Cubic. When the flow starts SSR is used, when SSR reaches the threshold then AIMD begins. When congestion is detected, AIMD switches to SSR again. The AIMD is very effective in terms of network fairness. It doesn't hurt other TCP flows. [...] AIMD probes \u2018slowly\u2019 as compared to the \u2018Slow Start\u2019 phase. Slow start increases the congestion window size exponentially (double per RTT) while AIMD increases cwnd linearly (by 1 per RTT). When TCP was introduced there was no congestion control mechanism. The TCP sender used to send the entire cwnd worth of packets at a time without caring about the packet loss at intermediary devices. The routers could not tolerate that burst of packets and thus lost the packets. Then slow start was designed [...] AIMD is a feedback control algorithm, it is used by TCP protocols in the transport layer of the TCP/IP stack. The AI phase is responsible for the linear growth of the sender's congestion window where there is no congestion detected. The MD phase is responsible for the exponential cut-down of the sender's congestion window when congestion is detected. There can exist multiple combinations of these two phases: additive and multiplicative.",
+          "score": 0.9992
+        },
+        {
+          "id": 5,
+          "source": "TCP Congestion Control \u2014 AIMD, Slow Start, Fast Retransmit \u2014 Computer Networks \u00b7 Engineering Playbook",
+          "source_type": "web",
+          "url": "https://engineering-playbook.vercel.app/computer-networks/tcp-congestion-control-aimd-slow-start",
+          "page": null,
+          "snippet": "| / \u2197  | / \u2197  | / \u2197 \u2190 additive increase: equal slope, parallel to 45\u00b0  |/ \u2198 \u2190 multiplicative decrease: toward origin  +----------> flow 1 cwnd  ```  Multiplicative-increase / additive-decrease would diverge. Additive-increase / multiplicative-decreas...",
+          "text": "| / \u2197\n\n| / \u2197\n\n| / \u2197 \u2190 additive increase: equal slope, parallel to 45\u00b0\n\n|/ \u2198 \u2190 multiplicative decrease: toward origin\n\n+----------> flow 1 cwnd\n\n```\n\nMultiplicative-increase / additive-decrease would diverge. Additive-increase / multiplicative-decrease converges. That\u2019s the deep reason TCP uses AIMD specifically.\n\n### Fast retransmit and fast recovery# [...] Two flows sharing a bottleneck: each grows additively when there\u2019s no loss; both halve when loss occurs. Plot one flow\u2019s `cwnd` against the other\u2019s. Additive increase moves the point along a 45\u00b0 line; multiplicative decrease moves it along a line through the origin. The intersection of those two motions converges to the fair-share point \u2014 equal `cwnd` for both flows. This is the classical Chiu-Jain result.\n\n```\n\nflow 2 cwnd\n\n^\n\n| . . . . . fairness line (cwnd1 == cwnd2)\n\n| / \u2197\n\n| / \u2197 [...] Four canonical algorithms, layered: slow start (probe how fast the path can carry traffic), congestion avoidance (linear additive increase past a threshold), fast retransmit (resend on three duplicate ACKs without waiting for the timer), fast recovery (don\u2019t drop `cwnd` all the way to 1 after a fast retransmit \u2014 halve it and continue). Together they form Reno-style AIMD: Additive Increase, Multiplicative Decrease. Modern Linux defaults to CUBIC, which keeps the shape but uses a cubic function",
+          "score": 0.9957
+        }
+      ],
+      "total_latency_ms": 32041.89,
+      "tokens": 1793,
+      "estimated_cost_usd": 0.000194,
+      "is_idk": false
+    },
+    {
+      "id": 20,
+      "question": "What distinct purpose do convolutional layers and pooling layers serve in a convolutional neural network?",
+      "expected_source": "wikipedia",
+      "split": "test",
+      "kb_file": "",
+      "answer": "Based on the provided sources, convolutional layers and pooling layers serve distinct purposes in a convolutional neural network (CNN):\n\n* **Convolutional layers** systematically apply learned filters (or convolution kernels sliding along the input matrix) to input images to create feature maps that summarize the presence of specific features in the input [2, 3]. They perform operations like a dot product of the convolution kernel with the input matrix [3].\n* **Pooling layers** (which often follow convolutional layers) are crucial for reducing computational complexity [1] and reducing the dimensions of data [4, 5]. They operate upon each feature map separately (independently on every depth or slice) to create a new set of resized pooled feature maps [2, 5] by combining the outputs of neuron clusters at one layer into a single neuron in the next layer [4]. They also contribute to local translation invariance [5].",
+      "routing_mode": "fan_out",
+      "sources_queried": [
+        "kb",
+        "wikipedia",
+        "web"
+      ],
+      "router_decision": "fan_out_all",
+      "router_fallback": false,
+      "confidence_score": 0.9977,
+      "citation_source_types": [
+        "web",
+        "wikipedia",
+        "wikipedia",
+        "web"
+      ],
+      "citation_files": [
+        "Convolutional Neural Networks: A Comprehensive Evaluation and Benchmarking of Pooling Layer Variants",
+        "Convolutional neural network",
+        "Convolutional neural network",
+        "Convolutional neural network - Wikipedia"
+      ],
+      "citations": [
+        {
+          "id": 1,
+          "source": "Convolutional Neural Networks: A Comprehensive Evaluation and Benchmarking of Pooling Layer Variants",
+          "source_type": "web",
+          "url": "https://www.mdpi.com/2073-8994/16/11/1516",
+          "page": null,
+          "snippet": "Convolutional Neural Networks (CNNs) are a class of deep neural networks that have proven highly effective in areas such as image and video recognition. CNNs typically include several types of layers, such as convolutional layers, activation layers,...",
+          "text": "Convolutional Neural Networks (CNNs) are a class of deep neural networks that have proven highly effective in areas such as image and video recognition. CNNs typically include several types of layers, such as convolutional layers, activation layers, pooling layers, and fully connected layers, all of which contribute to the network\u2019s ability to recognize patterns and features. The pooling layer, which often follows the convolutional layer, is crucial for reducing computational complexity by",
+          "score": 0.9982
+        },
+        {
+          "id": 3,
+          "source": "Convolutional neural network",
+          "source_type": "wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Convolutional_neural_network",
+          "page": null,
+          "snippet": "A convolutional neural network consists of an input layer, hidden layers and an output layer. In a convolutional neural network, the hidden layers include one or more layers that perform convolutions. Typically this includes a layer that performs a d...",
+          "text": "A convolutional neural network consists of an input layer, hidden layers and an output layer. In a convolutional neural network, the hidden layers include one or more layers that perform convolutions. Typically this includes a layer that performs a dot product of the convolution kernel with the layer's input matrix. This product is usually the Frobenius inner product, and its activation function is commonly ReLU. As the convolution kernel slides along the input matrix for the layer, the convolution operation generates a feature map, which in turn contributes to the input of the next layer. This is followed by other layers such as pooling layers, fully connected layers, and normalization layers.\n\nHere it should be noted how close a convolutional neural network is to a matched filter.",
+          "score": 0.9968
+        },
+        {
+          "id": 4,
+          "source": "Convolutional neural network",
+          "source_type": "wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Convolutional_neural_network",
+          "page": null,
+          "snippet": "Convolutional networks may include local and/or global pooling layers along with traditional convolutional layers. Pooling layers reduce the dimensions of data by combining the outputs of neuron clusters at one layer into a single neuron in the next...",
+          "text": "Convolutional networks may include local and/or global pooling layers along with traditional convolutional layers. Pooling layers reduce the dimensions of data by combining the outputs of neuron clusters at one layer into a single neuron in the next layer. Local pooling combines small clusters, tiling sizes such as 2 \u00d7 2 are commonly used. Global pooling acts on all the neurons of the feature map. There are two common types of pooling in popular use: max and average. Max pooling uses the maximum value of each local cluster of neurons in the feature map, while average pooling takes the average value.",
+          "score": 0.996
+        },
+        {
+          "id": 5,
+          "source": "Convolutional neural network - Wikipedia",
+          "source_type": "web",
+          "url": "https://en.wikipedia.org/wiki/Convolutional_neural_network",
+          "page": null,
+          "snippet": "Convolutional networks may include local and/or global pooling layers along with traditional convolutional layers. Pooling layers reduce the dimensions of data by combining the outputs of neuron clusters at one layer into a single neuron in the next...",
+          "text": "Convolutional networks may include local and/or global pooling layers along with traditional convolutional layers. Pooling layers reduce the dimensions of data by combining the outputs of neuron clusters at one layer into a single neuron in the next layer. Local pooling combines small clusters, tiling sizes such as 2 \u00d7 2 are commonly used. Global pooling acts on all the neurons of the feature map. There are two common types of pooling in popular use: max and average. Max pooling uses the [...] a pooling layer between successive convolutional layers (each one typically followed by an activation function, such as a ReLU layer) in a CNN architecture.:\u200a460\u2013461 While pooling layers contribute to local translation invariance, they do not provide global translation invariance in a CNN, unless a form of global pooling is used. The pooling layer commonly operates independently on every depth, or slice, of the input and resizes it spatially. A very common form of max pooling is a layer with [...] along the input matrix for the layer, the convolution operation generates a feature map, which in turn contributes to the input of the next layer. This is followed by other layers such as pooling layers, fully connected layers, and normalization layers.",
+          "score": 0.9958
+        }
+      ],
+      "total_latency_ms": 11412.14,
+      "tokens": 1259,
+      "estimated_cost_usd": 0.000135,
+      "is_idk": false
+    },
+    {
+      "id": 21,
+      "question": "What properties define a B-tree and keep it balanced during insertions and deletions?",
+      "expected_source": "wikipedia",
+      "split": "test",
+      "kb_file": "",
+      "answer": "Based on the provided sources, the key properties that define a B-tree and keep it balanced include:\n\n* **Self-Balancing Tree Data Structure:** B-trees maintain a balanced structure automatically during operations without requiring separate rebalancing [1], [2], [3].\n* **Balanced Depth (or Height):** All leaf nodes appear on the same level, ensuring a consistent and balanced tree height with worst-case logarithmic performance [2]. \n* **Multiple Keys and Children per Node:** Unlike binary trees, B-tree nodes can contain multiple keys and pointers to more than two child nodes [1], [2]. For example, a B-tree of order $m$ has nodes containing up to $m-1$ keys and $m$ children, along with a minimum occupancy requirement to ensure balance [2].\n* **Handling Insertions:** A B-tree is kept balanced after an insertion by splitting an overfilled node (containing $2d+1$ keys) into two $d$-key siblings and inserting the mid-value key into the parent [4], [5]. Depth only increases when the root is split [4], [5].\n* **Handling Deletions:** A B-tree is kept balanced after deletion by merging or redistributing keys among siblings to maintain the $d$-key minimum for non-root nodes [4], [5].",
+      "routing_mode": "fan_out",
+      "sources_queried": [
+        "kb",
+        "wikipedia",
+        "web"
+      ],
+      "router_decision": "fan_out_all",
+      "router_fallback": false,
+      "confidence_score": 0.9976,
+      "citation_source_types": [
+        "wikipedia",
+        "web",
+        "web",
+        "web",
+        "wikipedia"
+      ],
+      "citation_files": [
+        "B-tree",
+        "B-Trees: Balanced Tree Data Structures",
+        "Introduction of B Tree - GeeksforGeeks",
+        "B-tree - Wikipedia",
+        "B-tree"
+      ],
+      "citations": [
+        {
+          "id": 1,
+          "source": "B-tree",
+          "source_type": "wikipedia",
+          "url": "https://en.wikipedia.org/wiki/B-tree",
+          "page": null,
+          "snippet": "In computer science, a B-tree is a self-balancing tree data structure that maintains sorted data and allows searches, sequential access, insertions, and deletions in logarithmic time. The B-tree generalizes the binary search tree, allowing nodes to h...",
+          "text": "In computer science, a B-tree is a self-balancing tree data structure that maintains sorted data and allows searches, sequential access, insertions, and deletions in logarithmic time. The B-tree generalizes the binary search tree, allowing nodes to have more than two children.\n\nBy allowing more children under one node than a regular self-balancing binary search tree, the B-tree reduces the height of the tree and puts the data in fewer separate blocks. This is especially important for trees stored in secondary storage (e.g., disk drives), as these systems have relatively high latency and work with relatively large blocks of data, hence the B-tree's use in databases and file systems.",
+          "score": 0.9986
+        },
+        {
+          "id": 2,
+          "source": "B-Trees: Balanced Tree Data Structures",
+          "source_type": "web",
+          "url": "https://pages.cs.wisc.edu/~arias-camargo",
+          "page": null,
+          "snippet": "# B-Trees: Efficient Database Indexing Structures  B-Trees are self-balancing tree data structures that maintain sorted data and allow searches, sequential access, insertions, and deletions in logarithmic time. They are optimized for systems that rea...",
+          "text": "# B-Trees: Efficient Database Indexing Structures\n\nB-Trees are self-balancing tree data structures that maintain sorted data and allow searches, sequential access, insertions, and deletions in logarithmic time. They are optimized for systems that read and write large blocks of data and are commonly used in databases and file systems.\n\nB-Tree Operations Animation\n\n## Key Properties of B-Trees [...] Multiple Keys per Node: Unlike binary trees, B-Tree nodes can contain multiple keys and pointers to child nodes.\n Balanced Depth: All leaf nodes appear on the same level, ensuring balanced tree height and consistent performance.\n Order Parameter: A B-Tree of order m has nodes that can contain up to m-1 keys and m children, with a minimum occupancy to ensure balance.\n Self-Balancing: Operations on B-Trees maintain the tree's balance properties without requiring separate rebalancing. [...] Reduced Disk I/O: By storing multiple keys per node, B-Trees minimize the number of disk accesses required for operations.\n Optimized for External Storage: The structure is designed specifically for block-based storage systems like hard drives and SSDs.\n Consistent Performance: Due to the balanced nature of B-Trees, worst-case performance remains logarithmic regardless of insertion or deletion patterns.",
+          "score": 0.9986
+        },
+        {
+          "id": 3,
+          "source": "Introduction of B Tree - GeeksforGeeks",
+          "source_type": "web",
+          "url": "https://www.geeksforgeeks.org/dsa/introduction-of-b-tree-2",
+          "page": null,
+          "snippet": "Optimized for Large Datasets: B-Trees are designed to handle millions of records efficiently. Their reduced height and balanced structure enable faster sequential access to data and simplify operations like insertion and deletion. This ensures effici...",
+          "text": "Optimized for Large Datasets: B-Trees are designed to handle millions of records efficiently. Their reduced height and balanced structure enable faster sequential access to data and simplify operations like insertion and deletion. This ensures efficient management of large datasets while maintaining an ordered structure. [...] B Trees allow faster data retrieval and updates, making them an ideal choice for systems requiring efficient and scalable data management. By maintaining a balanced structure at all times,\n B-Trees deliver consistent and efficient performance for critical operations such as search, insertion, and deletion. [...] Improved Performance Over M-way Trees: While M-way trees can be either balanced or skewed, B-Trees are always self-balanced. This self-balancing property ensures fewer levels in the tree, significantly reducing access time compared to M-way trees. This makes B-Trees particularly suitable for external storage systems where faster data retrieval is crucial.",
+          "score": 0.9972
+        },
+        {
+          "id": 4,
+          "source": "B-tree - Wikipedia",
+          "source_type": "web",
+          "url": "https://en.wikipedia.org/wiki/B-tree",
+          "page": null,
+          "snippet": "{\\displaystyle 2d+1} keys, into two d-key siblings and inserting the mid-value key into the parent. Depth only increases when the root is split, maintaining balance. Similarly, a B-tree is kept balanced after deletion by merging or redistributing key...",
+          "text": "{\\displaystyle 2d+1} keys, into two d-key siblings and inserting the mid-value key into the parent. Depth only increases when the root is split, maintaining balance. Similarly, a B-tree is kept balanced after deletion by merging or redistributing keys among siblings to maintain the d-key minimum for non-root nodes. A merger reduces the number of keys in the parent, potentially forcing it to merge or redistribute keys with its siblings, and so on. The only change in depth occurs when the root [...] {\\displaystyle O(n)}\n{\\displaystyle O(\\log n)}\n{\\displaystyle O(\\log n)}\n{\\displaystyle O(\\log n)}\n{\\displaystyle O(\\log n)}\n{\\displaystyle O(\\log n)}\n{\\displaystyle O(\\log n)}\n\nIn computer science, a B-tree is a self-balancing tree data structure that maintains sorted data and allows searches, sequential access, insertions, and deletions in logarithmic time. The B-tree generalizes the binary search tree, allowing nodes \"Node (computer science)\") to have more than two children. [...] d\n\u2212\n1\n{\\displaystyle d-1}\n{\\displaystyle d-1} keys; joining the neighbor would add d keys plus one more key brought down from the neighbor's parent. The result is an entirely full node of \n\n2\nd\n{\\displaystyle 2d}\n{\\displaystyle 2d} keys.\n\n{\\displaystyle 2d}\n{\\displaystyle 2d+1}\n{\\displaystyle d-1}\n{\\displaystyle 2d}\n\nA B-tree is kept balanced after insertion by splitting a would-be overfilled node, of",
+          "score": 0.995
+        },
+        {
+          "id": 5,
+          "source": "B-tree",
+          "source_type": "wikipedia",
+          "url": "https://en.wikipedia.org/wiki/B-tree",
+          "page": null,
+          "snippet": "keys, into two d-key siblings and inserting the mid-value key into the parent. Depth only increases when the root is split, maintaining balance. Similarly, a B-tree is kept balanced after deletion by merging or redistributing keys among siblings to m...",
+          "text": "keys, into two d-key siblings and inserting the mid-value key into the parent. Depth only increases when the root is split, maintaining balance. Similarly, a B-tree is kept balanced after deletion by merging or redistributing keys among siblings to maintain the d-key minimum for non-root nodes. A merger reduces the number of keys in the parent, potentially forcing it to merge or redistribute keys with its siblings, and so on. The only change in depth occurs when the root has two children, of d and (transitionally)\n\nd\n\n\u2212\n\n1\n\n{\\displaystyle d-1}\n\nkeys, in which case the two siblings and parent are merged, reducing the depth by one.",
+          "score": 0.9896
+        }
+      ],
+      "total_latency_ms": 8599.42,
+      "tokens": 1675,
+      "estimated_cost_usd": 0.000189,
+      "is_idk": false
+    },
+    {
+      "id": 25,
+      "question": "What major cybersecurity incident or zero-day vulnerability disclosure was reported across enterprise infrastructure this week?",
+      "expected_source": "web",
+      "split": "test",
+      "kb_file": "",
+      "answer": "Based on the available sources, major disclosures and incidents affecting enterprise infrastructure include:\n\n* **PHP2Shell vulnerabilities** and active exploitation attempts involving them [1].\n* **Node.js Brotli decoder vulnerabilities** [1].\n* Reported **GitLab unauthenticated remote code execution flaws** [1].\n* Vulnerabilities affecting **Plex Media Server** (with reports of active exploitation against vulnerable installations) and enterprise infrastructure [1].\n* A critical **Splunk Enterprise vulnerability (CVE-2026-20253)** that was exploited in attacks days after its public disclosure, allowing unauthenticated attackers to create or truncate arbitrary files via a PostgreSQL sidecar service endpoint [5].",
+      "routing_mode": "fan_out",
+      "sources_queried": [
+        "kb",
+        "wikipedia",
+        "web"
+      ],
+      "router_decision": "fan_out_all",
+      "router_fallback": false,
+      "confidence_score": 0.9136,
+      "citation_source_types": [
+        "web",
+        "web"
+      ],
+      "citation_files": [
+        "Black October 2026: Cyberattacks, Breaches and Incidents",
+        "Splunk Enterprise Vulnerability Exploited in Attacks Days After Disclosure - SecurityWeek"
+      ],
+      "citations": [
+        {
+          "id": 1,
+          "source": "Black October 2026: Cyberattacks, Breaches and Incidents",
+          "source_type": "web",
+          "url": "https://www.unosecur.com/blog/october-2026-cybersecurity-incidents",
+          "page": null,
+          "snippet": "Major disclosures included PHP2Shell, Node.js Brotli decoder vulnerabilities, reported GitLab unauthenticated remote code execution flaws, and vulnerabilities affecting Plex Media Server and enterprise infrastructure.  ### Which October 2026 vulnerab...",
+          "text": "Major disclosures included PHP2Shell, Node.js Brotli decoder vulnerabilities, reported GitLab unauthenticated remote code execution flaws, and vulnerabilities affecting Plex Media Server and enterprise infrastructure.\n\n### Which October 2026 vulnerabilities were actively exploited?\n\nReporting described exploitation attempts involving PHP2Shell and active exploitation against vulnerable Plex Media Server installations. The evidence and confirmed impact differ between incidents. [...] ## 1. Major data breaches and credential exposure incidents in October 2026\n\nCloud infrastructure, developer platforms, enterprise integrations, and third-party services were prominent in October's breach reporting.\n\nA recurring concern was the exposure of credentials that could provide access beyond the initially compromised environment. [...] Weak cryptographic keys at eMudhra raised concerns about digital certificate trust. Reports involving OpenCode, PwC, SBI, and other organizations highlighted risks to AI provider credentials, customer information, and third-party systems. Meanwhile, vulnerabilities in Node.js, Plex Media Server, and enterprise infrastructure demanded urgent attention from security teams.",
+          "score": 0.9828
+        },
+        {
+          "id": 5,
+          "source": "Splunk Enterprise Vulnerability Exploited in Attacks Days After Disclosure - SecurityWeek",
+          "source_type": "web",
+          "url": "https://www.securityweek.com/splunk-enterprise-vulnerability-exploited-in-attacks-days-after-disclosure",
+          "page": null,
+          "snippet": "A critical Splunk Enterprise vulnerability is being exploited in attacks only days after its public disclosure, and organizations have been urged to patch it immediately.  The vulnerability is tracked as CVE-2026-20253 and Splunk\u2019s advisory says it c...",
+          "text": "A critical Splunk Enterprise vulnerability is being exploited in attacks only days after its public disclosure, and organizations have been urged to patch it immediately.\n\nThe vulnerability is tracked as CVE-2026-20253 and Splunk\u2019s advisory says it can be exploited by an unauthenticated attacker to create or truncate arbitrary files via a PostgreSQL sidecar service endpoint. [...] Iran\u2019s Prince of Persia APT Hosts C&C in US for First Time Since 2016\n Tech and Security Companies Respond to PHP2Shell Vulnerabilities\n Oracle Patches Over 1,200 Vulnerabilities With October 2026 CPU\n Google Hardens Chrome Against ClickFix Attacks, Insecure HTTP Connections\n OpenAI Agents Silenced Security Team Alerts, Removed Misalignment Monitor\n Hijacked Developer Account Used to Plant Stealer in OVHcloud CLI\n Accenture, Dragos, SANS Launch $10M Initiative to Defend Small US Utilities",
+          "score": 0.2156
+        }
+      ],
+      "total_latency_ms": 7696.56,
+      "tokens": 1445,
+      "estimated_cost_usd": 0.000141,
+      "is_idk": false
+    },
+    {
+      "id": 26,
+      "question": "What are the latest experimental breakthroughs in quantum computing qubit coherence times announced this week?",
+      "expected_source": "web",
+      "split": "test",
+      "kb_file": "",
+      "answer": "I don't know based on the available sources.",
+      "routing_mode": "fan_out",
+      "sources_queried": [
+        "kb",
+        "wikipedia",
+        "web"
+      ],
+      "router_decision": "fan_out_all",
+      "router_fallback": false,
+      "confidence_score": 0.426,
+      "citation_source_types": [
+        "wikipedia",
+        "web",
+        "web",
+        "web",
+        "web"
+      ],
+      "citation_files": [
+        "2025 in science",
+        "This new qubit could be 100 times less error-prone in superfluid quantum computer breakthrough | ScienceDaily",
+        "Quantum Computing in 2026: From Lab to Reality | Zylos Research",
+        "Quantinuum Breaks Error-Correction World Record by 10x, Validating its Leading Path to Fault-Tolerant Quantum Computing by 2029",
+        "Quantum Computing Companies in 2026 (76 Major Players)"
+      ],
+      "citations": [
+        {
+          "id": 1,
+          "source": "2025 in science",
+          "source_type": "wikipedia",
+          "url": "https://en.wikipedia.org/wiki/2025_in_science",
+          "page": null,
+          "snippet": "Astronomers publish details of 2023 KQ14, informally nicknamed Ammonite, a sednoid announced in April 2025.  Researchers perform the first experimental demonstration of logical-level magic state distillation on a neutral-atom quantum computer, demons...",
+          "text": "Astronomers publish details of 2023 KQ14, informally nicknamed Ammonite, a sednoid announced in April 2025.\n\nResearchers perform the first experimental demonstration of logical-level magic state distillation on a neutral-atom quantum computer, demonstrating a critical step toward universal, fault-tolerant quantum computation by producing high-fidelity magic states entirely within error-corrected logical qubits.\n\n17 July \u2013 OpenAI announces ChatGPT Agent.\n\n18 July \u2013 The British Antarctic Survey reports the extraction of 1.5 million-year-old ice cores from depths of 2,800 metres in East Antarctica. The samples, containing bubbles of trapped CO2, could significantly improve the understanding of Earth's climate history by nearly doubling the current ice core record of 800,000 years.",
+          "score": 0.921
+        },
+        {
+          "id": 2,
+          "source": "This new qubit could be 100 times less error-prone in superfluid quantum computer breakthrough | ScienceDaily",
+          "source_type": "web",
+          "url": "https://www.sciencedaily.com/releases/2026/09/260930020309.htm",
+          "page": null,
+          "snippet": "University of Surrey. \"This new qubit could be 100 times less error-prone in superfluid quantum computer breakthrough.\" ScienceDaily. www.sciencedaily.com/releases/2026/09/260930020309.htm (accessed October 25, 2026).      ## Explore More  from Scien...",
+          "text": "University of Surrey. \"This new qubit could be 100 times less error-prone in superfluid quantum computer breakthrough.\" ScienceDaily. www.sciencedaily.com/releases/2026/09/260930020309.htm (accessed October 25, 2026).\n\n  \n\n## Explore More\n\nfrom ScienceDaily\n\nRELATED STORIES\n\nWhen Qubits Learn the Language of Fiberoptics [...] Story Source:\n\nMaterials provided by University of Surrey. Note: Content may be edited for style and length.\n\nJournal Reference:\n\n1. Priya Sharma, Jens Koch, Eran Ginossar. Towards a micromechanical qubit based on quantized oscillations in superfluid helium. npj Quantum Information, 2026; DOI: 10.1038/s41534-026-01355-3\n\nCite This Page:\n\n MLA\n APA\n Chicago [...] ScienceDaily \n\nYour source for the latest research news\n\nFollow: Facebook X/Twitter Subscribe: RSS Feeds Newsletter\n\nNew! Sign up for our free email newsletter.\n\nScience News\n\nfrom research organizations\n\n# This new qubit could be 100 times less error-prone in superfluid quantum computer breakthrough\n\nDate:\n:   October 1, 2026\n\nSource:\n:   University of Surrey",
+          "score": 0.8992
+        },
+        {
+          "id": 3,
+          "source": "Quantum Computing in 2026: From Lab to Reality | Zylos Research",
+          "source_type": "web",
+          "url": "https://zylos.ai/research/2026-02-02-quantum-computing",
+          "page": null,
+          "snippet": "1. 2026 is the transition year: Quantum computing shifts from experimental to commercially relevant, though widespread adoption is still years away 2. Quantum advantage is imminent: IBM and others expect the first verified cases by end of 2026, provi...",
+          "text": "1. 2026 is the transition year: Quantum computing shifts from experimental to commercially relevant, though widespread adoption is still years away\n2. Quantum advantage is imminent: IBM and others expect the first verified cases by end of 2026, proving quantum superiority on real-world tasks\n3. Error correction is the breakthrough: QEC has emerged as the universal priority, with exponential growth in research and practical demonstrations [...] D-Wave Quantum Computing Breakthrough 2026\n TQI's Expert Predictions on Quantum Technology in 2026\n Neutral Atom Quantum Computing: 2026's Big Leap - IEEE Spectrum\n IBM Quantum Processors, Software, and Algorithm Breakthroughs\n 7 Quantum Computing Trends That Will Shape Every Industry In 2026\n Quantum Computing Applications: 8 Real-World Use Cases in 2026\n IBM Quantum 2026: When Quantum Beats Classical Computing\n Quantum Error Correction: 2025 trends and 2026 predictions - Riverlane [...] Why QEC Matters: Quantum Error Correction is the universal priority for utility-scale quantum computing. It's the beating heart of the industry in 2026, marking the true beginning of sustained engineering effort needed to build practical systems.\n\nRecent Progress:",
+          "score": 0.7273
+        },
+        {
+          "id": 4,
+          "source": "Quantinuum Breaks Error-Correction World Record by 10x, Validating its Leading Path to Fault-Tolerant Quantum Computing by 2029",
+          "source_type": "web",
+          "url": "https://www.quantinuum.com/press-releases/quantinuum-breaks-error-correction-world-record-by-10x-validating-its-leading-path-to-fault-tolerant-quantum-computing-by-2029",
+          "page": null,
+          "snippet": "BROOMFIELD, Colo.\u2014October 19, 2026\u2014Quantinuum (NASDAQ: QNT), a leading full-stack quantum computing company, today announced a world-record quantum error-correction result, achieving a logical fidelity of 99.9995% on its Helios commercial computer us...",
+          "text": "BROOMFIELD, Colo.\u2014October 19, 2026\u2014Quantinuum (NASDAQ: QNT), a leading full-stack quantum computing company, today announced a world-record quantum error-correction result, achieving a logical fidelity of 99.9995% on its Helios commercial computer using the company\u2019s error-correction architecture. This marks Quantinuum\u2019s second breakthrough in two months, demonstrating how its highly accurate trapped-ion hardware and flexible architecture work together to deliver rapid improvements in accuracy. [...] BROOMFIELD, Colo., and PERTH, Australia\u2014October 5, 2026\u2014Quantinuum (NASDAQ: QNT), a leading quantum computing company, today announced the signing of a Memorandum of Understanding (MOU) with The University of Western Australia (UWA) to advance Australia\u2019s quantum capability by expanding access to advanced quantum computing, developing quantum talent, and accelerating the development of practical applications that integrate quantum computing, AI, and high-performance computing (HPC). [...] Get Access\n\n# Quantinuum Breaks Error-Correction World Record by 10x, Validating its Leading Path to Fault-Tolerant Quantum Computing by 2029\n\n# \u200d\n\nOctober 19, 2026",
+          "score": 0.7125
+        },
+        {
+          "id": 5,
+          "source": "Quantum Computing Companies in 2026 (76 Major Players)",
+          "source_type": "web",
+          "url": "https://thequantuminsider.com/2025/09/23/top-quantum-computing-companies",
+          "page": null,
+          "snippet": "The company has also developed a novel chip fabrication method called Alternating-Bias Assisted Annealing (ABAA), which improves qubit coherence and two-qubit gate performance. This method is being applied to the Novera and upcoming Ankaa-3 systems....",
+          "text": "The company has also developed a novel chip fabrication method called Alternating-Bias Assisted Annealing (ABAA), which improves qubit coherence and two-qubit gate performance. This method is being applied to the Novera and upcoming Ankaa-3 systems. [...] Their flagship quantum computer, Hilbert, operates at room temperature and is designed for high fidelity, long coherence times, and scalable architecture. Complementing it is Superstaq, a cloud-accessible quantum software platform that enhances performance across various hardware backends, and Oqtant, which enables cloud-based experimentation with quantum matter. [...] Unlike most quantum processors today, which use transmon qubits, Atlantic Quantum is developing systems based on fluxonium qubits. These qubits operate at significantly lower frequencies, which translates into much longer coherence times and simpler control requirements. This design decision positions fluxonium as a superior candidate for scalable, fault-tolerant architectures. The company is focused not just on the qubits themselves, but on the entire hardware stack, including advanced control",
+          "score": 0.3583
+        }
+      ],
+      "total_latency_ms": 18023.21,
+      "tokens": 1690,
+      "estimated_cost_usd": 0.000129,
+      "is_idk": true
+    },
+    {
+      "id": 27,
+      "question": "What are the latest developments and legal enforcement timelines for AI regulation in the European Union and the United States this week?",
+      "expected_source": "web",
+      "split": "test",
+      "kb_file": "",
+      "answer": "Based on the available sources, here are the details regarding the implementation and enforcement timelines for AI regulation in the European Union:\n\n* **EU AI Act Implementation and Enforcement Timelines:**\n  * **General Application & Transparency:** August 2, 2026, marks the general date of application for the EU AI Act [1], [4]. On this date, Article 50 transparency rules began to apply (including disclosing AI interactions, machine-readable marking of AI-generated content, and labeling deepfakes) [4], [5]. Enforcement by the European Commission's AI Office and national authorities also began for applicable rules such as general-purpose AI models, prohibitions, transparency, and AI literacy [4], [5].\n  * **General-Purpose AI Fines:** The European Commission gained the power to fine providers of general-purpose AI models (up to 3 percent of global turnover or EUR 15 million) [4].\n  * **High-Risk Obligations & Transition Dates:** High-risk obligations were moved by the Digital Omnibus to December 2, 2027 (for Annex III) and August 2, 2028 (for Annex I) [4]. Additionally, generative systems on the market before August 2, 2026, have until December 2, 2026, to comply with the Article 50(2) machine-readable marking duty [4], [5].\n  * **Prior Enforcement:** Enforcement powers under Article 99 have actually been active since August 2, 2025 [1].\n\nThe provided sources do not contain sufficient information to answer regarding specific developments or timelines for the United States this week.",
+      "routing_mode": "fan_out",
+      "sources_queried": [
+        "kb",
+        "wikipedia",
+        "web"
+      ],
+      "router_decision": "fan_out_all",
+      "router_fallback": false,
+      "confidence_score": 0.9248,
+      "citation_source_types": [
+        "web",
+        "web",
+        "web"
+      ],
+      "citation_files": [
+        "EU AI Act Timeline 2026: Aug 2 Milestone & Next Deadlines",
+        "EU AI Act: What U.S. Businesses Actually Need to Know in 2026 | Matthew Bertram",
+        "Timeline for the Implementation of the EU AI Act | AI Act Service Desk"
+      ],
+      "citations": [
+        {
+          "id": 1,
+          "source": "EU AI Act Timeline 2026: Aug 2 Milestone & Next Deadlines",
+          "source_type": "web",
+          "url": "https://alicelabs.ai/en/insights/eu-ai-act-timeline-2026",
+          "page": null,
+          "snippet": "The EU AI Act implementation timeline in 2026 is dominated by a single date: 2 August 2026. On that day, all Chapter III Section 2 obligations for Annex III high-risk AI systems enter into application, per Article 113(c) of Regulation (EU) 2024/1689....",
+          "text": "The EU AI Act implementation timeline in 2026 is dominated by a single date: 2 August 2026. On that day, all Chapter III Section 2 obligations for Annex III high-risk AI systems enter into application, per Article 113(c) of Regulation (EU) 2024/1689. There is no separate June 2026 enforcement milestone \u2014 that claim circulates in secondary reporting but does not appear in the Official Journal text or on the Commission's Service Desk timeline. [...] The Commission's own framing is unambiguous: 2 August 2026 is the general application date, not the start of enforcement \u2014 enforcement powers under Article 99 are already active since 2 August 2025. This distinction matters when procurement teams and auditors ask whether the Act is \"in force\" today: yes, it is, and specific penalty tiers are already attachable.\n\n## EU AI Act Implementation Timeline 2026: What Actually Changes on 2 August\n\nIn short [...] ### EU AI Act Articles Activated on 2 August 2026\n\nThe 2 August 2026 date is set by Article 113(a) of Regulation (EU) 2024/1689 as the general date of application. The specific provisions that shifted from grace to enforceable on that day include:",
+          "score": 0.9742
+        },
+        {
+          "id": 4,
+          "source": "EU AI Act: What U.S. Businesses Actually Need to Know in 2026 | Matthew Bertram",
+          "source_type": "web",
+          "url": "https://matthewbertram.com/blog/eu-ai-act-what-us-businesses-need-to-know",
+          "page": null,
+          "snippet": "August 2, 2026 still happened for everything that was not postponed. On that date the AI Act's general application began: the Article 50 transparency rules (tell people when they are talking to an AI, mark AI-generated content in a machine-readable w...",
+          "text": "August 2, 2026 still happened for everything that was not postponed. On that date the AI Act's general application began: the Article 50 transparency rules (tell people when they are talking to an AI, mark AI-generated content in a machine-readable way, label deepfakes) now apply; the European Commission's AI Office and national authorities began enforcing the Act; and the Commission can now fine providers of general-purpose AI models (up to 3 percent of global turnover or EUR 15 million). [...] The Act's general application date arrived. The Article 50 transparency obligations began to apply (disclosing AI interactions, machine-readable marking of AI-generated content, deepfake labeling), the Commission's AI Office and national authorities began enforcement, and the Commission gained the power to fine general-purpose AI model providers. The high-risk obligations did not apply on that date; the Digital Omnibus moved them to December 2, 2027 (Annex III) and August 2, 2028 (Annex I). [...] Sets a marking transition. The Article 50(2) machine-readable marking duty for AI-generated and manipulated content applies from August 2, 2026; generative systems already on the market before that date have until December 2, 2026.\n Resolves an Annex I dispute. The conformity assessment regime for AI components in regulated products (machinery, medical devices) shifts to sectoral primacy with an equivalence clause for safety levels.",
+          "score": 0.7399
+        },
+        {
+          "id": 5,
+          "source": "Timeline for the Implementation of the EU AI Act | AI Act Service Desk",
+          "source_type": "web",
+          "url": "https://ai-act-service-desk.ec.europa.eu/en/ai-act/timeline/timeline-implementation-eu-ai-act",
+          "page": null,
+          "snippet": "The majority of rules of the AI Act come into force and enforcement starts for applicable rules      Transparency rules (Article 50) start to apply.     Measures in support of innovation start apply.     Enforcement of the AI Act starts at national a...",
+          "text": "The majority of rules of the AI Act come into force and enforcement starts for applicable rules\n\n    Transparency rules (Article 50) start to apply.\n    Measures in support of innovation start apply.\n    Enforcement of the AI Act starts at national and EU-level concerning general-purpose AI models, prohibitions, transparency rules and AI literacy.\n5. 02 Dec 2026\n\n   New prohibitions + Article 50(2) transition apply \\\\",
+          "score": 0.6718
+        }
+      ],
+      "total_latency_ms": 9257.42,
+      "tokens": 1751,
+      "estimated_cost_usd": 0.000212,
+      "is_idk": false
+    },
+    {
+      "id": 28,
+      "question": "What features were introduced in the latest major programming language releases for Rust and Python this week?",
+      "expected_source": "web",
+      "split": "test",
+      "kb_file": "",
+      "answer": "Based on the provided sources, the latest releases for Python and Rust introduce the following features:\n\n* **Python 3.15:** \n  * Explicit lazy imports via a new `lazy` soft keyword (introduced through PEP 810) to defer loading modules until they are actually used, which helps improve startup time for large applications [1], [2].\n  * New built-in types: `frozendict` and `sentinel` [2].\n  * Defaults to UTF-8 [2].\n\n* **Rust:**\n  * In the context of recent updates (such as Rust 1.98.1 fixing a miscompilation bug [4]), general language features that have matured over recent years include `let-else` statements, block expressions that can be labeled as a `break` target, async/await, macros, consts, generics, and error handling ergonomics [3], [4].",
+      "routing_mode": "fan_out",
+      "sources_queried": [
+        "kb",
+        "wikipedia",
+        "web"
+      ],
+      "router_decision": "fan_out_all",
+      "router_fallback": false,
+      "confidence_score": 0.8497,
+      "citation_source_types": [
+        "web",
+        "web",
+        "web",
+        "web"
+      ],
+      "citation_files": [
+        "TIOBE Index October 2026: Python at 19.23%, Julia Back",
+        "Python (programming language)",
+        "2026 Will Make or Break Rust",
+        "What\u2019s new in the Rust programming language | InfoWorld"
+      ],
+      "citations": [
+        {
+          "id": 1,
+          "source": "TIOBE Index October 2026: Python at 19.23%, Julia Back",
+          "source_type": "web",
+          "url": "https://tech-insider.org/tiobe-index-october-2026-python-julia-rust",
+          "page": null,
+          "snippet": "### Lazy Imports and UTF-8 by Default  The headline language feature is explicit lazy imports, introduced through PEP 810 and confirmed in Python\u2019s official changelog. Traditionally, Python loads every imported module immediately, even when a program...",
+          "text": "### Lazy Imports and UTF-8 by Default\n\nThe headline language feature is explicit lazy imports, introduced through PEP 810 and confirmed in Python\u2019s official changelog. Traditionally, Python loads every imported module immediately, even when a program never ends up calling it, which slows startup time for large applications with heavy dependency trees. Python 3.15 adds a new `lazy` keyword that defers loading until the module is actually used. Linuxiac\u2019s example shows the syntax in practice: [...] dominance, now reinforced by a release aimed directly at large-application startup time and profiling overhead, lowers the switching cost for teams already standardized on it. Second, Rust\u2019s sustained multi-month climb into the top 10 suggests the language has moved past early-adopter status into a more durable position in systems and infrastructure hiring pipelines. Third, Julia\u2019s reappearance, however fragile its margin, is a signal that numerical-computing teams evaluating alternatives to [...] For individual developers, the practical takeaway from October\u2019s numbers is narrower than the headlines suggest. Python\u2019s rating gain doesn\u2019t change what Python is good at, and Rust\u2019s four-month hold on 10th place doesn\u2019t mean it has overtaken Go in any meaningful technical sense, it means search interest in Rust-related skilled engineers, courses, and vendors has been proportionally larger than Go\u2019s for four straight months. Where the data is more directly actionable is in Python 3.15 itself:",
+          "score": 0.9737
+        },
+        {
+          "id": 2,
+          "source": "Python (programming language)",
+          "source_type": "web",
+          "url": "https://en.wikipedia.org/wiki/Python_(programming_language)",
+          "page": null,
+          "snippet": "As of October 2026( Python 3.15.2  is the latest stable release, it all the other releases where \"expedited security releases\"( such as 3.14.10, 3.14.9 and also 3.14.8 in the same month,( and since 3.14 official Android binary releases are available....",
+          "text": "As of October 2026( Python 3.15.2  is the latest stable release, it all the other releases where \"expedited security releases\"( such as 3.14.10, 3.14.9 and also 3.14.8 in the same month,( and since 3.14 official Android binary releases are available. All older 3.x versions had a security update down to  Python 3.10.22. Python 3.11 is, since October 2026, the oldest supported branch.( Python 3.15 adds e.g. `frozendict` and `sentinel` built-in types, and a new soft keyword, `lazy`, for lazy [...] 163.   \u2191#cite_ref-171 \"Jump up\")\"RustPython/RustPython\". RustPython Dev. 5 May 2026. Retrieved 6 May 2026.\n164.   \u2191#cite_ref-AutoNT-73_172-0 \"Jump up\")\"Application-level Stackless features \u2013 PyPy 2.0.2 documentation\". Doc.pypy.org. Archived from the original on 4 June 2020. Retrieved 17 July 2013.\n165.   \u2191#cite_ref-AutoNT-74_173-0 \"Jump up\")\"Plans for optimizing Python\". _Google Project Hosting_. 15 December 2009. Archived from the original on 11 April 2016. Retrieved 24 September 2011. [...] that all were \"expedited security releases\"( in October 2026, following the project's annual release cycle and five-year support policy. Python 3.15 the latest stable release defaults to UTF-8, unlike previous versions. Earlier versions in the 3.x series have reached end-of-life and no longer receive security updates.",
+          "score": 0.9354
+        },
+        {
+          "id": 3,
+          "source": "2026 Will Make or Break Rust",
+          "source_type": "web",
+          "url": "https://www.youtube.com/watch?v=h4-t2hZ9T2A",
+          "page": null,
+          "snippet": "[2:49] handling ergonomics which developers have come to love. In addition to the core rust features, thirdparty frameworks and libraries have matured. [2:56] There are plenty of productionready rust frameworks and libraries like Axom, tracing, embas...",
+          "text": "[2:49] handling ergonomics which developers have come to love. In addition to the core rust features, thirdparty frameworks and libraries have matured.\n[2:56] There are plenty of productionready rust frameworks and libraries like Axom, tracing, embassy, and clap to name a few. And first class support for us in\n[3:05] major code editors like VS Code, Jet Brains and Vim definitely make the development experience smooth and productive. The only downside I see is [...] [2:27] manager and build system. In fact, Cargo is the most admired infrastructure tool of the year. According to the 2025 Stack Overflow developer survey, it's fast,\n[2:36] reliable, simple, and comes builtin right out of the box. No setup required.\n[2:41] Other than cargo, many core rust features have matured over the past couple years too, such as async await, macros, cons, generics, and error [...] [6:49] Rust is the first language to effectively eliminate that trade-off and gain popularity. And that's why Rust is being used for critical systems right\n[6:57] now. As we speak, Rust is powering authentication systems, networking stacks, distributed databases, recommendation engines, observability\n[7:04] pipelines, and cloud infrastructure that millions of people rely on every day.",
+          "score": 0.5756
+        },
+        {
+          "id": 4,
+          "source": "What\u2019s new in the Rust programming language | InfoWorld",
+          "source_type": "web",
+          "url": "https://www.infoworld.com/article/2266609/whats-new-in-the-rust-language.html",
+          "page": null,
+          "snippet": "### JDK 27: The new features of Java 27    Sep 15, 2026 4 mins  news    ### Visual Studio Code 1.136 introduces agent merges for pull requests    Sep 4, 2026 2 mins  news    ### Rust 1.98.1 fixes miscompilation bug    Sep 3, 2026 2 mins  ## Show me m...",
+          "text": "### JDK 27: The new features of Java 27\n\n  Sep 15, 2026 4 mins\n news\n\n  ### Visual Studio Code 1.136 introduces agent merges for pull requests\n\n  Sep 4, 2026 2 mins\n news\n\n  ### Rust 1.98.1 fixes miscompilation bug\n\n  Sep 3, 2026 2 mins\n\n## Show me more\n\nfeature\n\n### Hands-on agentic development with Google\u2019s Antigravity IDE\n\nBy Matthew Tyson\n\nOct 12, 202611 mins\n\nDevelopment ToolsGenerative AIIntegrated Development Environments\n\nImage [...] A new type of `let` statement is introduced, `let-else`, with a refutable pattern and a diverging `else` block that executes when that pattern does not match.\n Plain block expressions now can be labeled as a `break` target, terminating that block early. [...] Rust 1.27 introduced support for detecting x86 CPU features in the standard library, via the `is_x86_feature_detected` macro. Because of an internal refactoring, Rust 1.43.0 prevented detection of features that cannot be used on stable yet, even though detecting them previously was allowed. Version 1.43.1 fixes this regression.",
+          "score": 0.5428
+        }
+      ],
+      "total_latency_ms": 6939.58,
+      "tokens": 2076,
+      "estimated_cost_usd": 0.0002,
+      "is_idk": false
+    },
+    {
+      "id": 29,
+      "question": "What were the latest quarterly earnings reports and cloud infrastructure revenue trends reported by big-tech companies this week?",
+      "expected_source": "web",
+      "split": "test",
+      "kb_file": "",
+      "answer": "Based on the available sources, big-tech companies reported significant cloud infrastructure growth and quarterly financial results:\n\n* **Alphabet (Google Cloud):** Alphabet reported Q2 FY2026 revenue rose 24% to $119.8 billion, with net income surging nearly 300% to $112.2 billion due to a $99 billion unrealized gain on equity investments, though heavy cloud investments led to a $5.8 billion free cash flow deficit [3]. Alphabet's Google Cloud revenue surged by 82% [4], [5].\n* **Amazon (AWS):** Amazon's AWS revenue accelerated by 37% to $42.2 billion in quarterly revenue, marking its fastest growth in 18 quarters [4], [5]. AWS operating income reached $16.6 billion (up from $10.2 billion a year earlier) [5]. However, for the twelve months ended June 2026, Amazon's free cash flow fell to negative $7.6 billion due to significant capital investments in AI infrastructure [5].\n* **Microsoft:** Microsoft reported that Azure and other cloud services revenue increased by 43% [4], [5].\n* **Oracle:** Oracle delivered strong FY2026 results with revenue surging 17.3% to $67.4B and net income jumping 37.3% to $17.1B, driven by robust cloud infrastructure demand [1].\n* **Netflix:** Netflix reported Q2 FY2026 revenue grew 13% year-over-year to $12.56B and net income rose 9% to $3.40B, while operating margin slipped to 33.4% and operating cash flow fell 28% due to higher content spending and $4.7B in record share buybacks [1].",
+      "routing_mode": "fan_out",
+      "sources_queried": [
+        "kb",
+        "wikipedia",
+        "web"
+      ],
+      "router_decision": "fan_out_all",
+      "router_fallback": false,
+      "confidence_score": 0.8806,
+      "citation_source_types": [
+        "web",
+        "web",
+        "web",
+        "web"
+      ],
+      "citation_files": [
+        "Big Tech Earnings & Quarterly Financial Results",
+        "AI Infrastructure Earnings & Quarterly Financial Results",
+        "EarningsTime on X: \"Big Tech Earnings Preview: Is the AI Spending Boom Paying Off?\" / X",
+        "Big Tech Earnings Preview: Is the AI Spending Boom Paying Off? | EarningsTime (@Earnings_Time) on X"
+      ],
+      "citations": [
+        {
+          "id": 1,
+          "source": "Big Tech Earnings & Quarterly Financial Results",
+          "source_type": "web",
+          "url": "https://www.earningslens.ai/sector/big-tech",
+          "page": null,
+          "snippet": "Jun 22, 2026  Oracle delivered strong FY2026 results with revenue surging 17.3% to $67.4B and net income jumping 37.3% to $17.1B, driven by robust cloud infrastructure demand, while total assets expanded 55.5% to $261.8B reflecting significant capita...",
+          "text": "Jun 22, 2026\n\nOracle delivered strong FY2026 results with revenue surging 17.3% to $67.4B and net income jumping 37.3% to $17.1B, driven by robust cloud infrastructure demand, while total assets expanded 55.5% to $261.8B reflecting significant capital deployment.\n\nRead AI analysis\n\n## Reporting Next \u2014 Next 30 Days\n\nUpcoming big tech earnings releases scheduled on the earnings calendar.\n\nSep 10, 2026\u00b7 After market close\n\nEPS est. $1.78\n\nRev est. $19.53B\n\n## All Big Tech Companies Tracked [...] Jul 17, 2026\n\nNetflix's Q2 FY2026 revenue grew 13% year-over-year to $12.56B and net income rose 9% to $3.40B, but operating margin slipped 0.7 points to 33.4% as technology & development and sales & marketing expenses outpaced revenue growth, while operating cash flow fell 28% due to higher content spending and record share buybacks of $4.7B.\n\nRead AI analysisORCLFY2026\n\nJun 22, 2026 [...] SemiconductorsChip designers, foundries, and semi equipment \u2014 the infrastructure behind every AI and computing trend.AI InfrastructureThe picks-and-shovels play \u2014 compute, hosting, and platforms enabling the AI build-out.BankingThe biggest US banks \u2014 first to report each quarter and a leading indicator for the economy.Biotech & PharmaDrug developers, large pharma, and medical devices \u2014 earnings plus pipeline updates.EV & AutonomousElectric vehicles and autonomous mobility \u2014 volatile quarters,",
+          "score": 0.9933
+        },
+        {
+          "id": 3,
+          "source": "AI Infrastructure Earnings & Quarterly Financial Results",
+          "source_type": "web",
+          "url": "https://www.earningslens.ai/sector/ai-infrastructure",
+          "page": null,
+          "snippet": "Jul 23, 2026  Alphabet\u2019s Q2 FY2026 revenue rose 24% to $119.8 billion, but a $99 billion unrealized gain on equity investments pushed net income up nearly 300% to $112.2 billion, while heavy cloud investments led to a $5.8 billion free cash flow defi...",
+          "text": "Jul 23, 2026\n\nAlphabet\u2019s Q2 FY2026 revenue rose 24% to $119.8 billion, but a $99 billion unrealized gain on equity investments pushed net income up nearly 300% to $112.2 billion, while heavy cloud investments led to a $5.8 billion free cash flow deficit.\n\nRead AI analysisORCLFY2026\n\nJun 22, 2026 [...] Jun 22, 2026\n\nOracle delivered strong FY2026 results with revenue surging 17.3% to $67.4B and net income jumping 37.3% to $17.1B, driven by robust cloud infrastructure demand, while total assets expanded 55.5% to $261.8B reflecting significant capital deployment.\n\nRead AI analysisAVGOQ2 FY2026\n\nJun 9, 2026 [...] SemiconductorsChip designers, foundries, and semi equipment \u2014 the infrastructure behind every AI and computing trend.Big TechThe hyperscalers and internet giants that drive most of the S&P 500's earnings growth.BankingThe biggest US banks \u2014 first to report each quarter and a leading indicator for the economy.Biotech & PharmaDrug developers, large pharma, and medical devices \u2014 earnings plus pipeline updates.EV & AutonomousElectric vehicles and autonomous mobility \u2014 volatile quarters, huge retail",
+          "score": 0.7168
+        },
+        {
+          "id": 4,
+          "source": "EarningsTime on X: \"Big Tech Earnings Preview: Is the AI Spending Boom Paying Off?\" / X",
+          "source_type": "web",
+          "url": "https://x.com/Earnings_Time/status/2114033127915913663",
+          "page": null,
+          "snippet": "EarningsTime    Real-time earnings reports and insights. Follow us on eToro: etoro.tw/3U7XbBQ Not financial advice.    More Articles    Join 16.1K followers    04:35:49 PM \u00b7 10/24/2026\u00b71,530    Views    1  @fogi70    eToro Builders    @fogi70    10/2...",
+          "text": "EarningsTime\n\n  Real-time earnings reports and insights. Follow us on eToro: etoro.tw/3U7XbBQ Not financial advice.\n\n  More Articles\n\n  Join 16.1K followers\n\n  04:35:49 PM \u00b7 10/24/2026\u00b71,530\n\n  Views\n\n  1\n @fogi70\n\n  eToro Builders\n\n  @fogi70\n\n  10/24/2026\n\n  Is cloud growth enough to justify the capex? [...] For Microsoft, Alphabet and Amazon, the next chapter of the AI boom will increasingly be written in profits, margins and cash flow.\n\nAnd this earnings week could tell us which companies are making the most progress.\n\n@Earnings_Time\n\nEarningsTime\n\nReal-time earnings reports and insights. Follow us on eToro: etoro.tw/3U7XbBQ Not financial advice.\n\nMore Articles\n\nJoin 16.1K followers\n\n04:35:49 PM \u00b7 10/24/2026\u00b71,530\n\nViews\n\n1\n\n @Earnings_Time\n\n  EarningsTime@Earnings\\_Time\n\n  Article cover image [...] Microsoft: Azure and other cloud services revenue increased 43%.\n Alphabet: Google Cloud revenue surged 82%.\n Amazon: AWS revenue accelerated 37%, its fastest growth in 18 quarters.\n\nThese figures are impressive, although the businesses have different revenue bases and reporting definitions.\n\nBut investors are no longer asking whether AI demand exists.",
+          "score": 0.5125
+        },
+        {
+          "id": 5,
+          "source": "Big Tech Earnings Preview: Is the AI Spending Boom Paying Off? | EarningsTime (@Earnings_Time) on X",
+          "source_type": "web",
+          "url": "https://x.com/i/article/2114033127915913663",
+          "page": null,
+          "snippet": "Yet Amazon's cash flow tells a more complicated story.  For the twelve months ended June 2026, free cash flow fell to negative $7.6 billion, compared with positive $18.2 billion one year earlier.  The primary reason was a significant increase in capi...",
+          "text": "Yet Amazon's cash flow tells a more complicated story.\n\nFor the twelve months ended June 2026, free cash flow fell to negative $7.6 billion, compared with positive $18.2 billion one year earlier.\n\nThe primary reason was a significant increase in capital investment, largely associated with AI infrastructure.\n\nThis does not automatically mean the investment is excessive.\n\nBuilding data centers requires spending money long before the infrastructure generates its full potential revenue. [...] Microsoft: Azure and other cloud services revenue increased 43%.\n Alphabet: Google Cloud revenue surged 82%.\n Amazon: AWS revenue accelerated 37%, its fastest growth in 18 quarters.\n\nThese figures are impressive, although the businesses have different revenue bases and reporting definitions.\n\nBut investors are no longer asking whether AI demand exists. [...] Its AWS division generated $42.2 billion in quarterly revenue, an increase of 37% year over year.\n\nAWS operating income reached $16.6 billion, compared with $10.2 billion a year earlier.\n\nThose numbers demonstrate that Amazon's cloud business is not merely expanding. It is generating substantial operating profits.\n\nThe company also reported strong demand for its AI infrastructure, including its custom Trainium chips and cloud-based AI services.",
+          "score": 0.3691
+        }
+      ],
+      "total_latency_ms": 9277.38,
+      "tokens": 2364,
+      "estimated_cost_usd": 0.000268,
+      "is_idk": false
+    },
+    {
+      "id": 30,
+      "question": "What major merger, acquisition, or antitrust enforcement in tech was announced this week?",
+      "expected_source": "web",
+      "split": "test",
+      "kb_file": "",
+      "answer": "Based on the available sources, I don't know which specific major merger, acquisition, or antitrust enforcement in tech was announced \"this week.\" \n\nWhile the sources mention several transactions and enforcement actions\u2014such as SpaceX's acquisition of xAI [4], Salesforce's acquisition of Informatica in May 2025 [5], Illumina's acquisition of Grail, and Lockheed Martin's acquisition of Aerojet Rocketdyne [1], [2]\u2014they do not specify events announced \"this week.\"",
+      "routing_mode": "fan_out",
+      "sources_queried": [
+        "kb",
+        "wikipedia",
+        "web"
+      ],
+      "router_decision": "fan_out_all",
+      "router_fallback": false,
+      "confidence_score": 0.4561,
+      "citation_source_types": [
+        "web",
+        "web",
+        "web",
+        "web"
+      ],
+      "citation_files": [
+        "Antitrust + Competition Technology Quarterly Update Q1 2022",
+        "Antitrust + Competition Technology Quarterly Update Q1 2022",
+        "$649B Tech M&A 2026: SpaceX's $250B xAI Deal Leads",
+        "Antitrust & Competition Technology Update Q2 2025 | Insights & Resources | Goodwin"
+      ],
+      "citations": [
+        {
+          "id": 1,
+          "source": "Antitrust + Competition Technology Quarterly Update Q1 2022",
+          "source_type": "web",
+          "url": "https://goodwinlaw.com/en/insights/publications/2022/05/05_03-technology-q1-quarterly-update",
+          "page": null,
+          "snippet": "Scrutiny of mergers between parties in adjacent markets did not bring about any enforcement actions in the first quarter, but recent speeches by the DOJ and FTC indicate we may see such enforcement in the near future.  Three major tech transactions,...",
+          "text": "Scrutiny of mergers between parties in adjacent markets did not bring about any enforcement actions in the first quarter, but recent speeches by the DOJ and FTC indicate we may see such enforcement in the near future.\n Three major tech transactions, two announced and another that closed in the first quarter, are deals to keep an eye on given these shifts. [...] Two shifts in merger control enforcement in the U.S. have emerged that are impacting the technology space: an increase in challenges of vertical transactions and increased scrutiny and enforcement with respect to deals between parties in adjacent markets.\n Increased vertical enforcement resulted in parties abandoning a large transaction in the technology space in February. [...] follows two other recent 4-0 votes to challenge vertical transactions \u2014 Illumina\u2019s proposed acquisition of Grail in March 2021 and Lockheed Martin\u2019s proposed acquisition of Aerojet Rocketdyne in January 2022.(#ft6)These three bipartisan votes to challenge vertical transactions indicate that stronger vertical merger enforcement is supported by both Republicans and Democrats and is not likely to be a temporary trend.",
+          "score": 0.9871
+        },
+        {
+          "id": 2,
+          "source": "Antitrust + Competition Technology Quarterly Update Q1 2022",
+          "source_type": "web",
+          "url": "https://www.goodwinlaw.com/en/insights/publications/2022/05/05_03-technology-q1-quarterly-update",
+          "page": null,
+          "snippet": "Scrutiny of mergers between parties in adjacent markets did not bring about any enforcement actions in the first quarter, but recent speeches by the DOJ and FTC indicate we may see such enforcement in the near future.  Three major tech transactions,...",
+          "text": "Scrutiny of mergers between parties in adjacent markets did not bring about any enforcement actions in the first quarter, but recent speeches by the DOJ and FTC indicate we may see such enforcement in the near future.\n Three major tech transactions, two announced and another that closed in the first quarter, are deals to keep an eye on given these shifts. [...] Two shifts in merger control enforcement in the U.S. have emerged that are impacting the technology space: an increase in challenges of vertical transactions and increased scrutiny and enforcement with respect to deals between parties in adjacent markets.\n Increased vertical enforcement resulted in parties abandoning a large transaction in the technology space in February. [...] follows two other recent 4-0 votes to challenge vertical transactions \u2014 Illumina\u2019s proposed acquisition of Grail in March 2021 and Lockheed Martin\u2019s proposed acquisition of Aerojet Rocketdyne in January 2022.(#ft6)These three bipartisan votes to challenge vertical transactions indicate that stronger vertical merger enforcement is supported by both Republicans and Democrats and is not likely to be a temporary trend.",
+          "score": 0.9871
+        },
+        {
+          "id": 4,
+          "source": "$649B Tech M&A 2026: SpaceX's $250B xAI Deal Leads",
+          "source_type": "web",
+          "url": "https://valueaddvc.com/blog/the-ma-boom-in-tech-2026-antitrust-easing-and-the-deals-getting-done",
+          "page": null,
+          "snippet": "SpaceX's $250 billion acquisition of xAI is now the largest M&A deal in history, and it capped a first half of 2026 in which technology generated $649 billion in announced U.S. transactions \u2014 more than any other sector, on a global M&A pace of $2.8 t...",
+          "text": "SpaceX's $250 billion acquisition of xAI is now the largest M&A deal in history, and it capped a first half of 2026 in which technology generated $649 billion in announced U.S. transactions \u2014 more than any other sector, on a global M&A pace of $2.8 trillion through June, up 48% year over year. That's the short answer. The longer answer is that this boom looks nothing like 2021's \u2014 it's narrower, more AI-infrastructure-driven, and still shadowed by live antitrust litigation against the two [...] transactions, with deals above $5 billion now representing 48% of total global value. Antitrust enforcement against Meta and Google remains live and unresolved, and regulators are now also probing non-traditional deal structures like Nvidia's Groq arrangement, but mid-market deals are clearing faster than they did two years ago. If you're building anything with a genuine compute, data, or distribution moat, this is the best strategic acquisition market in years \u2014 if you're not, the multiples",
+          "score": 0.8555
+        },
+        {
+          "id": 5,
+          "source": "Antitrust & Competition Technology Update Q2 2025 | Insights & Resources | Goodwin",
+          "source_type": "web",
+          "url": "https://www.goodwinlaw.com/en/insights/publications/2025/10/insights-technology-antc-antitrust-competition-technology-update-q2",
+          "page": null,
+          "snippet": "On May 27, 2025, Salesforce announced a definitive agreement to acquire Informatica for approximately $8 billion in cash. Strategically, the deal extends Salesforce\u2019s data plumbing \u2014 cataloging, integration, governance \u2014 underpinning its Agentforce a...",
+          "text": "On May 27, 2025, Salesforce announced a definitive agreement to acquire Informatica for approximately $8 billion in cash. Strategically, the deal extends Salesforce\u2019s data plumbing \u2014 cataloging, integration, governance \u2014 underpinning its Agentforce and other AI initiatives. From an antitrust perspective, the transaction raises questions because Salesforce holds a dominant position in customer relationship management (CRM) software. Informatica\u2019s data integration and governance tools could [...] Q2 2025 delivered a series of US M&A developments that highlight both continuity and change in antitrust enforcement under the Trump administration. Combinations like Salesforce/Informatica and HPE/Juniper illustrate how regulators are approaching vertical adjacency and remedies \u2014 sometimes in unconventional ways \u2014 while simultaneously navigating political influence and legacy investigations. At the same time, novel deal structures such as Google\u2019s acquihire arrangement underscore how leading [...] The second quarter of 2025 was marked by major transactions, high-stakes litigation, and shifting regulatory frameworks. In the United States, deals such as Salesforce/Informatica and Hewlett Packard Enterprise (HPE)/Juniper Networks highlight how enforcers are recalibrating their approach to vertical integration, remedies, and political influence, while the surge of acquihire transactions in artificial intelligence (AI) demonstrates how dealmaking is evolving to capture scarce talent outside",
+          "score": 0.1067
+        }
+      ],
+      "total_latency_ms": 9127.76,
+      "tokens": 1784,
+      "estimated_cost_usd": 0.000158,
+      "is_idk": false
+    }
+  ]
+}

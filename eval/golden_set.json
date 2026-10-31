@@ -1,0 +1,195 @@
+[
+  {
+    "id": 1,
+    "question": "How does the Native TPU Accelerator optimize dynamic memory-bound operations for analytical query processing in JAX/XLA?",
+    "source": "kb",
+    "split": "dev",
+    "kb_file": "arxiv_2610.22673v1_The_Case_for_TPU-Accelerated_Analytical_Query_Processing.txt"
+  },
+  {
+    "id": 2,
+    "question": "How does the FuseRAG framework overcome graph-structure degradation and inefficient KV-cache reuse in graph-based retrieval-augmented generation?",
+    "source": "kb",
+    "split": "dev",
+    "kb_file": "arxiv_2610.22818v1_FuseRAG_Fusing_Structure_and_Evidence_into_Inference_for_Cos.txt"
+  },
+  {
+    "id": 3,
+    "question": "What five components comprise the persona-driven NL2SQL pipeline designed to eliminate query hallucinations in regulated domains?",
+    "source": "kb",
+    "split": "dev",
+    "kb_file": "arxiv_2610.22968v1_NL2SQL_with_Iterative_Self-Refinement.txt"
+  },
+  {
+    "id": 4,
+    "question": "Why do traditional tabular data quality concepts fail when assessing errors in schemaless property graph databases?",
+    "source": "kb",
+    "split": "dev",
+    "kb_file": "arxiv_2610.23083v1_An_Error_Taxonomy_for_Property_Graph_Data.txt"
+  },
+  {
+    "id": 5,
+    "question": "How does PrairieFire achieve high update throughput in billion-scale SSD-based approximate nearest neighbor search without sacrificing search performance?",
+    "source": "kb",
+    "split": "test",
+    "kb_file": "arxiv_2610.23232v1_PrairieFire_Igniting_High-Throughput_Updates_in_Large-Scale_.txt"
+  },
+  {
+    "id": 6,
+    "question": "How does AgentOnto utilize Iterative Ontology Preparation to refine enterprise knowledge representations for LLM agents?",
+    "source": "kb",
+    "split": "test",
+    "kb_file": "arxiv_2610.23317v1_AgentOnto_Ontology-Guided_LLM_Agents_for_Enterprise_Data_Ana.txt"
+  },
+  {
+    "id": 7,
+    "question": "What three techniques are introduced by the PUMA framework to accelerate large-scale string similarity joins using Jaro-Winkler distance?",
+    "source": "kb",
+    "split": "test",
+    "kb_file": "arxiv_2610.23652v1_Joining_Large_String_Collections_with_Jaro-Winkler_Similarit.txt"
+  },
+  {
+    "id": 8,
+    "question": "What computational complexity is established for finding a diverse subset of why-provenance explanations in Datalog queries?",
+    "source": "kb",
+    "split": "test",
+    "kb_file": "arxiv_2610.24707v1_Diverse_Why-Provenance_for_Datalog_Queries.txt"
+  },
+  {
+    "id": 9,
+    "question": "How does the Helmholtz Component Flow Matching architecture isolate anomaly signals in time series without requiring full Jacobian-trace estimation?",
+    "source": "kb",
+    "split": "test",
+    "kb_file": "arxiv_2610.25059v1_HCFM_Helmholtz_Component_Flow_Matching_for_Time_Series_Anoma.txt"
+  },
+  {
+    "id": 10,
+    "question": "How does the RemoteANN vector search engine minimize cloud object storage request fees and network I/O during similarity queries?",
+    "source": "kb",
+    "split": "test",
+    "kb_file": "arxiv_2610.25172v1_RemoteANN_A_Native_Vector_Search_Engine_for_Cloud_Object_Sto.txt"
+  },
+  {
+    "id": 11,
+    "question": "What diagnostic methodology does the MemDerive benchmark use to expose failures in agent memory systems over evolving histories?",
+    "source": "kb",
+    "split": "test",
+    "kb_file": "arxiv_2610.25373v1_MemDerive_A_Diagnostic_Benchmark_for_Agent_Memory_over_Evolv.txt"
+  },
+  {
+    "id": 12,
+    "question": "How does the SARP indexing scheme resolve the tradeoff between prefix-matching latency and crash-recovery time for on-SSD KVCache?",
+    "source": "kb",
+    "split": "test",
+    "kb_file": "arxiv_2610.26849v1_SARP_An_On-SSD_Index_for_KVCache_with_Fast_Prefix_Matching_a.txt"
+  },
+  {
+    "id": 13,
+    "question": "What trade-offs does the CAP theorem establish for distributed data stores?",
+    "source": "wikipedia",
+    "split": "dev"
+  },
+  {
+    "id": 14,
+    "question": "How does a hash table resolve collisions using open addressing versus separate chaining?",
+    "source": "wikipedia",
+    "split": "dev"
+  },
+  {
+    "id": 15,
+    "question": "How does gradient descent update parameters to minimize the loss function during neural network training?",
+    "source": "wikipedia",
+    "split": "dev"
+  },
+  {
+    "id": 16,
+    "question": "What is the role of multi-head self-attention in the original Transformer architecture?",
+    "source": "wikipedia",
+    "split": "test"
+  },
+  {
+    "id": 17,
+    "question": "How does Dijkstra's algorithm determine the shortest path from a single source vertex in a non-negative weighted graph?",
+    "source": "wikipedia",
+    "split": "test"
+  },
+  {
+    "id": 18,
+    "question": "How does a Bloom filter achieve space efficiency and why can it yield false positives but never false negatives?",
+    "source": "wikipedia",
+    "split": "test"
+  },
+  {
+    "id": 19,
+    "question": "How does TCP congestion control use slow start and additive-increase/multiplicative-decrease (AIMD) to prevent network congestion?",
+    "source": "wikipedia",
+    "split": "test"
+  },
+  {
+    "id": 20,
+    "question": "What distinct purpose do convolutional layers and pooling layers serve in a convolutional neural network?",
+    "source": "wikipedia",
+    "split": "test"
+  },
+  {
+    "id": 21,
+    "question": "What properties define a B-tree and keep it balanced during insertions and deletions?",
+    "source": "wikipedia",
+    "split": "test"
+  },
+  {
+    "id": 22,
+    "question": "What are the latest benchmark results and architecture features of newly released multimodal frontier AI models this week?",
+    "source": "web",
+    "split": "dev"
+  },
+  {
+    "id": 23,
+    "question": "What are the latest GPU architecture announcements and memory specifications from Nvidia and AMD this week?",
+    "source": "web",
+    "split": "dev"
+  },
+  {
+    "id": 24,
+    "question": "What are the latest open-source large language model releases and permissive licenses announced this week?",
+    "source": "web",
+    "split": "dev"
+  },
+  {
+    "id": 25,
+    "question": "What major cybersecurity incident or zero-day vulnerability disclosure was reported across enterprise infrastructure this week?",
+    "source": "web",
+    "split": "test"
+  },
+  {
+    "id": 26,
+    "question": "What are the latest experimental breakthroughs in quantum computing qubit coherence times announced this week?",
+    "source": "web",
+    "split": "test"
+  },
+  {
+    "id": 27,
+    "question": "What are the latest developments and legal enforcement timelines for AI regulation in the European Union and the United States this week?",
+    "source": "web",
+    "split": "test"
+  },
+  {
+    "id": 28,
+    "question": "What features were introduced in the latest major programming language releases for Rust and Python this week?",
+    "source": "web",
+    "split": "test"
+  },
+  {
+    "id": 29,
+    "question": "What were the latest quarterly earnings reports and cloud infrastructure revenue trends reported by big-tech companies this week?",
+    "source": "web",
+    "split": "test"
+  },
+  {
+    "id": 30,
+    "question": "What major merger, acquisition, or antitrust enforcement in tech was announced this week?",
+    "source": "web",
+    "split": "test"
+  }
+]
+

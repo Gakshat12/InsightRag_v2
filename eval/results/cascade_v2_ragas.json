@@ -1,0 +1,16 @@
+{
+  "tag": "cascade_v2",
+  "ragas_version": "0.2.14",
+  "model": "gemini-flash-lite-latest",
+  "scored": 16,
+  "skipped_idk": 3,
+  "failed": 1,
+  "avg_faithfulness": 0.8327,
+  "avg_answer_relevancy": 0.8793,
+  "failed_ids": [
+    {
+      "id": 26,
+      "error": ""
+    }
+  ]
+}
